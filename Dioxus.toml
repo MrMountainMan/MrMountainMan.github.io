@@ -8,6 +8,7 @@ name = "pd3-weapon-calculator"
 default_platform = "web"
 
 # `build` & `serve` dist path
+# change to 'docs' when creating release build
 out_dir = "docs"
 
 # resource (assets) file folder

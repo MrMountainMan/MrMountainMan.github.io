@@ -48,5 +48,13 @@ fn Home() -> Element {
             button { onclick: move |_| count += 1, "Up high!" }
             button { onclick: move |_| count -= 1, "Down low!" }
         }
+        br {}
+        br {}
+        label {r#for: "test1"}
+        select {name: "thing", id: "test1",
+        option {value: "1", "1"}
+        option {value: "2", "2"}
+        option {value: "3", "3"}
+        }
     }
 }
