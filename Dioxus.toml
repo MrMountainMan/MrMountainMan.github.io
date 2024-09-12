@@ -18,8 +18,6 @@ asset_dir = "assets"
 # HTML title tag content
 title = "pd3-weapon-calculator"
 
-base_path = "MrMountainMan.github.io"
-
 [web.watcher]
 
 # when watcher trigger, regenerate the `index.html`
