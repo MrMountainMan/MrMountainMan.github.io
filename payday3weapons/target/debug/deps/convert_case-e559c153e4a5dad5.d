@@ -1,0 +1,11 @@
+c:\Users\James\Documents\MrMountainMan.github.io\target\debug\deps\libconvert_case-e559c153e4a5dad5.rmeta: C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\lib.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\case.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\converter.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\pattern.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\segmentation.rs
+
+c:\Users\James\Documents\MrMountainMan.github.io\target\debug\deps\libconvert_case-e559c153e4a5dad5.rlib: C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\lib.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\case.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\converter.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\pattern.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\segmentation.rs
+
+c:\Users\James\Documents\MrMountainMan.github.io\target\debug\deps\convert_case-e559c153e4a5dad5.d: C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\lib.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\case.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\converter.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\pattern.rs C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\segmentation.rs
+
+C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\lib.rs:
+C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\case.rs:
+C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\converter.rs:
+C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\pattern.rs:
+C:\Users\James\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\segmentation.rs:
