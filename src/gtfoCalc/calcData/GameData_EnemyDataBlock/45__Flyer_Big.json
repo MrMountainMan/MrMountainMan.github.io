@@ -1,0 +1,144 @@
+{
+  "EnemyType": 1,
+  "AssetBundle": 300,
+  "BundleShard": 0,
+  "BasePrefabs": [
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/EnemyBase.prefab",
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/FlyerBase.prefab"
+  ],
+  "ModelDatas": [
+    {
+      "ModelFile": "Assets/AssetPrefabs/CharacterBuilder/Enemies/FlyerBig/FlyerBig_CB.prefab",
+      "ModelCustomization": "Assets/AssetPrefabs/CharacterBuilder/Enemies/FlyerBig/Customization_FlyerBig.prefab",
+      "PositionOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "RotationOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "NeckScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "HeadScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "ChestScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "ArmScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "LegScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "SizeRange": {
+        "x": 0.8,
+        "y": 1.0,
+        "normalized": {
+          "x": 0.624695063,
+          "y": 0.780868769,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.28062487,
+        "sqrMagnitude": 1.64
+      }
+    }
+  ],
+  "DetectionDataId": 13,
+  "BehaviorDataId": 39,
+  "MovementDataId": 37,
+  "BalancingDataId": 36,
+  "SFXDataId": 37,
+  "ArenaDimensions": [],
+  "LinkedSlaveModels": [],
+  "InternalMaterial": 131072,
+  "isCoccoon": false,
+  "EnemySpottedDialogId": 0,
+  "AI_Abilities": [
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_ProjectileShooterSmall_ShotgunChoke.prefab",
+      "AbilityType": 2,
+      "Cooldown": 5.0
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_ScoutDetection.prefab",
+      "AbilityType": 7,
+      "Cooldown": 25.0
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_DoorBreakerShooter.prefab",
+      "AbilityType": 8,
+      "Cooldown": 1.0
+    }
+  ],
+  "name": "Flyer_Big",
+  "internalEnabled": true,
+  "persistentID": 45
+}

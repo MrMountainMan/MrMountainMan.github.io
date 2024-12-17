@@ -1,0 +1,130 @@
+{
+  "EnemyType": 1,
+  "AssetBundle": 300,
+  "BundleShard": 0,
+  "BasePrefabs": [
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/EnemyBase.prefab",
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/StrikerBase.prefab"
+  ],
+  "ModelDatas": [
+    {
+      "ModelFile": "Assets/AssetPrefabs/CharacterBuilder/Enemies/Striker/Striker_Berserk_CB.prefab",
+      "ModelCustomization": "Assets/AssetPrefabs/CharacterBuilder/Enemies/Striker/Customization_StrikerBerserk.prefab",
+      "PositionOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "RotationOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "NeckScale": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "HeadScale": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "ChestScale": {
+        "x": 1.05,
+        "y": 1.05,
+        "z": 1.05,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.81865323,
+        "sqrMagnitude": 3.30749965
+      },
+      "ArmScale": {
+        "x": 1.2,
+        "y": 1.2,
+        "z": 1.2,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 2.07846117,
+        "sqrMagnitude": 4.32
+      },
+      "LegScale": {
+        "x": 0.97,
+        "y": 0.97,
+        "z": 0.97,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.68008935,
+        "sqrMagnitude": 2.82270026
+      },
+      "SizeRange": {
+        "x": 1.1,
+        "y": 1.2,
+        "normalized": {
+          "x": 0.6757246,
+          "y": 0.7371541,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 1.62788212,
+        "sqrMagnitude": 2.65
+      }
+    }
+  ],
+  "DetectionDataId": 13,
+  "BehaviorDataId": 43,
+  "MovementDataId": 43,
+  "BalancingDataId": 40,
+  "SFXDataId": 40,
+  "ArenaDimensions": [],
+  "LinkedSlaveModels": [],
+  "InternalMaterial": 131072,
+  "isCoccoon": false,
+  "EnemySpottedDialogId": 0,
+  "AI_Abilities": [
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_StrikerMelee.prefab",
+      "AbilityType": 1,
+      "Cooldown": 7.0
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_DoorBreakerStriker.prefab",
+      "AbilityType": 8,
+      "Cooldown": 1.0
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_StrikerTentacle.prefab",
+      "AbilityType": 2,
+      "Cooldown": 9.0
+    }
+  ],
+  "name": "Striker_Berserk",
+  "internalEnabled": true,
+  "persistentID": 53
+}

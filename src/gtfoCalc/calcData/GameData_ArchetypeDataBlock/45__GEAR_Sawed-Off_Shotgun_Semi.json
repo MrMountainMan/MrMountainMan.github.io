@@ -1,0 +1,103 @@
+{
+  "PublicName": 771,
+  "Description": 772,
+  "FireMode": 0,
+  "RecoilDataID": 28,
+  "DamageBoosterEffect": 58,
+  "Damage": 3.8,
+  "DamageFalloff": {
+    "x": 6.0,
+    "y": 40.0,
+    "normalized": {
+      "x": 0.148340449,
+      "y": 0.9889363,
+      "normalized": {
+        "x": 0.148340464,
+        "y": 0.988936365,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 0.99999994,
+      "sqrMagnitude": 0.9999999
+    },
+    "magnitude": 40.4475,
+    "sqrMagnitude": 1636.0
+  },
+  "StaggerDamageMulti": 2.0,
+  "PrecisionDamageMulti": 0.7413,
+  "DefaultClipSize": 4,
+  "DefaultReloadTime": 1.6,
+  "CostOfBullet": 11.0,
+  "ShotDelay": 0.25,
+  "ShellCasingSize": 1.0,
+  "ShellCasingSpeedRange": {
+    "x": 3.0,
+    "y": 5.0,
+    "normalized": {
+      "x": 0.5144958,
+      "y": 0.857493,
+      "normalized": {
+        "x": 0.51449573,
+        "y": 0.857492864,
+        "normalized": {
+          "x": 0.5144958,
+          "y": 0.8574929,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.99999994,
+        "sqrMagnitude": 0.9999999
+      },
+      "magnitude": 1.00000012,
+      "sqrMagnitude": 1.00000012
+    },
+    "magnitude": 5.83095169,
+    "sqrMagnitude": 34.0
+  },
+  "PiercingBullets": false,
+  "PiercingDamageCountLimit": 5,
+  "HipFireSpread": 0.0,
+  "AimSpread": 0.0,
+  "EquipTransitionTime": 0.33,
+  "EquipSequence": [
+    {
+      "TriggerTime": 0.0,
+      "Type": 0,
+      "StringData": "Front_Pistol_1_equip_weaponmovement"
+    },
+    {
+      "TriggerTime": 2.0,
+      "Type": 7
+    }
+  ],
+  "AimTransitionTime": 0.23,
+  "AimSequence": [],
+  "BurstDelay": 0.0,
+  "BurstShotCount": 0,
+  "ShotgunBulletCount": 8,
+  "ShotgunConeSize": 2,
+  "ShotgunBulletSpread": 2,
+  "SpecialChargetupTime": 0.0,
+  "SpecialCooldownTime": 0.0,
+  "SpecialSemiBurstCountTimeout": 0.0,
+  "Sentry_StartFireDelay": 1.0,
+  "Sentry_RotationSpeed": 4.0,
+  "Sentry_DetectionMaxRange": 25.0,
+  "Sentry_DetectionMaxAngle": 30.0,
+  "Sentry_FireTowardsTargetInsteadOfForward": false,
+  "Sentry_ForceAimTowardsBody": false,
+  "Sentry_LongRangeThreshold": 999.0,
+  "Sentry_ShortRangeThreshold": 0.0,
+  "Sentry_LegacyEnemyDetection": true,
+  "Sentry_FireTagOnly": false,
+  "Sentry_PrioTag": false,
+  "Sentry_StartFireDelayTagMulti": 1.0,
+  "Sentry_RotationSpeedTagMulti": 1.0,
+  "Sentry_DamageTagMulti": 1.0,
+  "Sentry_StaggerDamageTagMulti": 1.0,
+  "Sentry_CostOfBulletTagMulti": 1.0,
+  "Sentry_ShotDelayTagMulti": 1.0,
+  "name": "GEAR_Sawed-Off_Shotgun_Semi",
+  "internalEnabled": true,
+  "persistentID": 45
+}

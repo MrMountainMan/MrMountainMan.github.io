@@ -1,0 +1,169 @@
+{
+  "EnemyType": 4,
+  "AssetBundle": 300,
+  "BundleShard": 0,
+  "BasePrefabs": [
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/EnemyBase.prefab",
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/BossBase.prefab"
+  ],
+  "ModelDatas": [
+    {
+      "ModelFile": "Assets/AssetPrefabs/CharacterBuilder/Enemies/Birther/MegaMother_CB.prefab",
+      "ModelCustomization": "Assets/AssetPrefabs/CharacterBuilder/Enemies/Birther/Customization_MegaMother.prefab",
+      "PositionOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "RotationOffset": {
+        "x": 0.0,
+        "y": 180.0,
+        "z": 0.0,
+        "normalized": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 180.0,
+        "sqrMagnitude": 32400.0
+      },
+      "NeckScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "HeadScale": {
+        "x": 0.65,
+        "y": 0.65,
+        "z": 0.65,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.125833,
+        "sqrMagnitude": 1.26749992
+      },
+      "ChestScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "ArmScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "LegScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "SizeRange": {
+        "x": 6.0,
+        "y": 6.0,
+        "normalized": {
+          "x": 0.7071068,
+          "y": 0.7071068,
+          "normalized": {
+            "x": 0.707106769,
+            "y": 0.707106769,
+            "magnitude": 1.0,
+            "sqrMagnitude": 0.99999994
+          },
+          "magnitude": 1.00000012,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 8.485281,
+        "sqrMagnitude": 72.0
+      }
+    }
+  ],
+  "DetectionDataId": 13,
+  "BehaviorDataId": 44,
+  "MovementDataId": 45,
+  "BalancingDataId": 44,
+  "SFXDataId": 32,
+  "ArenaDimensions": [],
+  "LinkedSlaveModels": [],
+  "InternalMaterial": 131072,
+  "isCoccoon": false,
+  "EnemySpottedDialogId": 0,
+  "AI_Abilities": [
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_Birthing_Megamother.prefab",
+      "AbilityType": 1,
+      "Cooldown": 2.0
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_DoorBreakerStriker.prefab",
+      "AbilityType": 8,
+      "Cooldown": 1.0
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_StrikerBigTentacle.prefab",
+      "AbilityType": 1,
+      "Cooldown": 4.0
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_ProjectileShooterBig_RapidFire.prefab",
+      "AbilityType": 2,
+      "Cooldown": 8.0
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_Birthing.prefab",
+      "AbilityType": 2,
+      "Cooldown": 50.0
+    }
+  ],
+  "name": "MegaMother",
+  "internalEnabled": true,
+  "persistentID": 55
+}

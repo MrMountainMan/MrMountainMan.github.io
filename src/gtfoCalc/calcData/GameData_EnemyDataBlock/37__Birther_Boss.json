@@ -1,0 +1,151 @@
+{
+  "EnemyType": 4,
+  "AssetBundle": 300,
+  "BundleShard": 0,
+  "BasePrefabs": [
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/EnemyBase.prefab",
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/BossBase.prefab"
+  ],
+  "ModelDatas": [
+    {
+      "ModelFile": "Assets/AssetPrefabs/CharacterBuilder/Enemies/Birther/Birther_CB.prefab",
+      "ModelCustomization": "Assets/AssetPrefabs/CharacterBuilder/Enemies/Birther/Customization_BirtherBoss.prefab",
+      "PositionOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "RotationOffset": {
+        "x": 0.0,
+        "y": 180.0,
+        "z": 0.0,
+        "normalized": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 180.0,
+        "sqrMagnitude": 32400.0
+      },
+      "NeckScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "HeadScale": {
+        "x": 0.65,
+        "y": 0.65,
+        "z": 0.65,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.125833,
+        "sqrMagnitude": 1.26749992
+      },
+      "ChestScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "ArmScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "LegScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "SizeRange": {
+        "x": 3.3,
+        "y": 3.3,
+        "normalized": {
+          "x": 0.707106769,
+          "y": 0.707106769,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 4.666905,
+        "sqrMagnitude": 21.7799988
+      }
+    }
+  ],
+  "DetectionDataId": 13,
+  "BehaviorDataId": 33,
+  "MovementDataId": 32,
+  "BalancingDataId": 31,
+  "SFXDataId": 32,
+  "ArenaDimensions": [],
+  "LinkedSlaveModels": [],
+  "InternalMaterial": 131072,
+  "isCoccoon": false,
+  "EnemySpottedDialogId": 0,
+  "AI_Abilities": [
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_Birthing_Boss.prefab",
+      "AbilityType": 1,
+      "Cooldown": 3.0
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_DoorBreakerStriker.prefab",
+      "AbilityType": 8,
+      "Cooldown": 1.0
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_FogSphere.prefab",
+      "AbilityType": 2,
+      "Cooldown": 15.0
+    }
+  ],
+  "name": "Birther_Boss",
+  "internalEnabled": true,
+  "persistentID": 37
+}

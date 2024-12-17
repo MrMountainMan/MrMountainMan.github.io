@@ -1,0 +1,144 @@
+{
+  "EnemyType": 3,
+  "AssetBundle": 300,
+  "BundleShard": 0,
+  "BasePrefabs": [
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/EnemyBase.prefab",
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/StrikerBase.prefab"
+  ],
+  "ModelDatas": [
+    {
+      "ModelFile": "Assets/AssetPrefabs/CharacterBuilder/Enemies/Tank/Tank_CB.prefab",
+      "ModelCustomization": "Assets/AssetPrefabs/CharacterBuilder/Enemies/Tank/Customization_Tank.prefab",
+      "PositionOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "RotationOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "NeckScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "HeadScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "ChestScale": {
+        "x": 1.2,
+        "y": 1.2,
+        "z": 1.2,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 2.07846117,
+        "sqrMagnitude": 4.32
+      },
+      "ArmScale": {
+        "x": 0.7,
+        "y": 0.7,
+        "z": 0.7,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.2124356,
+        "sqrMagnitude": 1.46999991
+      },
+      "LegScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "SizeRange": {
+        "x": 1.8,
+        "y": 1.8,
+        "normalized": {
+          "x": 0.707106769,
+          "y": 0.707106769,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 2.54558444,
+        "sqrMagnitude": 6.47999954
+      }
+    }
+  ],
+  "DetectionDataId": 13,
+  "BehaviorDataId": 35,
+  "MovementDataId": 34,
+  "BalancingDataId": 29,
+  "SFXDataId": 34,
+  "ArenaDimensions": [],
+  "LinkedSlaveModels": [],
+  "InternalMaterial": 131072,
+  "isCoccoon": false,
+  "EnemySpottedDialogId": 0,
+  "AI_Abilities": [
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_StrikerBigTentacleMultiple.prefab",
+      "AbilityType": 2,
+      "Cooldown": 0.1
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_DoorBreakerStriker.prefab",
+      "AbilityType": 8,
+      "Cooldown": 1.0
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_StrikerMelee.prefab",
+      "AbilityType": 1,
+      "Cooldown": 2.0
+    }
+  ],
+  "name": "Tank",
+  "internalEnabled": true,
+  "persistentID": 29
+}

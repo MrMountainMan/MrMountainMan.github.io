@@ -1,15 +1,14 @@
 [application]
 
 # App (Project) Name
-name = "pd3-weapon-calculator"
+name = "mr-mountain-man-github"
 
 # Dioxus App Default Platform
 # web, desktop, fullstack
 default_platform = "web"
 
 # `build` & `serve` dist path
-# change to 'docs' when creating release build
-out_dir = "docs"
+out_dir = "dist"
 
 # resource (assets) file folder
 asset_dir = "assets"
@@ -17,7 +16,7 @@ asset_dir = "assets"
 [web.app]
 
 # HTML title tag content
-title = "pd3-weapon-calculator"
+title = "mr-mountain-man-github"
 
 [web.watcher]
 

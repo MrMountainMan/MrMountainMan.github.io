@@ -1,0 +1,152 @@
+{
+  "EnemyType": 1,
+  "AssetBundle": 300,
+  "BundleShard": 0,
+  "BasePrefabs": [
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/EnemyBase.prefab",
+    "Assets/AssetPrefabs/Characters/Enemies/Bases/StrikerBase.prefab"
+  ],
+  "ModelDatas": [
+    {
+      "ModelFile": "Assets/AssetPrefabs/CharacterBuilder/Enemies/Striker/Striker_CB.prefab",
+      "ModelCustomization": "Assets/AssetPrefabs/CharacterBuilder/Enemies/Striker/Customization_StrikerChild.prefab",
+      "PositionOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "RotationOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "NeckScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1.73205078,
+        "sqrMagnitude": 3.0
+      },
+      "HeadScale": {
+        "x": 2.0,
+        "y": 2.0,
+        "z": 2.0,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 3.46410155,
+        "sqrMagnitude": 12.0
+      },
+      "ChestScale": {
+        "x": 1.3,
+        "y": 1.3,
+        "z": 1.3,
+        "normalized": {
+          "x": 0.577350259,
+          "y": 0.577350259,
+          "z": 0.577350259,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 2.251666,
+        "sqrMagnitude": 5.06999969
+      },
+      "ArmScale": {
+        "x": 1.0,
+        "y": 0.8,
+        "z": 0.8,
+        "normalized": {
+          "x": 0.6622662,
+          "y": 0.529813,
+          "z": 0.529813,
+          "normalized": {
+            "x": 0.662266135,
+            "y": 0.529812932,
+            "z": 0.529812932,
+            "magnitude": 0.99999994,
+            "sqrMagnitude": 0.99999994
+          },
+          "magnitude": 1.00000012,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 1.50996685,
+        "sqrMagnitude": 2.28
+      },
+      "LegScale": {
+        "x": 1.0,
+        "y": 0.8,
+        "z": 0.8,
+        "normalized": {
+          "x": 0.6622662,
+          "y": 0.529813,
+          "z": 0.529813,
+          "normalized": {
+            "x": 0.662266135,
+            "y": 0.529812932,
+            "z": 0.529812932,
+            "magnitude": 0.99999994,
+            "sqrMagnitude": 0.99999994
+          },
+          "magnitude": 1.00000012,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 1.50996685,
+        "sqrMagnitude": 2.28
+      },
+      "SizeRange": {
+        "x": 0.55,
+        "y": 0.7,
+        "normalized": {
+          "x": 0.6178216,
+          "y": 0.7863183,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 0.8902247,
+        "sqrMagnitude": 0.7925
+      }
+    }
+  ],
+  "DetectionDataId": 13,
+  "BehaviorDataId": 34,
+  "MovementDataId": 33,
+  "BalancingDataId": 32,
+  "SFXDataId": 33,
+  "ArenaDimensions": [],
+  "LinkedSlaveModels": [],
+  "InternalMaterial": 131072,
+  "isCoccoon": false,
+  "EnemySpottedDialogId": 0,
+  "AI_Abilities": [
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_StrikerChildTentacle.prefab",
+      "AbilityType": 1,
+      "Cooldown": 1.5
+    },
+    {
+      "Enabled": true,
+      "AbilityPrefab": "Assets/AssetPrefabs/Characters/Enemies/Abilities/EAB_DoorBreakerStriker.prefab",
+      "AbilityType": 8,
+      "Cooldown": 1.0
+    }
+  ],
+  "name": "Striker_Child",
+  "internalEnabled": true,
+  "persistentID": 38
+}
