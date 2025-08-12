@@ -46,7 +46,6 @@ fn App() -> Element {
 #[component]
 fn Blog(id: i32) -> Element {
     rsx! {
-        Link { to: Route::Monaco2CalcMain {}, "Monaco 2 Score Calculator"}
         Link { to: Route::Home {}, "Go to counter" }
         "Blog post {id}"
     }
@@ -57,6 +56,8 @@ fn Home() -> Element {
     let mut count = use_signal(|| 0);
 
     rsx! {
+        Link { to: Route::Monaco2CalcMain {}, "Monaco 2 Score Calculator"}
+        br {}
         Link { to: Route::Blog { id: count() }, "Go to blog" }
         div {
             h1 { "High-Five counter: {count}" }
