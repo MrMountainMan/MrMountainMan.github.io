@@ -11,6 +11,10 @@ use cleargen::ClearGen;
 mod gtfocalc;
 use gtfocalc::CalcMain;
 
+#[path = "./monaco2Calc/monaco2calc.rs"]
+mod monaco2calc;
+use monaco2calc::Monaco2CalcMain;
+
 
 #[derive(Clone, Routable, Debug, PartialEq)]
 enum Route {
@@ -22,6 +26,8 @@ enum Route {
     ClearGen { },
     #[route("/gtfocalc")]
     CalcMain { },
+    #[route("/monaco2scorecalc")]
+    Monaco2CalcMain { },
 }
 
 fn main() {
@@ -40,6 +46,7 @@ fn App() -> Element {
 #[component]
 fn Blog(id: i32) -> Element {
     rsx! {
+        Link { to: Route::Monaco2CalcMain {}, "Monaco 2 Score Calculator"}
         Link { to: Route::Home {}, "Go to counter" }
         "Blog post {id}"
     }

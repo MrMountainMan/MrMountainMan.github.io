@@ -11,7 +11,8 @@ edition = "2021"
 dioxus = { version = "0.6.0", features = ["web", "router"] }
 serde = "1.0.216"
 serde_json = "1.0.132"
+reqwest = {version = "0.12.9", features = ["json"] }
 
 # Debug
 dioxus-logger = "0.6.0"
-reqwest = "0.12.9"
+

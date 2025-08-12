@@ -72,15 +72,25 @@ pub fn GetFromJson(file_name: &str, key: &str) -> Element
     //let rifle = asset!("src/gtfoCalc/calcData/GameData_ArchetypeDataBlock/1__GEAR_Rifle_Semi.json");
     let path = std::path::Path::new("src/gtfoCalc/calcData/GameData_ArchetypeDataBlock/1__GEAR_Rifle_Semi.json");
 
+    //let file1 = reqwest::get("https://github.com/MrMountainMan/MrMountainMan.github.io/blob/main/src/1__GEAR_Rifle_Semi.json").await?.text();
+
+    let mut future = use_resource(|| async move {
+        reqwest::get("https://github.com/MrMountainMan/MrMountainMan.github.io/blob/main/src/1__GEAR_Rifle_Semi.json").await.unwrap().json::<WeaponData>().await
+    });
+
+    //let test = &future.read_unchecked();
+
     //let file = File::open(format!("src/gtfoCalc/calcData/{}", file_name))?;
-    let file = File::open(&path)?;
-    let json: serde_json::Value  = serde_json::from_reader(file).expect("Bad JSON");
-    let dmg = json.get(key).expect(format!("No key value of: {key}").as_str());
+    //let file = File::open(&path)?;
+    //let json: serde_json::Value  = serde_json::from_reader(file).expect("Bad JSON");
+    //let dmg = json.get(key).expect(format!("No key value of: {key}").as_str());
 
     rsx!
     {
-        {dmg.to_string()}
+        //if let Ok(image) = future { rsx!{ image.Damage}};
     }
+    
+
 }
 
 /*
