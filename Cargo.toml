@@ -1,5 +1,5 @@
 [package]
-name = "mr-mountain-man-github"
+name = "mrmountainman-github"
 version = "0.1.0"
 authors = ["James Dickson <jamesetpater@gmail.com>"]
 edition = "2021"
@@ -8,11 +8,24 @@ edition = "2021"
 
 [dependencies]
 
-dioxus = { version = "0.6.0", features = ["web", "router"] }
+dioxus = { version = "0.6.3", features = ["web", "router", "html"] }
 serde = "1.0.216"
 serde_json = "1.0.132"
 reqwest = {version = "0.12.9", features = ["json"] }
+regex = "1.11.1"
 
 # Debug
 dioxus-logger = "0.6.0"
+
+[profile]
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"
 

@@ -39,6 +39,8 @@ fn main() {
 
 fn App() -> Element {
     rsx! {
+        document::Link {rel: "icon", href: asset!("./assets/icon.ico")}
+        document::Title{ "MrMountainMan Github" }
         Router::<Route> {}
     }
 }
@@ -53,9 +55,13 @@ fn Blog(id: i32) -> Element {
 
 #[component]
 fn Home() -> Element {
+
     let mut count = use_signal(|| 0);
 
     rsx! {
+        document::Link {rel: "icon", href: asset!("./assets/icon.ico")}
+        document::Title{ "MrMountainMan Github" }
+
         Link { to: Route::Monaco2CalcMain {}, "Monaco 2 Score Calculator"}
         br {}
         Link { to: Route::Blog { id: count() }, "Go to blog" }
