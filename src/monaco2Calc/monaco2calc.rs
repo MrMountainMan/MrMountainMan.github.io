@@ -31,7 +31,7 @@ pub fn Monaco2CalcMain() -> Element
     ]));
 
     let mut level: Signal<String> = use_signal(|| "yacht_club".to_string());
-    let mut players: Signal<u16> = use_signal(|| 8);
+    let mut player_multiplier: Signal<f32> = use_signal(|| 2f32);
     let mut coins: Signal<u16> = use_signal(|| 0);
 
     let mut hours: Signal<u16> = use_signal(|| 0);
@@ -46,6 +46,7 @@ pub fn Monaco2CalcMain() -> Element
         document::Title{"Monaco 2 Score Calculator"}
         div
         {   
+            style: "width: 600px; float: left;",
             //display header
             h1 {"Monaco 2 Score Calculator"}
             br {}
@@ -54,9 +55,9 @@ pub fn Monaco2CalcMain() -> Element
             "Level selected is: {level}"
             br {}
             br {}
-            {PlayerSelector(players)}
+            {PlayerSelector(player_multiplier)}
             br {}
-            "Player multiplier is: {players}"
+            "Player multiplier is: {player_multiplier}"
             br {}
             br {}
             {CoinsCollected(coins, level, coins_per_level)}"/{coins_per_level()[&level() as &str]}"
@@ -67,10 +68,15 @@ pub fn Monaco2CalcMain() -> Element
             {CompletionTime(hours, minutes, seconds, milliseconds)}
             br {}
             br {}
-            "Final score: {CalculateScore(level, players, coins, hours, minutes, seconds, milliseconds)}"
+            "Final score: {CalculateScore(level, player_multiplier, coins, hours, minutes, seconds, milliseconds)}"
+            br {  }
 
-
-
+        }
+        div
+        {
+            style: "margin-left: 620px;",
+            h1 { "Greedy Score Times" }
+            {GreedyTimes(level, player_multiplier, coins_per_level)}
         }
 
 
@@ -112,22 +118,23 @@ pub fn LevelSelector(mut level: Signal<String>) -> Element
     }
 }
 
-pub fn PlayerSelector(mut players: Signal<u16>) -> Element
+pub fn PlayerSelector( mut player_multiplier: Signal<f32>) -> Element
 {
 
     rsx!
     {
         label { r#for: "num_players", "Number of Players: " }
-        select
+        div
         {
-            name: "players",
             id: "num_players",
-            onchange: move |event| { *players.write() = event.value().parse().unwrap(); },
-            option { value: 8, "1"}
-            option { value: 6, "2"}
-            option { value: 5, "3"}
-            option { value: 4, "4"}
-            
+            label { r#for: "1_player", "1" }
+            input { r#type: "radio", id: "1_player", name: "player_selector", value: 2f32, checked: true, onchange: move |event| { *player_multiplier.write() = event.value().parse::<f32>().unwrap(); }, }
+            label { r#for: "2_player", "2" }
+            input { r#type: "radio", id: "2_player", name: "player_selector", value: 1.5f32, onchange: move |event| { *player_multiplier.write() = event.value().parse::<f32>().unwrap(); }, }
+            label { r#for: "2_player", "3" }
+            input { r#type: "radio", id: "3_player", name: "player_selector", value: 1.25f32, onchange: move |event| { *player_multiplier.write() = event.value().parse::<f32>().unwrap(); }, }
+            label { r#for: "2_player", "4" }
+            input { r#type: "radio", id: "4_player", name: "player_selector", value: 1f32, onchange: move |event| { *player_multiplier.write() = event.value().parse::<f32>().unwrap(); }, }
         }
     }
 }
@@ -245,33 +252,8 @@ pub fn CheckValidInput(event: Event<FormData>, mut value: Signal<u16>, max_value
 
 }
 
-pub fn CalculateScore(level: Signal<String>, players: Signal<u16>, coins: Signal<u16>, hours: Signal<u16>, minutes: Signal<u16>, seconds: Signal<u16>, milliseconds: Signal<u16>) -> f64
+pub fn CalculateScore(level: Signal<String>, player_multiplier: Signal<f32>, coins: Signal<u16>, hours: Signal<u16>, minutes: Signal<u16>, seconds: Signal<u16>, milliseconds: Signal<u16>) -> u128
 {
-    /*
-    let mut f_hours: f32 = 0.0;
-    let mut f_minutes: f32 = 0.0;
-    let mut f_seconds: f32 = 0.0;
-    let mut f_milliseconds: f32 = 0.0;
-
-    if !hours().is_empty()
-    {
-        f_hours = hours() as f32;
-    }
-
-    if !minutes().is_empty()
-    {
-        f_minutes = minutes() as f32;
-    }
-
-    if !seconds().is_empty()
-    {
-        f_seconds = seconds() as f32;
-    }
-    
-    if !milliseconds().is_empty()
-    {
-        f_milliseconds = milliseconds() as f32;
-    }*/
     
     let total_time: f32 = ((hours() as f32 * 3600.0) + (minutes() as f32 * 60.0) + seconds() as f32 + (milliseconds() as f32/ 100.0)).into();
 
@@ -281,10 +263,64 @@ pub fn CalculateScore(level: Signal<String>, players: Signal<u16>, coins: Signal
         time_under_hour = 0.0;
     }
 
-    let result: f64 = time_under_hour as f64 + coins() as f64 * players() as f64;
+    let result: f64 = time_under_hour as f64 + coins() as f64 * (player_multiplier() * 4f32) as f64;
 
-    return result * 100.0;
+    return (result * 100.0) as u128;
 
+}
+
+pub fn GreedyTimes(level: Signal<String>, player_multiplier: Signal<f32>, coins_per_level: Signal<HashMap<&str, u16>>) -> Element
+{
+    let missed_0: String;
+    let missed_1: String;
+    let missed_2: String;
+    let missed_3: String;
+    let missed_4: String;
+    let missed_5: String;
+    let missed_6: String;
+
+    let max_coins = coins_per_level()[&level() as &str];
+
+    let max_time_in_seconds: f32 = max_coins as f32 * player_multiplier();
+
+    missed_0 = SecondsToTime(max_time_in_seconds);
+    missed_1 = SecondsToTime(max_time_in_seconds - (player_multiplier * 4f32) as f32);
+    missed_2 = SecondsToTime(max_time_in_seconds - (2f32 * (player_multiplier * 4f32)) as f32);
+    missed_3 = SecondsToTime(max_time_in_seconds - (3f32 * (player_multiplier * 4f32)) as f32);
+    missed_4 = SecondsToTime(max_time_in_seconds - (4f32 * (player_multiplier * 4f32)) as f32);
+    missed_5 = SecondsToTime(max_time_in_seconds - (5f32 * (player_multiplier * 4f32)) as f32);
+    missed_6 = SecondsToTime(max_time_in_seconds - (6f32 * (player_multiplier * 4f32)) as f32);
+
+    rsx!
+    {
+        "Missing 0 Coins: {missed_0}"
+        br {}
+        "Missing 1 Coin: {missed_1}"
+        br {}
+        "Missing 2 Coins: {missed_2}"
+        br {}
+        "Missing 3 Coins: {missed_3}"
+        br {}
+        "Missing 4 Coins: {missed_4}"
+        br {}
+        "Missing 5 Coins: {missed_5}"
+        br {}
+        "Missing 6 Coins: {missed_6}"
+    }
+}
+
+pub fn SecondsToTime(seconds: f32) -> String
+{
+    let remainder = seconds % 60f32;
+    let remaining_seconds = seconds - remainder;
+    let minutes = remaining_seconds / 60f32;
+
+    if remainder < 10f32
+    {
+        return format!("{}:0{}", minutes, remainder);
+    }
+
+    return format!("{}:{}", minutes, remainder);
 }
 
 
