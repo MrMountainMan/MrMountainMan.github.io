@@ -52,17 +52,11 @@ pub fn Monaco2CalcMain() -> Element
             br {}
             {LevelSelector(level)}
             br {}
-            "Level selected is: {level}"
-            br {}
             br {}
             {PlayerSelector(player_multiplier)}
             br {}
-            "Player multiplier is: {player_multiplier}"
-            br {}
             br {}
             {CoinsCollected(coins, level, coins_per_level)}"/{coins_per_level()[&level() as &str]}"
-            br {}
-            "Coins collected: {coins}"
             br {}
             br {}
             {CompletionTime(hours, minutes, seconds, milliseconds)}
@@ -256,7 +250,7 @@ pub fn CalculateScore(level: Signal<String>, player_multiplier: Signal<f32>, coi
 {
     if level() == "bonhomme"
     {
-        return 0;
+        //return 0;
     }
 
     let total_time: f32 = ((hours() as f32 * 3600.0) + (minutes() as f32 * 60.0) + seconds() as f32 + (milliseconds() as f32/ 100.0)).into();
@@ -268,6 +262,8 @@ pub fn CalculateScore(level: Signal<String>, player_multiplier: Signal<f32>, coi
     }
 
     let result: f64 = time_under_hour as f64 + coins() as f64 * (player_multiplier() * 4f32) as f64;
+
+    tracing::info!("time under hour: {} coins: {} player multiplier: {}", time_under_hour, coins(), player_multiplier());
 
     return (result * 100.0) as u128;
 
