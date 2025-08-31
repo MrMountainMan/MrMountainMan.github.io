@@ -19,11 +19,11 @@ pub fn Monaco2CalcMain() -> Element
         ("night_club", 399),
         ("opera", 294),
         ("bank", 403),
-        ("palace", 337), //unconfirmed
-        ("safehouse", 310), //unconfirmed
-        ("catacombs", 525), //unconfirmed
-        ("casino", 464), //unconfirmed
-        ("bonhomme", 589), //unconfirmed
+        ("palace", 337),
+        ("safehouse", 310),
+        ("catacombs", 525),
+        ("casino", 464),
+        ("bonhomme", u16::MAX), 
         ("petit_bank_optional", 315), //unconfirmed
         ("museum_optional", 271), //unconfirmed
         ("office_optional", 268), //unconfirmed
@@ -254,7 +254,11 @@ pub fn CheckValidInput(event: Event<FormData>, mut value: Signal<u16>, max_value
 
 pub fn CalculateScore(level: Signal<String>, player_multiplier: Signal<f32>, coins: Signal<u16>, hours: Signal<u16>, minutes: Signal<u16>, seconds: Signal<u16>, milliseconds: Signal<u16>) -> u128
 {
-    
+    if level() == "bonhomme"
+    {
+        return 0;
+    }
+
     let total_time: f32 = ((hours() as f32 * 3600.0) + (minutes() as f32 * 60.0) + seconds() as f32 + (milliseconds() as f32/ 100.0)).into();
 
     let mut time_under_hour: f32 = 3600.0 - total_time;
@@ -271,6 +275,13 @@ pub fn CalculateScore(level: Signal<String>, player_multiplier: Signal<f32>, coi
 
 pub fn GreedyTimes(level: Signal<String>, player_multiplier: Signal<f32>, coins_per_level: Signal<HashMap<&str, u16>>) -> Element
 {
+    if level() == "bonhomme"
+    {
+        return rsx!{
+            "???"
+        }
+    }
+
     let missed_0: String;
     let missed_1: String;
     let missed_2: String;
