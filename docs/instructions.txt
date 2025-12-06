@@ -1,0 +1,5 @@
+run 'dx build'
+take the files in 'target/dx/.../public' and place them in 'docs'
+the files will be 'assets', 'wasm', and 'index.html'
+you will have to make your own '404.html' and include it in docs as well
+push to github
