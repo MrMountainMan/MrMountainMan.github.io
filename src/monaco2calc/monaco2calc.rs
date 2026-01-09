@@ -4,30 +4,29 @@ use dioxus::{html::input, prelude::*};
 
 //use dioxus_logger::tracing;
 
-
 pub fn Monaco2CalcMain() -> Element
 {
-    let coins_per_level: Signal<HashMap<&str, u16>> = use_signal(|| HashMap::from([
-        ("yacht_club", 130),
-        ("hotel", 169),
-        ("bona_fide_sanitation", 270),
-        ("cocktail_party", 317),
-        ("prison", 231),
-        ("museum", 296),
-        ("shipyard", 362),
-        ("data_center", 300),
-        ("night_club", 399),
-        ("opera", 294),
-        ("bank", 403),
-        ("palace", 337),
-        ("safehouse", 310),
-        ("catacombs", 525),
-        ("casino", 464),
-        ("bonhomme", u16::MAX), 
-        ("petit_bank_optional", 315), //unconfirmed
-        ("museum_optional", 271), //unconfirmed
-        ("office_optional", 268), //unconfirmed
-        ("art_gallery_optional", 274), //unconfirmed
+    let coins_per_level_string: Signal<HashMap<String, u16>> = use_signal(|| HashMap::from([
+        ("yacht_club".to_string(), 130),
+        ("hotel".to_string(), 169),
+        ("bona_fide_sanitation".to_string(), 270),
+        ("cocktail_party".to_string(), 317),
+        ("prison".to_string(), 231),
+        ("museum".to_string(), 296),
+        ("shipyard".to_string(), 362),
+        ("data_center".to_string(), 300),
+        ("night_club".to_string(), 399),
+        ("opera".to_string(), 294),
+        ("bank".to_string(), 403),
+        ("palace".to_string(), 337),
+        ("safehouse".to_string(), 310),
+        ("catacombs".to_string(), 525),
+        ("casino".to_string(), 464),
+        ("bonhomme".to_string(), u16::MAX), 
+        ("petit_bank_optional".to_string(), 315),
+        ("museum_optional".to_string(), 271),
+        ("office_optional".to_string(), 268), //unconfirmed
+        ("art_gallery_optional".to_string(), 274), //unconfirmed
     ]));
 
     let mut level: Signal<String> = use_signal(|| "yacht_club".to_string());
@@ -56,7 +55,7 @@ pub fn Monaco2CalcMain() -> Element
             {PlayerSelector(player_multiplier)}
             br {}
             br {}
-            {CoinsCollected(coins, level, coins_per_level)}"/{coins_per_level()[&level() as &str]}"
+            {CoinsCollected(coins, level, coins_per_level_string)}"/{coins_per_level_string()[&level()]}"
             br {}
             br {}
             {CompletionTime(hours, minutes, seconds, milliseconds)}
@@ -70,7 +69,7 @@ pub fn Monaco2CalcMain() -> Element
         {
             style: "margin-left: 620px;",
             h1 { "Greedy Score Times" }
-            {GreedyTimes(level, player_multiplier, coins_per_level)}
+            {GreedyTimes(level, player_multiplier, coins_per_level_string)}
         }
 
 
@@ -133,7 +132,7 @@ pub fn PlayerSelector( mut player_multiplier: Signal<f32>) -> Element
     }
 }
 
-pub fn CoinsCollected(coins: Signal<u16>, level: Signal<String>, coins_per_level: Signal<HashMap<&str, u16>>) -> Element
+pub fn CoinsCollected(coins: Signal<u16>, level: Signal<String>, coins_per_level: Signal<HashMap<String, u16>>) -> Element
 {
     rsx!
     {
@@ -142,12 +141,12 @@ pub fn CoinsCollected(coins: Signal<u16>, level: Signal<String>, coins_per_level
             id: "coins_collected",
             r#type: "number",
             min: 0,
-            //max: coins_per_level()[&level() as &str],
+            max: coins_per_level()[&level()],
             value: coins,
-            //oninput: move |event| { CheckValidInput(event, coins, coins_per_level()[&level() as &str]); },
+            oninput: move |event| { CheckValidInput(event, coins, coins_per_level()[&level()]); },
             onpaste: move |event| { event.prevent_default(); },
             onkeypress: move |event| { PreventNonNumericalInput(event); },
-            //onkeyup: move |_| { CheckOverflow(coins, coins_per_level()[&level() as &str]) },
+            onkeyup: move |_| { CheckOverflow(coins, coins_per_level()[&level()]) },
         }
     }
 
@@ -269,7 +268,7 @@ pub fn CalculateScore(level: Signal<String>, player_multiplier: Signal<f32>, coi
 
 }
 
-pub fn GreedyTimes(level: Signal<String>, player_multiplier: Signal<f32>, coins_per_level: Signal<HashMap<&str, u16>>) -> Element
+pub fn GreedyTimes(level: Signal<String>, player_multiplier: Signal<f32>, coins_per_level: Signal<HashMap<String, u16>>) -> Element
 {
     if level() == "bonhomme"
     {
@@ -286,7 +285,7 @@ pub fn GreedyTimes(level: Signal<String>, player_multiplier: Signal<f32>, coins_
     let missed_5: String;
     let missed_6: String;
 
-    let max_coins = 1000;//coins_per_level()[&level() as &str];
+    let max_coins = coins_per_level()[&level()];
 
     let max_time_in_seconds: f32 = max_coins as f32 * player_multiplier();
 
