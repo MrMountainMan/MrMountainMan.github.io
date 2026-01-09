@@ -41,7 +41,7 @@ pub fn Monaco2CalcMain() -> Element
     rsx!
     {
         //change the icon and the website title
-        document::Link {rel: "icon", href: asset!("/assets/monaco2calc/monaco2.ico")}
+        //document::Link {rel: "icon", href: asset!("/assets/monaco2calc/monaco2.ico")}
         document::Title{"Monaco 2 Score Calculator"}
         div
         {   
