@@ -17,28 +17,29 @@ const DEFAULT_ICON: Asset = asset!("/assets/icon.ico");
 //const MAIN_CSS: Asset = asset!("/assets/main.css");
 
 fn main() {
-    dioxus::launch(|| rsx! { Router::<Route> {} });
+    dioxus::launch(App);
 }
 
-/*
+
 #[component]
 fn App() -> Element {
     rsx! {
         document::Link {rel: "icon", href: DEFAULT_ICON}
         document::Title{ "MrMountainMan Github" }
-  
+        Router::<Route> {}
     }
-    //^Router::<Route> {}
-}*/
+    
+}
 
 //home page
 #[component]
 fn Home() -> Element {
     rsx! {
-        Router::<Route> {}
         document::Link {rel: "icon", href: DEFAULT_ICON}
         document::Title{ "MrMountainMan Github" }
         
+        h2 {"Home Page!"}
+
         Link { to: Route::Monaco2CalcMain {}, "Monaco 2 Score Calculator"}
         br {}
 
