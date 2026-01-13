@@ -4,6 +4,7 @@ use dioxus::prelude::*;
 mod monaco2calc;
 use monaco2calc::Monaco2CalcMain;
 
+/*
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
 enum Route {
@@ -11,7 +12,7 @@ enum Route {
     Home {},
     #[route("/monaco-2-score-calculator")]
     Monaco2CalcMain {},
-}
+}*/
 
 const DEFAULT_ICON: Asset = asset!("/assets/icon.ico");
 //const MAIN_CSS: Asset = asset!("/assets/main.css");
@@ -26,9 +27,9 @@ fn App() -> Element {
     rsx! {
         document::Link {rel: "icon", href: DEFAULT_ICON}
         document::Title{ "MrMountainMan Github" }
-        Router::<Route> {}
+        
     }
-    
+    //Router::<Route> {}
 }
 
 //home page
@@ -40,8 +41,10 @@ fn Home() -> Element {
         
         h2 {"Home Page!"}
 
-        Link { to: Route::Monaco2CalcMain {}, "Monaco 2 Score Calculator"}
+        
+        a { href: "/monaco-2-score-calculator", "Link"}
         br {}
 
     }
+    //Link { to: Route::Monaco2CalcMain {}, "Monaco 2 Score Calculator"}
 }
