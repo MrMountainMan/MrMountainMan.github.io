@@ -35,9 +35,10 @@ fn App() -> Element {
 #[component]
 fn Home() -> Element {
     rsx! {
+        Router::<Route> {}
         document::Link {rel: "icon", href: DEFAULT_ICON}
         document::Title{ "MrMountainMan Github" }
-
+        
         Link { to: Route::Monaco2CalcMain {}, "Monaco 2 Score Calculator"}
         br {}
 
