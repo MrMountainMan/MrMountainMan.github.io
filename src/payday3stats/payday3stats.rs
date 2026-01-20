@@ -1,5 +1,6 @@
 use std::vec;
 use dioxus::prelude::*;
+use serde_json::json;
 
 #[derive(serde::Deserialize, Clone, Copy, serde::Serialize)]
 struct DamageDistanceNode
@@ -35,8 +36,8 @@ struct Weapon
     name: String,
     damage_distance_array: Vec<DamageProcessed>,
     crit_distance_array: Vec<CritProcessed>,
-    armor_pen: f32,
-    pen: f32,
+    armor_pen: String,
+    pen: String,
 }
 
 
@@ -53,9 +54,9 @@ pub fn Payday3Stats() -> Element
     static BLYSPRUTA_JSON: Asset = asset!("/assets/payday3stats/lmgs/blyspruta_mx63.json");
     //marksman rifles
     static FIK22_JSON: Asset = asset!("/assets/payday3stats/marksman_rifles/fik_22_tlr.json");
-    static REINFELD900_JSON: Asset = asset!("/assets/payday3stats/marksman_rifles/fik_22_tlr.json");
-    static SA_JSON: Asset = asset!("/assets/payday3stats/marksman_rifles/fik_22_tlr.json");
-    static SPEARFISH_JSON: Asset = asset!("/assets/payday3stats/marksman_rifles/fik_22_tlr.json");
+    static REINFELD900_JSON: Asset = asset!("/assets/payday3stats/marksman_rifles/reinfeld_900s.json");
+    static SA_JSON: Asset = asset!("/assets/payday3stats/marksman_rifles/sa_a144.json");
+    static SPEARFISH_JSON: Asset = asset!("/assets/payday3stats/marksman_rifles/spearfish_1895.json");
     //overkill_weapons
     static BESSY_JSON: Asset = asset!("/assets/payday3stats/overkill_weapons/bessy.json");
     static HET_JSON: Asset = asset!("/assets/payday3stats/overkill_weapons/het5_red_fox.json");
@@ -105,11 +106,16 @@ pub fn Payday3Stats() -> Element
         {   
             let bytes = dioxus::asset_resolver::read_asset_bytes(&weapon_json).await.unwrap();
             let json: serde_json::Value = serde_json::from_slice(&bytes).unwrap();
-            let name_json: serde_json::Value = json[0].get("Name").expect("Failed to parse weapon name from JSON").clone();
-            let damage_distance_json: serde_json::Value = json[0]["Properties"].get("DamageDistanceArray").expect("Failed to parse damage distance array from JSON").clone();
-            let crit_distance_json: serde_json::Value = json[0]["Properties"].get("CriticalDamageMultiplierDistanceArray").expect("Failed to parse critical damage distance array from JSON").clone();
-            let armour_pen_json: serde_json::Value = json[0]["Properties"].get("ArmorPenetration").expect("Failed to parse armour pen value from JSON").clone();
-            let pen_json: serde_json::Value = json[0]["Properties"].get("DamageDistanceArray").expect("Failed to parse pen value from JSON").clone();
+            let name_json: serde_json::Value = json[0].get("Name").unwrap_or(&json!("unknown")).clone();//.expect("Failed to parse weapon name from JSON").clone();
+            let damage_distance_json: serde_json::Value = json[0]["Properties"].get("DamageDistanceArray").unwrap_or(&json!([])).clone();//.expect("Failed to parse damage distance array from JSON").clone();
+            let crit_distance_json: serde_json::Value = json[0]["Properties"].get("CriticalDamageMultiplierDistanceArray").unwrap_or(&json!([])).clone();//.expect("Failed to parse critical damage distance array from JSON").clone();
+            let armour_pen_json: serde_json::Value = json[0]["Properties"].get("ArmorPenetration").unwrap_or(&json!("0")).clone();//("Failed to parse armour pen value from JSON").clone();
+            let pen_json: serde_json::Value = json[0]["Properties"].get("MaximumPenetrationCount").unwrap_or(&json!("0")).clone();//.expect("Failed to parse pen value from JSON").clone();
+            //let pen_json: Option<serde_json::Value> = json[0]["Properties"].get("MaximumPenetrationCount").cloned();
+
+            //get and shorten the name
+            let full_name: String = serde_json::from_value(name_json).unwrap();
+            let (_, short_name) = full_name.rsplit_once('_').unwrap();
 
             //process damage distance
             let mut damage_nodes_processed: Vec<DamageProcessed> = Vec::new();
@@ -129,17 +135,14 @@ pub fn Payday3Stats() -> Element
                 let mut dist_string = String::from("span ");
                 dist_string.push_str(&(node.Distance as i32 / 100).to_string());
                 crit_nodes_processed.push(CritProcessed { crit: node.Multiplier.to_string(), crit_distance: dist_string });
-            }
-
-            let full_name: String = serde_json::from_value(name_json).unwrap();
-            let (_, short_name) = full_name.rsplit_once('_').unwrap();
+            }            
 
             weapons_signal.push(Weapon {
                 name: short_name.to_string(),
                 damage_distance_array: damage_nodes_processed,
                 crit_distance_array: crit_nodes_processed,
-                armor_pen: serde_json::from_value(armour_pen_json).unwrap_or(0f32),
-                pen: serde_json::from_value(pen_json).unwrap_or(0f32)
+                armor_pen: serde_json::from_value(armour_pen_json).unwrap_or("0".to_string()),
+                pen: serde_json::from_value(pen_json).unwrap_or("0".to_string()),
             });
         }
     });
