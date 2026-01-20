@@ -1,0 +1,59 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_OVK_ARGES",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 50.0,
+          "Distance": 1000000.0
+        }
+      ],
+      "AmmoLoaded": 750,
+      "AmmoInventoryMax": 0,
+      "AmmoInventory": 0,
+      "AmmoPickup": {
+        "Min": 0.0,
+        "Max": 0.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 2.0,
+          "Distance": 1000000.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "bCanHitEnvironmentAfterPenetration": true,
+      "bCanPenetrateBlocked": true,
+      "Range": 15000,
+      "ArmorPenetration": 2.0,
+      "ImpactType": "ESBZProjectileImpactType::Heavy",
+      "StartFireBuildupIncrease": 0.1,
+      "StartFireBuildupDecrease": 0.2,
+      "StartFireMinBuildup": 0.1,
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 750,
+      "AmmoPerReload": 5,
+      "AmmoVisibleMax": 0,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 1337.0,
+      "DamageTypeClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DamageType_OVK_ARGES_C'",
+        "ObjectPath": "PAYDAY3/Content/DLCs/00080-DLC0004/Gameplay/Weapons/OVK/ARGES/BP_DamageType_OVK_ARGES.0"
+      },
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_OVK_ARGES'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00080-DLC0004/Gameplay/Weapons/OVK/ARGES/C_HurtReactionWeight_OVK_ARGES.0"
+        },
+        "HurtReactionWeightModifier": 3.0,
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Incapacitate",
+        "HurtReactionWeightBuildupModifier": 1.0,
+        "CriticalHurtReactionWeightBuildupModifier": 1.0
+      }
+    }
+  }
+]

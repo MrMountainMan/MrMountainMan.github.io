@@ -1,0 +1,64 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_SMG_WAR45",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 86.4,
+          "Distance": 700.0
+        },
+        {
+          "Damage": 86.4,
+          "Distance": 1900.0
+        },
+        {
+          "Damage": 51.0,
+          "Distance": 2800.0
+        },
+        {
+          "Damage": 43.0,
+          "Distance": 3500.0
+        }
+      ],
+      "AmmoLoaded": 25,
+      "AmmoInventoryMax": 250,
+      "AmmoInventory": 200,
+      "AmmoPickup": {
+        "Min": 7.0,
+        "Max": 9.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 1.1,
+          "Distance": 1900.0
+        },
+        {
+          "Multiplier": 0.66,
+          "Distance": 2800.0
+        },
+        {
+          "Multiplier": 0.55,
+          "Distance": 3500.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "ArmorPenetration": 0.9,
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 25,
+      "AmmoPerReload": 25,
+      "AmmoVisibleMax": 2,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 650.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_SMG_WAR45'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00006-DLCWEAP0001/Gameplay/Weapons/SMG/WAR45/C_HurtReactionWeight_SMG_WAR45.0"
+        }
+      }
+    }
+  }
+]

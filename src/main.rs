@@ -2,6 +2,7 @@ use dioxus::prelude::*;
 
 #[path = "./monaco2calc/monaco2calc.rs"]
 mod monaco2calc;
+use dioxus_logger::tracing::Level;
 use monaco2calc::Monaco2CalcMain;
 
 #[path = "./payday3stats/payday3stats.rs"]
@@ -24,6 +25,7 @@ const DEFAULT_ICON: Asset = asset!("/assets/icon.ico");
 
 
 fn main() {
+    dioxus_logger::init(Level::INFO).expect("logger failed to init");
     dioxus::launch(App);
 }
 

@@ -1,0 +1,69 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_AssaultRifle_VF7S",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 92.0,
+          "Distance": 100.0
+        },
+        {
+          "Damage": 92.0,
+          "Distance": 1500.0
+        },
+        {
+          "Damage": 86.0,
+          "Distance": 2500.0
+        },
+        {
+          "Damage": 75.0,
+          "Distance": 3500.0
+        }
+      ],
+      "AmmoLoaded": 20,
+      "AmmoInventoryMax": 200,
+      "AmmoInventory": 160,
+      "AmmoPickup": {
+        "Min": 4.0,
+        "Max": 5.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 4.6,
+          "Distance": 1500.0
+        },
+        {
+          "Multiplier": 4.1,
+          "Distance": 2500.0
+        },
+        {
+          "Multiplier": 3.4,
+          "Distance": 3500.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 2.5,
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 20,
+      "AmmoPerReload": 20,
+      "AmmoVisibleMax": 5,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 550.0,
+      "DamageTypeClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DamageType_AssaultRifle_VF7S_C'",
+        "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/VF7S/BP_DamageType_AssaultRifle_VF7S.0"
+      },
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_VF7S'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/VF7S/C_HurtReactionWeight_AssaultRifle_VF7S.0"
+        }
+      }
+    }
+  }
+]

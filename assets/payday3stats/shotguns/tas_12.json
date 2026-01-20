@@ -1,0 +1,73 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Shotgun_TAS12",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 52.0,
+          "Distance": 200.0
+        },
+        {
+          "Damage": 52.0,
+          "Distance": 1100.0
+        },
+        {
+          "Damage": 22.0,
+          "Distance": 1700.0
+        },
+        {
+          "Damage": 18.0,
+          "Distance": 2200.0
+        }
+      ],
+      "bIsReloadEndCycledEachRound": true,
+      "AmmoLoaded": 7,
+      "AmmoInventoryMax": 70,
+      "AmmoInventory": 56,
+      "AmmoPickup": {
+        "Min": 2.0,
+        "Max": 3.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 2.0,
+          "Distance": 1100.0
+        },
+        {
+          "Multiplier": 1.0,
+          "Distance": 1700.0
+        },
+        {
+          "Multiplier": 0.8,
+          "Distance": 2200.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Pump",
+      "ProjectilesPerFiredRound": 10,
+      "MaximumPenetrationCount": 1,
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 7,
+      "AmmoPerReload": 1,
+      "AmmoVisibleMax": 2,
+      "AmmoVisibleMaxPreviewOverride": 0,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 65.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Shotgun_TAS12'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00080-DLC0004/Gameplay/Weapons/Shotgun/TAS12/C_HurtReactionWeight_Shotgun_TAS12.0"
+        },
+        "HurtReactionWeightModifier": 1.5,
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Incapacitate",
+        "HurtReactionWeightBuildupModifier": 0.8,
+        "CriticalHurtReactionWeightBuildupModifier": 1.0
+      }
+    }
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Shotgun_M7P",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 43.6,
+          "Distance": 200.0
+        },
+        {
+          "Damage": 43.6,
+          "Distance": 1200.0
+        },
+        {
+          "Damage": 22.0,
+          "Distance": 1900.0
+        },
+        {
+          "Damage": 18.0,
+          "Distance": 2500.0
+        }
+      ],
+      "TimeBetweenBurstsSeconds": 0.175,
+      "AmmoLoaded": 12,
+      "AmmoInventoryMax": 120,
+      "AmmoInventory": 96,
+      "AmmoPickup": {
+        "Min": 2.0,
+        "Max": 4.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 1.5,
+          "Distance": 1200.0
+        },
+        {
+          "Multiplier": 0.9,
+          "Distance": 1900.0
+        },
+        {
+          "Multiplier": 0.75,
+          "Distance": 2500.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Burst",
+      "FireType": "ESBZFireType::Burst",
+      "ProjectilesPerFiredRound": 10,
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Always",
+      "AmmoLoadedMax": 12,
+      "AmmoPerReload": 12,
+      "AmmoVisibleMax": 7,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 450.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Shotgun_M7P'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00030-DLC0003/Gameplay/Weapons/Shotgun/M7P/C_HurtReactionWeight_Shotgun_M7P.0"
+        },
+        "HurtReactionWeightModifier": 1.0
+      }
+    }
+  }
+]

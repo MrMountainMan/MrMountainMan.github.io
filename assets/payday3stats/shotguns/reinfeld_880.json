@@ -1,0 +1,68 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Shotgun_R880",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 47.6,
+          "Distance": 200.0
+        },
+        {
+          "Damage": 47.6,
+          "Distance": 1200.0
+        },
+        {
+          "Damage": 24.0,
+          "Distance": 1900.0
+        },
+        {
+          "Damage": 20.0,
+          "Distance": 2500.0
+        }
+      ],
+      "bIsReloadEndCycledEachRound": true,
+      "AmmoLoaded": 7,
+      "AmmoInventoryMax": 70,
+      "AmmoInventory": 56,
+      "AmmoPickup": {
+        "Min": 2.0,
+        "Max": 4.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 2.2,
+          "Distance": 1200.0
+        },
+        {
+          "Multiplier": 1.32,
+          "Distance": 1900.0
+        },
+        {
+          "Multiplier": 1.1,
+          "Distance": 2500.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Pump",
+      "ProjectilesPerFiredRound": 10,
+      "MaximumPenetrationCount": 1,
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoLoadedMax": 7,
+      "AmmoPerReload": 1,
+      "AmmoVisibleMax": 1,
+      "RoundsPerMinute": 75.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Shotgun_R880'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Shotgun/R880/C_HurtReactionWeight_Shotgun_R880.0"
+        },
+        "HurtReactionWeightModifier": 1.0,
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Incapacitate"
+      }
+    }
+  }
+]

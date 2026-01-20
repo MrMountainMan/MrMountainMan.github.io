@@ -1,0 +1,64 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_SMG_ATK7",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 79.2,
+          "Distance": 200.0
+        },
+        {
+          "Damage": 79.2,
+          "Distance": 1400.0
+        },
+        {
+          "Damage": 38.0,
+          "Distance": 2200.0
+        },
+        {
+          "Damage": 28.0,
+          "Distance": 2900.0
+        }
+      ],
+      "AmmoLoaded": 30,
+      "AmmoInventoryMax": 300,
+      "AmmoInventory": 240,
+      "AmmoPickup": {
+        "Min": 7.0,
+        "Max": 9.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 1.25,
+          "Distance": 1400.0
+        },
+        {
+          "Multiplier": 0.84,
+          "Distance": 2200.0
+        },
+        {
+          "Multiplier": 0.72,
+          "Distance": 2900.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "ArmorPenetration": 1.15,
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 30,
+      "AmmoPerReload": 30,
+      "AmmoVisibleMax": 3,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 800.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_SMG_ATK7'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00010-DLCHEIST0002/Gameplay/Weapons/SMG/ATK7/C_HurtReactionWeight_SMG_ATK7.0"
+        }
+      }
+    }
+  }
+]

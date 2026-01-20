@@ -1,0 +1,70 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_LMG_MX63",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 66.7,
+          "Distance": 700.0
+        },
+        {
+          "Damage": 66.7,
+          "Distance": 1200.0
+        },
+        {
+          "Damage": 43.0,
+          "Distance": 1900.0
+        },
+        {
+          "Damage": 31.0,
+          "Distance": 2900.0
+        }
+      ],
+      "AmmoLoaded": 100,
+      "AmmoInventoryMax": 500,
+      "AmmoInventory": 400,
+      "AmmoPickup": {
+        "Min": 7.0,
+        "Max": 9.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 2.0,
+          "Distance": 1200.0
+        },
+        {
+          "Multiplier": 1.4,
+          "Distance": 1900.0
+        },
+        {
+          "Multiplier": 1.0,
+          "Distance": 2900.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 1.5,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Always",
+      "AmmoLoadedMax": 100,
+      "AmmoPerReload": 100,
+      "AmmoVisibleMax": 12,
+      "bIsEmptyAmmoEjected": true,
+      "bIsUsingInsertAmmoCycle1": true,
+      "bIsUsingInsertAmmoCycle2": true,
+      "RoundsPerMinute": 720.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_LMG_MX63'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00010-DLCHEIST0002/Gameplay/Weapons/LMG/MX63/C_HurtReactionWeight_LMG_MX63.0"
+        },
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Interrupt",
+        "CriticalHurtReactionWeightBuildupModifier": 0.3
+      }
+    }
+  }
+]
