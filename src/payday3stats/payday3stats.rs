@@ -51,7 +51,7 @@ pub fn Payday3Stats() -> Element
     //info!("{}", response.unwrap());
 
     //assault rifles
-    static ADELIG_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/adelig_rg5.json");
+    static ADELIG_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/adelig_rg5.json");/*
     static CAR4_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/car_4.json");
     static CHANIT_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/chanit_s3.json");
     static KU_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/ku_59.json");
@@ -93,13 +93,13 @@ pub fn Payday3Stats() -> Element
     static FIKPC9_JSON: Asset = asset!("/assets/payday3stats/smgs/fik_pc9.json");
     static SG_JSON: Asset = asset!("/assets/payday3stats/smgs/sg_compact7.json");
     static WAR_JSON: Asset = asset!("/assets/payday3stats/smgs/war_45.json");
-    static ZIV_JSON: Asset = asset!("/assets/payday3stats/smgs/ziv_commando.json");
+    static ZIV_JSON: Asset = asset!("/assets/payday3stats/smgs/ziv_commando.json");*/
 
     let mut weapons_signal = use_signal(|| Vec::<Weapon>::new());
 
     use_future(move || async move {
         //MASTER LIST OF ALL WEAPONS. MUST BE UPDATED IN ORDER TO DISPLAY NEW WEAPONS
-        let ordered_weapons_list: Vec<Asset> = vec![ADELIG_JSON, CAR4_JSON, CHANIT_JSON, KU_JSON, NORTHWEST_JSON, VF_JSON,
+        let ordered_weapons_list: Vec<Asset> = vec![ADELIG_JSON];/*, CAR4_JSON, CHANIT_JSON, KU_JSON, NORTHWEST_JSON, VF_JSON,
             BLYSPRUTA_JSON,
             FIK22_JSON, REINFELD900_JSON, SA_JSON, SPEARFISH_JSON,
             BESSY_JSON, HET_JSON, ARGES_JSON,
@@ -107,7 +107,7 @@ pub fn Payday3Stats() -> Element
             BULLKICK_JSON, CASTIGO_JSON, BISON_JSON,
             FSA_JSON, JUSTICAR_JSON, PURSUVIANT_JSON, MOSCONI_JSON, REINFELD880_JSON, TAS_JSON,
             ATK_JSON, FIKPC9_JSON, SG_JSON, WAR_JSON, ZIV_JSON
-        ];
+        ];*/
 
         for weapon_json in ordered_weapons_list
         {   
