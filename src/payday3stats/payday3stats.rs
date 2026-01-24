@@ -1,6 +1,10 @@
+//#[cfg(feature = "blocking")]
+
 use std::vec;
 use dioxus::prelude::*;
 use serde_json::json;
+
+
 
 #[derive(serde::Deserialize, Clone, Copy, serde::Serialize)]
 struct DamageDistanceNode
@@ -43,6 +47,9 @@ struct Weapon
 
 pub fn Payday3Stats() -> Element
 {
+    //let response = reqwest::blocking::get("https://github.com/MrMountainMan/MrMountainMan.github.io/blob/main/assets/payday3stats/assault_rifles/adelig_rg5.json")?.text();
+    //info!("{}", response.unwrap());
+
     //assault rifles
     static ADELIG_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/adelig_rg5.json");
     static CAR4_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/car_4.json");
