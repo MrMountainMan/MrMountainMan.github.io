@@ -51,7 +51,8 @@ pub fn Payday3Stats() -> Element
     //info!("{}", response.unwrap());
 
     //assault rifles
-    static ADELIG_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/adelig_rg5.json");/*
+    //static ADELIG_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/adelig_rg5.json");
+    /*
     static CAR4_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/car_4.json");
     static CHANIT_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/chanit_s3.json");
     static KU_JSON: Asset = asset!("/assets/payday3stats/assault_rifles/ku_59.json");
@@ -99,8 +100,8 @@ pub fn Payday3Stats() -> Element
 
     use_future(move || async move {
         //MASTER LIST OF ALL WEAPONS. MUST BE UPDATED IN ORDER TO DISPLAY NEW WEAPONS
-        let ordered_weapons_list: Vec<Asset> = vec![ADELIG_JSON];/*, CAR4_JSON, CHANIT_JSON, KU_JSON, NORTHWEST_JSON, VF_JSON,
-            BLYSPRUTA_JSON,
+        let ordered_weapons_list: Vec<Asset> = vec![];//[ADELIG_JSON];/*, CAR4_JSON, CHANIT_JSON, KU_JSON, NORTHWEST_JSON, VF_JSON,
+            /*BLYSPRUTA_JSON,
             FIK22_JSON, REINFELD900_JSON, SA_JSON, SPEARFISH_JSON,
             BESSY_JSON, HET_JSON, ARGES_JSON,
             GARSTINI_JSON, JACKKNIFE_JSON, PICCHIO_JSON, SIG40_JSON, SIG403_JSON, SP_JSON, STRYK_JSON, TRIBUNE_JSON,
