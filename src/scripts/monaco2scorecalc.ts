@@ -43,6 +43,8 @@ function onLevelChange(): void
     let max_coins_display = document.getElementById("max_coins_display") as HTMLInputElement;
     max_coins_display.innerText = "/" + String(coins_per_level.get(selected_level));
 
+    //ensure that the coins collected is not too high (can occur when switching from a level with a higher max coins to a level with a lower max coins)
+    checkOverflow('coins_collected')
 }
 
 function preventNonNumericalInput(event: KeyboardEvent): void
