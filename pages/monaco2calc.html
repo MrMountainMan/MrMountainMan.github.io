@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monaco 2 Score Calculator</title>
+</head>
+<body>
+    <h2>Score Calculator</h2>
+
+    <form id="score_calculator_form">
+    <label for="level">Level: </label>
+
+     <br>
+
+    <select name="level" id="level_name" onchange="onLevelChange()">
+        <option value="yacht_club" selected="true">Yacht Club</option>
+        <option value="hotel">Hotel</option>
+        <option value="bona_fide_sanitation">Bona Fide Sanitation</option>
+        <option value="cocktail_party">Cocktail Party</option>
+        <option value="prison">Prison</option>
+        <option value="museum">Museum</option>
+        <option value="shipyard">Shipyard</option>
+        <option value="data_center">Data Center</option>
+        <option value="night_club">Night Club</option>
+        <option value="opera">Opera</option>
+        <option value="bank">Bank</option>
+        <option value="palace">Palace</option>
+        <option value="safehouse">Safehouse</option>
+        <option value="catacombs">Catacombs</option>
+        <option value="casino">Casino</option>
+        <option value="bonhomme">Bonhomme</option>
+        <option value="petit_bank_optional">Petit Bank (Optional)</option>
+        <option value="museum_optional">Museum (Optional)</option>
+        <option value="office_optional">Office (Optional)</option>
+        <option value="art_gallery_optional">Art Gallery (Optional)</option>
+    </select>
+
+    <br>
+
+    <label for="num_players">Number of Players</label>
+    <div id="num_players">
+        <label for="1_player">1</label>
+        <input type="radio" id="1_player" name="player_selector" value="2" checked="true">
+        <label for="2_player">2</label>
+        <input type="radio" id="2_player" name="player_selector" value="1.5">
+        <label for="3_player">3</label>
+        <input type="radio" id="3_player" name="player_selector" value="1.25">
+        <label for="4_player">4</label>
+        <input type="radio" id="4_player" name="player_selector" value="1">
+    </div>
+
+    <br>
+
+    <div>
+        <label for="coins_collected">Coins Collected: </label>
+        <input id="coins_collected" type="number" min="0" max="130" value="0" onkeypress="preventNonNumericalInput(event)" onkeyup="checkOverflow('coins_collected')">
+        <span id="max_coins_display">/130</span>
+    </div>
+
+    <div>
+        Time to complete: 
+        <input id="clear_time_hours" type="number" min="0" max="99" value="0" onkeypress="preventNonNumericalInput(event)" onkeyup="checkOverflow('clear_time_hours')">
+        :
+        <input id="clear_time_minutes" type="number" min="0" max="59" value="0" onkeypress="preventNonNumericalInput(event)" onkeyup="checkOverflow('clear_time_minutes')">
+        :
+        <input id="clear_time_seconds" type="number" min="0" max="59" value="0" onkeypress="preventNonNumericalInput(event)" onkeyup="checkOverflow('clear_time_seconds')">
+        .
+        <input id="clear_time_milliseconds" type="number" min="0" max="999" value="0" onkeypress="preventNonNumericalInput(event)" onkeyup="checkOverflow('clear_time_milliseconds')">
+    </div>
+
+    <div>
+        Final score:
+        <output id="score_output"></output>
+    </div>
+
+    </form>
+    <script src="../dist/scripts/monaco2scorecalc.js"></script>
+</body>
+</html>
