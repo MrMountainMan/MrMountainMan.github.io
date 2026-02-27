@@ -11,7 +11,8 @@ edition = "2021"
 #dioxus-logger = "0.7.3"
 
 [dependencies]
-dioxus = { version = "0.7.1", features = [] }
+dioxus = { version = "0.7.1", features = ["router"] }
+dioxus-logger = "0.7.1"
 regex = "1.11.3"
 reqwest = { version = "0.12.24", features = ["json"] }
 serde = {version = "1.0.221", features = ["derive"] }

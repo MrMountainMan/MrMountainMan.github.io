@@ -1,5 +1,7 @@
-run 'dx bundle --web --ssg'
-take the files in 'target/dx/.../public' and place them in 'docs'
-the files will be 'assets', 'wasm', and 'index.html'
-you will have to make your own '404.html' and include it in docs as well
+run 'dx bundle --release --out-dir docs'
+run 'rm docs/assets -r'
+run 'rm docs/404.html'
+run 'rm docs/index.html'
+run 'mv docs/public/* docs'
+run 'cp docs/index.html docs/404.html'
 push to github
