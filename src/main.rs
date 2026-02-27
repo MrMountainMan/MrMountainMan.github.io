@@ -1,58 +1,133 @@
 use dioxus::prelude::*;
-/*
-#[path = "./monaco2calc/monaco2calc.rs"]
-mod monaco2calc;
-use dioxus_logger::tracing::Level;
-use monaco2calc::Monaco2CalcMain;
 
-
-#[path = "./payday3stats/payday3stats.rs"]
-mod payday3stats;
-use payday3stats::Payday3Stats;
-*/
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
 enum Route {
+    #[layout(Navbar)]
     #[route("/")]
     Home {},
-    /*
-    #[route("/monaco-2-score-calculator")]
-    Monaco2CalcMain {},
-    #[route("/payday-3-stats")]
-    Payday3Stats {},*/
+    #[route("/blog/:id")]
+    Blog { id: i32 },
 }
 
-//const DEFAULT_ICON: Asset = asset!("/assets/icon.ico");
-//const MAIN_CSS: Asset = asset!("/assets/main.css");
-
+const FAVICON: Asset = asset!("/assets/favicon.ico");
+const MAIN_CSS: Asset = asset!("/assets/main.css");
+const HEADER_SVG: Asset = asset!("/assets/header.svg");
 
 fn main() {
-    //dioxus_web::launch::launch(App, vec![], dioxus_web::Config::new().hydrate(true));
-    //dioxus_logger::init(Level::INFO).expect("logger failed to init");
     dioxus::launch(App);
 }
-
 
 #[component]
 fn App() -> Element {
     rsx! {
-        //document::Link { rel: "icon", href: DEFAULT_ICON }
-        //document::Title { "MrMountainMan Github" }
+        document::Link { rel: "icon", href: FAVICON }
+        document::Link { rel: "stylesheet", href: MAIN_CSS }
         Router::<Route> {}
     }
 }
 
-//home page
+#[component]
+pub fn Hero() -> Element {
+    rsx! {
+        div {
+            id: "hero",
+            img { src: HEADER_SVG, id: "header" }
+            div { id: "links",
+                a { href: "https://dioxuslabs.com/learn/0.7/", "📚 Learn Dioxus" }
+                a { href: "https://dioxuslabs.com/awesome", "🚀 Awesome Dioxus" }
+                a { href: "https://github.com/dioxus-community/", "📡 Community Libraries" }
+                a { href: "https://github.com/DioxusLabs/sdk", "⚙️ Dioxus Development Kit" }
+                a { href: "https://marketplace.visualstudio.com/items?itemName=DioxusLabs.dioxus", "💫 VSCode Extension" }
+                a { href: "https://discord.gg/XgGxMSkvUM", "👋 Community Discord" }
+            }
+        }
+    }
+}
+
+/// Home page
 #[component]
 fn Home() -> Element {
     rsx! {
-        //document::Link { rel: "icon", href: DEFAULT_ICON }
-        //document::Title { "MrMountainMan Github" }
-
-        h2 { "Home Page!" }
-
-        //Link { to: Route::Monaco2CalcMain {}, "Monaco 2 Score Calculator" }
-        br {}
-        //Link { to: Route::Payday3Stats {}, "Payday 3 Stats" }
+        Hero {}
+        Echo {}
     }
+}
+
+/// Blog page
+#[component]
+pub fn Blog(id: i32) -> Element {
+    rsx! {
+        div {
+            id: "blog",
+
+            // Content
+            h1 { "This is blog #{id}!" }
+            p { "In blog #{id}, we show how the Dioxus router works and how URL parameters can be passed as props to our route components." }
+
+            // Navigation links
+            Link {
+                to: Route::Blog { id: id - 1 },
+                "Previous"
+            }
+            span { " <---> " }
+            Link {
+                to: Route::Blog { id: id + 1 },
+                "Next"
+            }
+        }
+    }
+}
+
+/// Shared navbar component.
+#[component]
+fn Navbar() -> Element {
+    rsx! {
+        div {
+            id: "navbar",
+            Link {
+                to: Route::Home {},
+                "Home"
+            }
+            Link {
+                to: Route::Blog { id: 1 },
+                "Blog"
+            }
+        }
+
+        Outlet::<Route> {}
+    }
+}
+
+/// Echo component that demonstrates fullstack server functions.
+#[component]
+fn Echo() -> Element {
+    let mut response = use_signal(|| String::new());
+
+    rsx! {
+        div {
+            id: "echo",
+            h4 { "ServerFn Echo" }
+            input {
+                placeholder: "Type here to echo...",
+                oninput:  move |event| async move {
+                    let data = echo_server(event.value()).await.unwrap();
+                    response.set(data);
+                },
+            }
+
+            if !response().is_empty() {
+                p {
+                    "Server echoed: "
+                    i { "{response}" }
+                }
+            }
+        }
+    }
+}
+
+/// Echo the user input on the server.
+#[post("/api/echo")]
+async fn echo_server(input: String) -> Result<String, ServerFnError> {
+    Ok(input)
 }
