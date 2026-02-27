@@ -5,3 +5,9 @@ run 'rm docs/index.html'
 run 'mv docs/public/* docs'
 run 'cp docs/index.html docs/404.html'
 push to github
+
+or
+
+while in root directory
+run './build.ps1'
+push to github
