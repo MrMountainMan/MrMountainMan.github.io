@@ -4,6 +4,7 @@
 
 # HTML title tag content
 title = "test"
+base_path = "MrMountainMan.github.io"
 
 # include `assets` in web platform
 [web.resource]
