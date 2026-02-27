@@ -10,6 +10,7 @@ use monaco2calc::Monaco2CalcMain;
 mod payday3stats;
 use payday3stats::Payday3Stats;
 */
+/*
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
 enum Route {
@@ -20,7 +21,7 @@ enum Route {
     Monaco2CalcMain {},
     #[route("/payday-3-stats")]
     Payday3Stats {},*/
-}
+}*/
 
 //const DEFAULT_ICON: Asset = asset!("/assets/icon.ico");
 //const MAIN_CSS: Asset = asset!("/assets/main.css");
@@ -36,9 +37,10 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
+        Home {}
         //document::Link { rel: "icon", href: DEFAULT_ICON }
         //document::Title { "MrMountainMan Github" }
-        Router::<Route> {}
+        //Router::<Route> {}
     }
 }
 
