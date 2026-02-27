@@ -20,7 +20,7 @@ enum Route {
     Payday3Stats {},
 }
 
-const DEFAULT_ICON: Asset = asset!("/assets/icon.ico");
+//const DEFAULT_ICON: Asset = asset!("/assets/icon.ico");
 //const MAIN_CSS: Asset = asset!("/assets/main.css");
 
 
@@ -34,8 +34,8 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
-        document::Link { rel: "icon", href: DEFAULT_ICON }
-        document::Title { "MrMountainMan Github" }
+        //document::Link { rel: "icon", href: DEFAULT_ICON }
+        //document::Title { "MrMountainMan Github" }
         Router::<Route> {}
     }
 }
@@ -44,8 +44,8 @@ fn App() -> Element {
 #[component]
 fn Home() -> Element {
     rsx! {
-        document::Link { rel: "icon", href: DEFAULT_ICON }
-        document::Title { "MrMountainMan Github" }
+        //document::Link { rel: "icon", href: DEFAULT_ICON }
+        //document::Title { "MrMountainMan Github" }
 
         h2 { "Home Page!" }
 
