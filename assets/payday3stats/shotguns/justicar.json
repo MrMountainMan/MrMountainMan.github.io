@@ -1,0 +1,73 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Revolver_Justicar",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 49.125,
+          "Distance": 200.0
+        },
+        {
+          "Damage": 49.125,
+          "Distance": 1300.0
+        },
+        {
+          "Damage": 31.0,
+          "Distance": 2100.0
+        },
+        {
+          "Damage": 22.0,
+          "Distance": 2900.0
+        }
+      ],
+      "AmmoLoaded": 5,
+      "AmmoLeftInChamber": 0,
+      "AmmoInventoryMax": 35,
+      "AmmoInventory": 25,
+      "AmmoPickup": {
+        "Min": 1.0,
+        "Max": 1.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 2.0,
+          "Distance": 1300.0
+        },
+        {
+          "Multiplier": 1.4,
+          "Distance": 2100.0
+        },
+        {
+          "Multiplier": 1.0,
+          "Distance": 2900.0
+        }
+      ],
+      "ProjectilesPerFiredRound": 8,
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Always",
+      "AmmoLoadedMax": 5,
+      "AmmoPerReload": 5,
+      "AmmoVisibleMax": 5,
+      "bIsChamberRotatedEachFiredRound": true,
+      "RoundsPerMinute": 500.0,
+      "DamageTypeClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DamageType_Justicar_C'",
+        "ObjectPath": "PAYDAY3/Content/DLCs/00110-DLCWEAP0002/Gameplay/Weapons/Revolver/Justicar/BP_DamageType_Justicar.0"
+      },
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Revolver_Justicar'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00110-DLCWEAP0002/Gameplay/Weapons/Revolver/Justicar/C_HurtReactionWeight_Revolver_Justicar.0"
+        },
+        "HurtReactionWeightModifier": 1.0,
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Incapacitate",
+        "HurtReactionWeightBuildupModifier": 1.0,
+        "CriticalHurtReactionWeightBuildupModifier": 1.0
+      }
+    }
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Revolver_Castigo44",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 160.1,
+          "Distance": 700.0
+        },
+        {
+          "Damage": 160.1,
+          "Distance": 1200.0
+        },
+        {
+          "Damage": 102.0,
+          "Distance": 1700.0
+        },
+        {
+          "Damage": 77.0,
+          "Distance": 2300.0
+        }
+      ],
+      "AmmoLoaded": 6,
+      "AmmoLeftInChamber": 0,
+      "AmmoInventoryMax": 60,
+      "AmmoInventory": 48,
+      "AmmoPickup": {
+        "Min": 2.0,
+        "Max": 3.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 4.0,
+          "Distance": 1200.0
+        },
+        {
+          "Multiplier": 3.2,
+          "Distance": 1700.0
+        },
+        {
+          "Multiplier": 2.4,
+          "Distance": 2300.0
+        }
+      ],
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 2.0,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Always",
+      "AmmoLoadedMax": 6,
+      "AmmoPerReload": 6,
+      "AmmoVisibleMax": 6,
+      "bIsChamberRotatedEachFiredRound": true,
+      "RoundsPerMinute": 300.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Revolver_Castigo44'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Revolver/Castigo44/C_HurtReactionWeight_Revolver_Castigo44.0"
+        },
+        "HurtReactionWeightModifier": 0.5
+      }
+    }
+  }
+]

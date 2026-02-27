@@ -1,0 +1,69 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_AssaultRifle_CAR4",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 64.6,
+          "Distance": 200.0
+        },
+        {
+          "Damage": 64.6,
+          "Distance": 1700.0
+        },
+        {
+          "Damage": 50.0,
+          "Distance": 2700.0
+        },
+        {
+          "Damage": 43.0,
+          "Distance": 3700.0
+        }
+      ],
+      "AmmoLoaded": 30,
+      "AmmoInventoryMax": 300,
+      "AmmoInventory": 240,
+      "AmmoPickup": {
+        "Min": 6.0,
+        "Max": 8.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 3.7,
+          "Distance": 1700.0
+        },
+        {
+          "Multiplier": 2.96,
+          "Distance": 2700.0
+        },
+        {
+          "Multiplier": 2.59,
+          "Distance": 3700.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 2.0,
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 30,
+      "AmmoPerReload": 30,
+      "AmmoVisibleMax": 6,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 720.0,
+      "DamageTypeClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DamageType_AssaultRifle_CAR4_C'",
+        "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/CAR4/BP_DamageType_AssaultRifle_CAR4.0"
+      },
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_CAR4'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/CAR4/C_HurtReactionWeight_AssaultRifle_CAR4.0"
+        }
+      }
+    }
+  }
+]

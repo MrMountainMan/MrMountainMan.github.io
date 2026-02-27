@@ -1,0 +1,72 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Marksman_R900S",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 186.0,
+          "Distance": 1600.0
+        },
+        {
+          "Damage": 186.0,
+          "Distance": 2600.0
+        },
+        {
+          "Damage": 171.0,
+          "Distance": 3100.0
+        },
+        {
+          "Damage": 156.0,
+          "Distance": 3600.0
+        }
+      ],
+      "bIsReloadEndCycledEachRound": true,
+      "AmmoLoaded": 5,
+      "AmmoInventoryMax": 50,
+      "AmmoInventory": 40,
+      "AmmoPickup": {
+        "Min": 1.0,
+        "Max": 2.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 5.0,
+          "Distance": 2600.0
+        },
+        {
+          "Multiplier": 6.5,
+          "Distance": 3100.0
+        },
+        {
+          "Multiplier": 7.5,
+          "Distance": 4100.0
+        }
+      ],
+      "FireType": "ESBZFireType::Bolt",
+      "MaximumPenetrationCount": 2,
+      "bCanHitEnvironmentAfterPenetration": true,
+      "Range": 15000,
+      "ArmorPenetration": 7.0,
+      "ImpactType": "ESBZProjectileImpactType::Heavy",
+      "AmmoLoadedMax": 5,
+      "AmmoPerReload": 5,
+      "AmmoVisibleMax": 6,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 50.0,
+      "DamageTypeClass": {
+        "ObjectName": "Class'SBZSniperBulletDamageType'",
+        "ObjectPath": "/Script/Starbreeze"
+      },
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Marksman_R900S'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Marksman/R900S/C_HurtReactionWeight_Marksman_R900S.0"
+        },
+        "HurtReactionWeightModifier": 2.0
+      }
+    }
+  }
+]

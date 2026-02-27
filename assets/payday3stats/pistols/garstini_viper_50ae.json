@@ -1,0 +1,68 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Pistol_GarstiniViper",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 137.0,
+          "Distance": 1000.0
+        },
+        {
+          "Damage": 137.0,
+          "Distance": 1500.0
+        },
+        {
+          "Damage": 119.0,
+          "Distance": 2000.0
+        },
+        {
+          "Damage": 80.0,
+          "Distance": 2600.0
+        }
+      ],
+      "AmmoLoaded": 7,
+      "AmmoInventoryMax": 70,
+      "AmmoInventory": 56,
+      "AmmoPickup": {
+        "Min": 1.0,
+        "Max": 2.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 7.0,
+          "Distance": 1000.0
+        },
+        {
+          "Multiplier": 5.0,
+          "Distance": 2000.0
+        },
+        {
+          "Multiplier": 2.5,
+          "Distance": 2600.0
+        }
+      ],
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 5.0,
+      "ImpactType": "ESBZProjectileImpactType::Heavy",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 7,
+      "AmmoPerReload": 7,
+      "AmmoVisibleMax": 3,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 275.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Pistol_GarstiniViper'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00080-DLC0004/Gameplay/Weapons/Pistol/GarstiniViper/C_HurtReactionWeight_Pistol_GarstiniViper.0"
+        },
+        "HurtReactionWeightModifier": 2.0,
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Incapacitate",
+        "HurtReactionWeightBuildupModifier": 1.0,
+        "CriticalHurtReactionWeightBuildupModifier": 1.0
+      }
+    }
+  }
+]

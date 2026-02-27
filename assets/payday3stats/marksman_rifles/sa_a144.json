@@ -1,0 +1,64 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Marksman_A114",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 96.0,
+          "Distance": 1000.0
+        },
+        {
+          "Damage": 96.0,
+          "Distance": 2000.0
+        },
+        {
+          "Damage": 88.0,
+          "Distance": 2500.0
+        },
+        {
+          "Damage": 80.0,
+          "Distance": 3000.0
+        }
+      ],
+      "AmmoLoaded": 12,
+      "AmmoInventoryMax": 120,
+      "AmmoInventory": 96,
+      "AmmoPickup": {
+        "Min": 3.0,
+        "Max": 4.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 3.0,
+          "Distance": 2000.0
+        },
+        {
+          "Multiplier": 3.3,
+          "Distance": 2500.0
+        },
+        {
+          "Multiplier": 3.9,
+          "Distance": 3000.0
+        }
+      ],
+      "ArmorPenetration": 3.0,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 12,
+      "AmmoPerReload": 12,
+      "AmmoVisibleMax": 5,
+      "RoundsPerMinute": 450.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Marksman_A114'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Marksman/A114/C_HurtReactionWeight_Marksman_A114.0"
+        },
+        "HurtReactionWeightModifier": 1.0,
+        "CriticalHurtReactionWeightBuildupModifier": 0.2
+      }
+    }
+  }
+]

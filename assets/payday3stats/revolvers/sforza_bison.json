@@ -1,0 +1,66 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Revolver_Bison",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 155.6,
+          "Distance": 200.0
+        },
+        {
+          "Damage": 155.6,
+          "Distance": 700.0
+        },
+        {
+          "Damage": 81.0,
+          "Distance": 1200.0
+        },
+        {
+          "Damage": 58.0,
+          "Distance": 1800.0
+        }
+      ],
+      "AmmoLoaded": 6,
+      "AmmoLeftInChamber": 0,
+      "AmmoInventoryMax": 60,
+      "AmmoInventory": 48,
+      "AmmoPickup": {
+        "Min": 2.0,
+        "Max": 4.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 6.0,
+          "Distance": 700.0
+        },
+        {
+          "Multiplier": 4.2,
+          "Distance": 1200.0
+        },
+        {
+          "Multiplier": 3.0,
+          "Distance": 1800.0
+        }
+      ],
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 4.0,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Always",
+      "AmmoLoadedMax": 6,
+      "AmmoPerReload": 6,
+      "AmmoVisibleMax": 6,
+      "bIsChamberRotatedEachFiredRound": true,
+      "RoundsPerMinute": 400.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Revolver_Bison'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Revolver/Bison/C_HurtReactionWeight_Revolver_Bison.0"
+        },
+        "HurtReactionWeightModifier": 0.5
+      }
+    }
+  }
+]

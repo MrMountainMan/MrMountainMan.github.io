@@ -1,0 +1,64 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_AssaultRifle_RG5",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 104.6,
+          "Distance": 200.0
+        },
+        {
+          "Damage": 104.6,
+          "Distance": 1700.0
+        },
+        {
+          "Damage": 82.0,
+          "Distance": 2700.0
+        },
+        {
+          "Damage": 71.0,
+          "Distance": 3700.0
+        }
+      ],
+      "AmmoLoaded": 20,
+      "AmmoInventoryMax": 200,
+      "AmmoInventory": 160,
+      "AmmoPickup": {
+        "Min": 4.0,
+        "Max": 5.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 2.0,
+          "Distance": 1700.0
+        },
+        {
+          "Multiplier": 1.6,
+          "Distance": 2700.0
+        },
+        {
+          "Multiplier": 1.4,
+          "Distance": 3700.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 2.0,
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 20,
+      "AmmoPerReload": 20,
+      "AmmoVisibleMax": 5,
+      "bIsEmptyAmmoEjected": true,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_RG5'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00010-DLCHEIST0002/Gameplay/Weapons/AssaultRifle/RG5/C_HurtReactionWeight_AssaultRifle_RG5.0"
+        }
+      }
+    }
+  }
+]

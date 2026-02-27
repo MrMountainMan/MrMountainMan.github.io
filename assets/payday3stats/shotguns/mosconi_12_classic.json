@@ -1,0 +1,68 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Shotgun_Mosconi12C",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 67.125,
+          "Distance": 200.0
+        },
+        {
+          "Damage": 67.125,
+          "Distance": 1300.0
+        },
+        {
+          "Damage": 42.0,
+          "Distance": 2100.0
+        },
+        {
+          "Damage": 30.0,
+          "Distance": 2900.0
+        }
+      ],
+      "AmmoLoaded": 2,
+      "AmmoLeftInChamber": 0,
+      "AmmoInventoryMax": 40,
+      "AmmoInventory": 32,
+      "AmmoPickup": {
+        "Min": 1.0,
+        "Max": 2.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 3.0,
+          "Distance": 1300.0
+        },
+        {
+          "Multiplier": 2.1,
+          "Distance": 2100.0
+        },
+        {
+          "Multiplier": 0.88,
+          "Distance": 2900.0
+        }
+      ],
+      "ProjectilesPerFiredRound": 10,
+      "MaximumPenetrationCount": 2,
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 2,
+      "AmmoPerReload": 2,
+      "AmmoVisibleMax": 3,
+      "bIsEquippedAmmoLoadedTracked": true,
+      "RoundsPerMinute": 400.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Shotgun_Mosconi12C'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Shotgun/Mosconi12C/C_HurtReactionWeight_Shotgun_Mosconi12C.0"
+        },
+        "HurtReactionWeightModifier": 1.0,
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Incapacitate"
+      }
+    }
+  }
+]

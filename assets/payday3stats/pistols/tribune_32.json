@@ -1,0 +1,65 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Pistol_T32",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 49.3,
+          "Distance": 300.0
+        },
+        {
+          "Damage": 49.3,
+          "Distance": 800.0
+        },
+        {
+          "Damage": 30.0,
+          "Distance": 1300.0
+        },
+        {
+          "Damage": 22.0,
+          "Distance": 2100.0
+        }
+      ],
+      "AmmoLoaded": 33,
+      "AmmoInventoryMax": 330,
+      "AmmoInventory": 264,
+      "AmmoPickup": {
+        "Min": 9.0,
+        "Max": 11.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 2.5,
+          "Distance": 800.0
+        },
+        {
+          "Multiplier": 1.75,
+          "Distance": 1100.0
+        },
+        {
+          "Multiplier": 1.25,
+          "Distance": 2100.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "ArmorPenetration": 1.3,
+      "AmmoLoadedMax": 33,
+      "AmmoPerReload": 33,
+      "AmmoVisibleMax": 3,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 900.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Pistol_T32'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00030-DLC0003/Gameplay/Weapons/Pistol/T32/C_HurtReactionWeight_Pistol_T32.0"
+        },
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Flinch",
+        "HurtReactionWeightBuildupModifier": 0.15
+      }
+    }
+  }
+]

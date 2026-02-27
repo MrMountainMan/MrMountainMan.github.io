@@ -1,0 +1,58 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Pistol_SE5",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 100.6,
+          "Distance": 200.0
+        },
+        {
+          "Damage": 100.6,
+          "Distance": 700.0
+        },
+        {
+          "Damage": 52.0,
+          "Distance": 1200.0
+        },
+        {
+          "Damage": 37.0,
+          "Distance": 1800.0
+        }
+      ],
+      "AmmoInventory": 80,
+      "AmmoPickup": {
+        "Min": 3.0,
+        "Max": 4.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 3.0,
+          "Distance": 700.0
+        },
+        {
+          "Multiplier": 2.1,
+          "Distance": 1200.0
+        },
+        {
+          "Multiplier": 1.5,
+          "Distance": 1800.0
+        }
+      ],
+      "ArmorPenetration": 1.4,
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoVisibleMax": 3,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 400.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Pistol_SE5'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00080-DLC0004/Gameplay/Weapons/Pistol/SE5/C_HurtReactionWeight_Pistol_SE5.0"
+        }
+      }
+    }
+  }
+]

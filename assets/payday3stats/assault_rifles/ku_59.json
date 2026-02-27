@@ -1,0 +1,65 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_AssaultRifle_KU59",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 98.5,
+          "Distance": 500.0
+        },
+        {
+          "Damage": 98.5,
+          "Distance": 2000.0
+        },
+        {
+          "Damage": 68.0,
+          "Distance": 3000.0
+        },
+        {
+          "Damage": 58.0,
+          "Distance": 4000.0
+        }
+      ],
+      "AmmoLoaded": 30,
+      "AmmoInventoryMax": 300,
+      "AmmoInventory": 240,
+      "AmmoPickup": {
+        "Min": 4.0,
+        "Max": 6.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 3.5,
+          "Distance": 2000.0
+        },
+        {
+          "Multiplier": 2.45,
+          "Distance": 3000.0
+        },
+        {
+          "Multiplier": 2.1,
+          "Distance": 4000.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 1.0,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 30,
+      "AmmoPerReload": 30,
+      "AmmoVisibleMax": 6,
+      "bIsEmptyAmmoEjected": true,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_KU59'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/KU59/C_HurtReactionWeight_AssaultRifle_KU59.0"
+        }
+      }
+    }
+  }
+]

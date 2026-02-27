@@ -1,0 +1,66 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Marksman_Spearfish",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 134.0,
+          "Distance": 900.0
+        },
+        {
+          "Damage": 134.0,
+          "Distance": 1900.0
+        },
+        {
+          "Damage": 123.0,
+          "Distance": 2400.0
+        },
+        {
+          "Damage": 112.5,
+          "Distance": 2900.0
+        }
+      ],
+      "bIsReloadEndCycledEachRound": true,
+      "AmmoLoaded": 8,
+      "AmmoInventoryMax": 56,
+      "AmmoInventory": 40,
+      "AmmoPickup": {
+        "Min": 2.0,
+        "Max": 3.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 3.0,
+          "Distance": 1900.0
+        },
+        {
+          "Multiplier": 4.5,
+          "Distance": 2400.0
+        },
+        {
+          "Multiplier": 5.1,
+          "Distance": 2900.0
+        }
+      ],
+      "FireType": "ESBZFireType::Bolt",
+      "MaximumPenetrationCount": 1,
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 2.6,
+      "ImpactType": "ESBZProjectileImpactType::Heavy",
+      "AmmoLoadedMax": 8,
+      "AmmoPerReload": 1,
+      "AmmoVisibleMax": 2,
+      "bIsEmptyAmmoEjected": true,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Marksman_Spearfish'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00170-Weapon3/Gameplay/Weapons/Marksman/Spearfish/C_HurtReactionWeight_Marksman_Spearfish.0"
+        },
+        "HurtReactionWeightModifier": 1.5
+      }
+    }
+  }
+]

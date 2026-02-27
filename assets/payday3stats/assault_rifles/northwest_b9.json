@@ -1,0 +1,69 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_AssaultRifle_NWB9",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 51.5,
+          "Distance": 500.0
+        },
+        {
+          "Damage": 51.5,
+          "Distance": 2000.0
+        },
+        {
+          "Damage": 35.0,
+          "Distance": 3000.0
+        },
+        {
+          "Damage": 30.0,
+          "Distance": 4000.0
+        }
+      ],
+      "AmmoLoaded": 30,
+      "AmmoInventoryMax": 300,
+      "AmmoInventory": 240,
+      "AmmoPickup": {
+        "Min": 7.0,
+        "Max": 9.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 5.0,
+          "Distance": 2000.0
+        },
+        {
+          "Multiplier": 3.5,
+          "Distance": 3000.0
+        },
+        {
+          "Multiplier": 3.0,
+          "Distance": 4000.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 2.2,
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 30,
+      "AmmoPerReload": 30,
+      "AmmoVisibleMax": 5,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 750.0,
+      "DamageTypeClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DamageType_AssaultRifle_NWB9_C'",
+        "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/NWB9/BP_DamageType_AssaultRifle_NWB9.0"
+      },
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_NWB9'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/NWB9/C_HurtReactionWeight_AssaultRifle_NWB9.0"
+        }
+      }
+    }
+  }
+]

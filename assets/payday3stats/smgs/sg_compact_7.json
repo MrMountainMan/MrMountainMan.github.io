@@ -1,0 +1,64 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_SMG_Compact7",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 59.2,
+          "Distance": 1000.0
+        },
+        {
+          "Damage": 59.2,
+          "Distance": 2200.0
+        },
+        {
+          "Damage": 38.0,
+          "Distance": 2900.0
+        },
+        {
+          "Damage": 32.0,
+          "Distance": 3700.0
+        }
+      ],
+      "AmmoLoaded": 30,
+      "AmmoInventoryMax": 300,
+      "AmmoInventory": 240,
+      "AmmoPickup": {
+        "Min": 8.0,
+        "Max": 11.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 1.2,
+          "Distance": 2200.0
+        },
+        {
+          "Multiplier": 0.84,
+          "Distance": 2900.0
+        },
+        {
+          "Multiplier": 0.72,
+          "Distance": 3700.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "ArmorPenetration": 1.4,
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 30,
+      "AmmoPerReload": 30,
+      "AmmoVisibleMax": 3,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 960.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_SMG_Compact7'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/SMG/Compact7/C_HurtReactionWeight_SMG_Compact7.0"
+        }
+      }
+    }
+  }
+]

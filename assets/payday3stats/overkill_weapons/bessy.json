@@ -1,0 +1,36 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Special_Bessy",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 9001.0,
+          "Distance": 1000000.0
+        }
+      ],
+      "AmmoLoaded": 1,
+      "AmmoInventoryMax": 0,
+      "AmmoInventory": 0,
+      "AmmoPickup": {
+        "Min": 0.0,
+        "Max": 0.0
+      },
+      "MaximumPenetrationCount": 3,
+      "bCanHitEnvironmentAfterPenetration": true,
+      "bCanPenetrateBlocked": true,
+      "ArmorPenetration": 4.0,
+      "AmmoLoadedMax": 1,
+      "AmmoPerReload": 1,
+      "AmmoVisibleMax": 1,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Special_Bessy'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00180-DLCDEMA/Gameplay/Weapons/Special/Bessy/C_HurtReactionWeight_Special_Bessy.0"
+        }
+      }
+    }
+  }
+]

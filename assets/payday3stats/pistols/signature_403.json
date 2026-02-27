@@ -1,0 +1,62 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Pistol_S403",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 66.0,
+          "Distance": 1000.0
+        },
+        {
+          "Damage": 66.0,
+          "Distance": 1500.0
+        },
+        {
+          "Damage": 49.0,
+          "Distance": 2000.0
+        },
+        {
+          "Damage": 38.0,
+          "Distance": 2600.0
+        }
+      ],
+      "AmmoLoaded": 17,
+      "AmmoInventoryMax": 170,
+      "AmmoInventory": 136,
+      "AmmoPickup": {
+        "Min": 4.0,
+        "Max": 7.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 4.0,
+          "Distance": 1500.0
+        },
+        {
+          "Multiplier": 3.7,
+          "Distance": 2000.0
+        },
+        {
+          "Multiplier": 2.8,
+          "Distance": 2600.0
+        }
+      ],
+      "ArmorPenetration": 1.6,
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 17,
+      "AmmoPerReload": 17,
+      "AmmoVisibleMax": 3,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 375.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Pistol_S403'",
+          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Pistol/S403/C_HurtReactionWeight_Pistol_S403.0"
+        }
+      }
+    }
+  }
+]
