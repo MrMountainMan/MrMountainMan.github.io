@@ -7,16 +7,6 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
-        Hero {}
-
-    }
-}
-
-#[component]
-pub fn Hero() -> Element {
-    rsx! {
-        div {
-            "this is some text"
-        }
+        "this is some text"
     }
 }
