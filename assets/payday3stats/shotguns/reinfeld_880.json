@@ -12,11 +12,11 @@
         },
         {
           "Damage": 47.6,
-          "Distance": 1200.0
+          "Distance": 10000.0
         },
         {
           "Damage": 24.0,
-          "Distance": 1900.0
+          "Distance": 2000.0
         },
         {
           "Damage": 20.0,
@@ -34,11 +34,11 @@
       "CriticalDamageMultiplierDistanceArray": [
         {
           "Multiplier": 2.2,
-          "Distance": 1200.0
+          "Distance": 1000.0
         },
         {
           "Multiplier": 1.32,
-          "Distance": 1900.0
+          "Distance": 2000.0
         },
         {
           "Multiplier": 1.1,

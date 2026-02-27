@@ -7,19 +7,19 @@
     "Properties": {
       "DamageDistanceArray": [
         {
-          "Damage": 51.5,
+          "Damage": 70.0,
           "Distance": 500.0
         },
         {
-          "Damage": 51.5,
+          "Damage": 68.0,
           "Distance": 2000.0
         },
         {
-          "Damage": 35.0,
+          "Damage": 65.0,
           "Distance": 3000.0
         },
         {
-          "Damage": 30.0,
+          "Damage": 62.0,
           "Distance": 4000.0
         }
       ],

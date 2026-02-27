@@ -12,15 +12,15 @@
         },
         {
           "Damage": 76.6,
-          "Distance": 700.0
+          "Distance": 1000.0
         },
         {
           "Damage": 39.0,
-          "Distance": 1200.0
+          "Distance": 1500.0
         },
         {
           "Damage": 28.0,
-          "Distance": 1800.0
+          "Distance": 2000.0
         }
       ],
       "TimeBetweenBurstsSeconds": 0.1,
@@ -33,15 +33,15 @@
       "CriticalDamageMultiplierDistanceArray": [
         {
           "Multiplier": 3.0,
-          "Distance": 1200.0
+          "Distance": 1000.0
         },
         {
           "Multiplier": 2.1,
-          "Distance": 1300.0
+          "Distance": 1500.0
         },
         {
           "Multiplier": 1.5,
-          "Distance": 2300.0
+          "Distance": 2000.0
         }
       ],
       "FireMode": "ESBZFireMode::Burst",

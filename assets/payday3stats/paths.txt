@@ -1,0 +1,40 @@
+adelig: DLCs/00010-DLCHEIST0002/Gameplay/Weapons/AssaultRifle
+car4: Gameplay/Weapons/AssaultRifle
+chanit: DLCs/00030-DLC0003/Weapons/AssaultRifle
+ku59: Gameplay/Weapons/AssaultRifle
+northwest: Gameplay/Weapons/AssaultRifle
+vf7s: Gameplay/Weapons/AssaultRifle
+
+blyspruta: DLCs/00010-DLCHEIST0002/Gameplay/Weapons/LMG
+
+fik22: DLCs/00006-DLCWEAP0001/Gameplay/Weapons/Marksman
+reinfeld r900: Gameplay/Weapons/Marksman
+sa a144: Gameplay/Weapons/Marksman
+spearfish: DLCs/00170-Weapon3/Gameplay/Waspons/Marksman
+
+deagle (viper): DLCs/0080-DLC0004/Gameplay/Weapons/Pistol
+jackknife: DLCs/0080-DLC0004/Gameplay/Weapons/Pistol
+picchip duro: DLCs/00030-DLC0003/Weapons/Pistol
+sig40: Gameplay/Weapons/Pistol
+sig403: Gameplay/Weapons/Pistol
+sp model 11:Gameplay/Weapons/Pistol
+stryk: Gameplay/Weapons/Pistol
+tribune: DLCs/00030-DLC0003/Weapons/Pistol
+
+bullkick: DLCs/00010-DLCHEIST0002/Gameplay/Weapons/Revolver
+castigo: Gameplay/Weapons/Revolver
+bison: Gameplay/Weapons/Revolver
+
+fsa: DLCs/00006-DLCWEAP0001/Gameplay/Waspons/Shotgun
+justicar: DLCs/00110/DLCWEAP0002/Gameplay/Weapons/Revolver
+pursuviant: DLCs/00030-DLC0003/Gameplay/Weapons/Shotgun
+mosconi: Gameplay/Weapons/Shotgun
+r880: Gameplay/Weapons/Shotgun
+tas12: DLCs/0080-DLC0004/Gameplay/Weapons/Shotgun
+
+atk7: DLCs/00010-DLCHEIST0002/Gameplay/Weapons/SMG
+fikpc9: Gameplay/Weapons/SMG
+sg compact: Gameplay/Weapons/SMG
+war45: DLCs/00006-DLCWEAP0001/Gameplay/Waspons/SMG
+ziv: Gameplay/Weapons/SMG
+

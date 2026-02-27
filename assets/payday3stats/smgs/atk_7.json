@@ -12,15 +12,15 @@
         },
         {
           "Damage": 79.2,
-          "Distance": 1400.0
+          "Distance": 1500.0
         },
         {
           "Damage": 38.0,
-          "Distance": 2200.0
+          "Distance": 2500.0
         },
         {
           "Damage": 28.0,
-          "Distance": 2900.0
+          "Distance": 3000.0
         }
       ],
       "AmmoLoaded": 30,
@@ -33,15 +33,15 @@
       "CriticalDamageMultiplierDistanceArray": [
         {
           "Multiplier": 1.25,
-          "Distance": 1400.0
+          "Distance": 1500.0
         },
         {
-          "Multiplier": 0.84,
-          "Distance": 2200.0
+          "Multiplier": 1.1,
+          "Distance": 2500.0
         },
         {
-          "Multiplier": 0.72,
-          "Distance": 2900.0
+          "Multiplier": 1.0,
+          "Distance": 3000.0
         }
       ],
       "FireMode": "ESBZFireMode::Auto",

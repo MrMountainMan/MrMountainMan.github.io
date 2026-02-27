@@ -7,19 +7,19 @@
     "Properties": {
       "DamageDistanceArray": [
         {
-          "Damage": 67.0,
+          "Damage": 85.0,
           "Distance": 100.0
         },
         {
-          "Damage": 67.0,
+          "Damage": 85.0,
           "Distance": 1500.0
         },
         {
-          "Damage": 55.0,
+          "Damage": 80.0,
           "Distance": 2500.0
         },
         {
-          "Damage": 49.0,
+          "Damage": 70.0,
           "Distance": 3500.0
         }
       ],
@@ -47,7 +47,7 @@
       "FireMode": "ESBZFireMode::Burst",
       "FireType": "ESBZFireType::Burst",
       "bCanHitEnvironmentAfterPenetration": true,
-      "ArmorPenetration": 2.4,
+      "ArmorPenetration": 2.8,
       "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
       "AmmoLoadedMax": 30,
       "AmmoPerReload": 30,

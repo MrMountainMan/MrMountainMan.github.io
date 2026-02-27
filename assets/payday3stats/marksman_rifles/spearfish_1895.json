@@ -7,20 +7,20 @@
     "Properties": {
       "DamageDistanceArray": [
         {
-          "Damage": 134.0,
+          "Damage": 100.0,
           "Distance": 900.0
         },
         {
-          "Damage": 134.0,
-          "Distance": 1900.0
+          "Damage": 95.0,
+          "Distance": 2000.0
         },
         {
-          "Damage": 123.0,
-          "Distance": 2400.0
+          "Damage": 95.0,
+          "Distance": 2500.0
         },
         {
-          "Damage": 112.5,
-          "Distance": 2900.0
+          "Damage": 90.0,
+          "Distance": 3000.0
         }
       ],
       "bIsReloadEndCycledEachRound": true,
@@ -34,15 +34,15 @@
       "CriticalDamageMultiplierDistanceArray": [
         {
           "Multiplier": 3.0,
-          "Distance": 1900.0
+          "Distance": 2000.0
         },
         {
-          "Multiplier": 4.5,
-          "Distance": 2400.0
+          "Multiplier": 2.8,
+          "Distance": 2500.0
         },
         {
-          "Multiplier": 5.1,
-          "Distance": 2900.0
+          "Multiplier": 2.2,
+          "Distance": 3000.0
         }
       ],
       "FireType": "ESBZFireType::Bolt",

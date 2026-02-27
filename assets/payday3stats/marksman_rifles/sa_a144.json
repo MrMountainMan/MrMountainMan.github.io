@@ -7,11 +7,11 @@
     "Properties": {
       "DamageDistanceArray": [
         {
-          "Damage": 96.0,
+          "Damage": 92.0,
           "Distance": 1000.0
         },
         {
-          "Damage": 96.0,
+          "Damage": 90.0,
           "Distance": 2000.0
         },
         {
@@ -32,15 +32,15 @@
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
-          "Multiplier": 3.0,
+          "Multiplier": 2.5,
           "Distance": 2000.0
         },
         {
-          "Multiplier": 3.3,
+          "Multiplier": 2.2,
           "Distance": 2500.0
         },
         {
-          "Multiplier": 3.9,
+          "Multiplier": 2.2,
           "Distance": 3000.0
         }
       ],

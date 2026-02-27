@@ -12,11 +12,11 @@
         },
         {
           "Damage": 86.4,
-          "Distance": 1900.0
+          "Distance": 2000.0
         },
         {
           "Damage": 51.0,
-          "Distance": 2800.0
+          "Distance": 3000.0
         },
         {
           "Damage": 43.0,
@@ -27,20 +27,19 @@
       "AmmoInventoryMax": 250,
       "AmmoInventory": 200,
       "AmmoPickup": {
-        "Min": 7.0,
-        "Max": 9.0
+        "Max": 7.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
           "Multiplier": 1.1,
-          "Distance": 1900.0
+          "Distance": 2000.0
         },
         {
-          "Multiplier": 0.66,
-          "Distance": 2800.0
+          "Multiplier": 1.05,
+          "Distance": 3000.0
         },
         {
-          "Multiplier": 0.55,
+          "Multiplier": 1.0,
           "Distance": 3500.0
         }
       ],

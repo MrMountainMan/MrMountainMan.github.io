@@ -7,20 +7,20 @@
     "Properties": {
       "DamageDistanceArray": [
         {
-          "Damage": 64.6,
+          "Damage": 90.0,
           "Distance": 200.0
         },
         {
-          "Damage": 64.6,
-          "Distance": 1700.0
+          "Damage": 90.0,
+          "Distance": 1500.0
         },
         {
-          "Damage": 50.0,
-          "Distance": 2700.0
+          "Damage": 85.0,
+          "Distance": 2500.0
         },
         {
-          "Damage": 43.0,
-          "Distance": 3700.0
+          "Damage": 80.0,
+          "Distance": 3500.0
         }
       ],
       "AmmoLoaded": 30,
@@ -33,21 +33,21 @@
       "CriticalDamageMultiplierDistanceArray": [
         {
           "Multiplier": 3.7,
-          "Distance": 1700.0
+          "Distance": 1500.0
         },
         {
           "Multiplier": 2.96,
-          "Distance": 2700.0
+          "Distance": 2500.0
         },
         {
           "Multiplier": 2.59,
-          "Distance": 3700.0
+          "Distance": 3500.0
         }
       ],
       "FireMode": "ESBZFireMode::Auto",
       "FireType": "ESBZFireType::Auto",
       "bCanHitEnvironmentAfterPenetration": true,
-      "ArmorPenetration": 2.0,
+      "ArmorPenetration": 2.8,
       "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
       "AmmoLoadedMax": 30,
       "AmmoPerReload": 30,

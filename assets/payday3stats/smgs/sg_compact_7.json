@@ -12,36 +12,35 @@
         },
         {
           "Damage": 59.2,
-          "Distance": 2200.0
+          "Distance": 2000.0
         },
         {
           "Damage": 38.0,
-          "Distance": 2900.0
+          "Distance": 3000.0
         },
         {
           "Damage": 32.0,
-          "Distance": 3700.0
+          "Distance": 4000.0
         }
       ],
       "AmmoLoaded": 30,
       "AmmoInventoryMax": 300,
       "AmmoInventory": 240,
       "AmmoPickup": {
-        "Min": 8.0,
-        "Max": 11.0
+        "Min": 8.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
           "Multiplier": 1.2,
-          "Distance": 2200.0
+          "Distance": 2000.0
         },
         {
-          "Multiplier": 0.84,
-          "Distance": 2900.0
+          "Multiplier": 1.1,
+          "Distance": 3000.0
         },
         {
-          "Multiplier": 0.72,
-          "Distance": 3700.0
+          "Multiplier": 1.0,
+          "Distance": 4000.0
         }
       ],
       "FireMode": "ESBZFireMode::Auto",

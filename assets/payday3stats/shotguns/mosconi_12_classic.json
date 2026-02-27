@@ -12,15 +12,15 @@
         },
         {
           "Damage": 67.125,
-          "Distance": 1300.0
+          "Distance": 1500.0
         },
         {
           "Damage": 42.0,
-          "Distance": 2100.0
+          "Distance": 2000.0
         },
         {
           "Damage": 30.0,
-          "Distance": 2900.0
+          "Distance": 3000.0
         }
       ],
       "AmmoLoaded": 2,
@@ -34,15 +34,15 @@
       "CriticalDamageMultiplierDistanceArray": [
         {
           "Multiplier": 3.0,
-          "Distance": 1300.0
+          "Distance": 1500.0
         },
         {
           "Multiplier": 2.1,
-          "Distance": 2100.0
+          "Distance": 2000.0
         },
         {
-          "Multiplier": 0.88,
-          "Distance": 2900.0
+          "Multiplier": 1.1,
+          "Distance": 3000.0
         }
       ],
       "ProjectilesPerFiredRound": 10,
