@@ -208,7 +208,7 @@ pub fn Payday3Stats() -> Element
 
     rsx!
     {
-        h3 {"Payday 3 Stats"}
+        h3 { "Payday 3 Stats" }
 
         div {
             display: "grid",
@@ -218,75 +218,44 @@ pub fn Payday3Stats() -> Element
             background: "black",
             gap: "1px",
             //blank
-            div {
-                grid_column_end: "span 10",
-                background: "white",
-                "name here"
-            }
+            div { grid_column_end: "span 10", background: "white", "name here" }
 
             //distance
             for i in 0..=20 {
-                div{
-                    grid_column_end: "span 5",
-                    background: "white",
-                    {(i*5).to_string()}
-                }
+                div { grid_column_end: "span 5", background: "white", {(i * 5).to_string()} }
             }
 
             //weapons
-            for weapon in weapons_signal.iter()
-            {
-                div
-                {
+            for weapon in weapons_signal.iter() {
+                div {
                     grid_column_start: 1,
                     grid_column_end: "span 10",
                     background: "white",
-                    "Name: "{weapon.name.clone()}
+                    "Name: "
+                    {weapon.name.clone()}
                 }
-                for node in weapon.damage_distance_array.clone().iter()
-                {
-                    div
-                    {
+                for node in weapon.damage_distance_array.clone().iter() {
+                    div {
                         grid_column_end: node.damage_distance.clone(),
                         background: "white",
                         {node.damage.clone()}
                     }
                 }
-                div
-                {
+                div {
                     grid_column_start: 1,
                     grid_column_end: "span 10",
                     background: "white",
                     "Crit Multi: "
                 }
-                for node in weapon.crit_distance_array.clone().iter()
-                {
-                    div
-                    {
+                for node in weapon.crit_distance_array.clone().iter() {
+                    div {
                         grid_column_end: node.crit_distance.clone(),
                         background: "white",
                         {node.crit.clone()}
                     }
                 }
-
-
-                /*
-                div
-                { 
-                    grid_column_end: weapon.damage_distance_array[0].damage_distance.clone(),
-                    background: "white",
-                    "ap: "
-                    {weapon.armor_pen.to_string()}
-                    " pen: "
-                    {weapon.pen.to_string()}
-                    " dmg: "
-                    {weapon.damage_distance_array[0].damage.clone()}
-                    " dist: "
-                    {weapon.damage_distance_array[0].damage_distance.clone()}
-                }*/
             }
-            
-
+        
         }
     }
 }

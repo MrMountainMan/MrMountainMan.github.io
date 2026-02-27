@@ -41,13 +41,11 @@ pub fn Monaco2CalcMain() -> Element
     rsx!
     {
         //change the icon and the website title
-        document::Link {rel: "icon", href: asset!("/assets/monaco2calc/monaco2.ico")}
-        document::Title{"Monaco 2 Score Calculator"}
-        div
-        {   
-            style: "width: 600px; float: left;",
+        document::Link { rel: "icon", href: asset!("/assets/monaco2calc/monaco2.ico") }
+        document::Title { "Monaco 2 Score Calculator" }
+        div { style: "width: 600px; float: left;",
             //display header
-            h1 {"Monaco 2 Score Calculator"}
+            h1 { "Monaco 2 Score Calculator" }
             br {}
             {LevelSelector(level)}
             br {}
@@ -55,23 +53,21 @@ pub fn Monaco2CalcMain() -> Element
             {PlayerSelector(player_multiplier)}
             br {}
             br {}
-            {CoinsCollected(coins, level, coins_per_level_string)}"/{coins_per_level_string()[&level()]}"
+            {CoinsCollected(coins, level, coins_per_level_string)}
+            "/{coins_per_level_string()[&level()]}"
             br {}
             br {}
             {CompletionTime(hours, minutes, seconds, milliseconds)}
             br {}
             br {}
             "Final score: {CalculateScore(level, player_multiplier, coins, hours, minutes, seconds, milliseconds)}"
-            br {  }
-
+            br {}
+        
         }
-        div
-        {
-            style: "margin-left: 620px;",
+        div { style: "margin-left: 620px;",
             h1 { "Greedy Score Times" }
             {GreedyTimes(level, player_multiplier, coins_per_level_string)}
         }
-
 
     }
 }
@@ -81,33 +77,34 @@ pub fn LevelSelector(mut level: Signal<String>) -> Element
     rsx!
     {
         label { r#for: "level_name", "Level: " }
-            select
-            {
-                name: "level",
-                id: "level_name",
-                value: level,
-                oninput: move |event| { *level.write() = event.value(); },
-                option { value: "yacht_club", "Yacht Club"}
-                option { value: "hotel", "Hotel"}
-                option { value: "bona_fide_sanitation", "Bona Fide Sanitation"}
-                option { value: "cocktail_party", "Cocktail Party"}
-                option { value: "prison", "Prison"}
-                option { value: "museum", "Museum"}
-                option { value: "shipyard", "Shipyard"}
-                option { value: "data_center", "Data Center"}
-                option { value: "night_club", "Night Club"}
-                option { value: "opera", "Opera"}
-                option { value: "bank", "Bank"}
-                option { value: "palace", "Palace"}
-                option { value: "safehouse", "Safehouse"}
-                option { value: "catacombs", "Catacombs"}
-                option { value: "casino", "Casino"}
-                option { value: "bonhomme", "Bonhomme"}
-                option { value: "petit_bank_optional", "Petit Bank (Optional)"}
-                option { value: "museum_optional", "Museum (Optional)"}
-                option { value: "office_optional", "Office (Optional)"}
-                option { value: "art_gallery_optional", "Art Gallery (Optional)"}
-            }
+        select {
+            name: "level",
+            id: "level_name",
+            value: level,
+            oninput: move |event| {
+                *level.write() = event.value();
+            },
+            option { value: "yacht_club", "Yacht Club" }
+            option { value: "hotel", "Hotel" }
+            option { value: "bona_fide_sanitation", "Bona Fide Sanitation" }
+            option { value: "cocktail_party", "Cocktail Party" }
+            option { value: "prison", "Prison" }
+            option { value: "museum", "Museum" }
+            option { value: "shipyard", "Shipyard" }
+            option { value: "data_center", "Data Center" }
+            option { value: "night_club", "Night Club" }
+            option { value: "opera", "Opera" }
+            option { value: "bank", "Bank" }
+            option { value: "palace", "Palace" }
+            option { value: "safehouse", "Safehouse" }
+            option { value: "catacombs", "Catacombs" }
+            option { value: "casino", "Casino" }
+            option { value: "bonhomme", "Bonhomme" }
+            option { value: "petit_bank_optional", "Petit Bank (Optional)" }
+            option { value: "museum_optional", "Museum (Optional)" }
+            option { value: "office_optional", "Office (Optional)" }
+            option { value: "art_gallery_optional", "Art Gallery (Optional)" }
+        }
     }
 }
 
@@ -117,17 +114,48 @@ pub fn PlayerSelector( mut player_multiplier: Signal<f32>) -> Element
     rsx!
     {
         label { r#for: "num_players", "Number of Players: " }
-        div
-        {
-            id: "num_players",
+        div { id: "num_players",
             label { r#for: "1_player", "1" }
-            input { r#type: "radio", id: "1_player", name: "player_selector", value: 2f32, checked: true, onchange: move |event| { *player_multiplier.write() = event.value().parse::<f32>().unwrap(); }, }
+            input {
+                r#type: "radio",
+                id: "1_player",
+                name: "player_selector",
+                value: 2f32,
+                checked: true,
+                onchange: move |event| {
+                    *player_multiplier.write() = event.value().parse::<f32>().unwrap();
+                },
+            }
             label { r#for: "2_player", "2" }
-            input { r#type: "radio", id: "2_player", name: "player_selector", value: 1.5f32, onchange: move |event| { *player_multiplier.write() = event.value().parse::<f32>().unwrap(); }, }
+            input {
+                r#type: "radio",
+                id: "2_player",
+                name: "player_selector",
+                value: 1.5f32,
+                onchange: move |event| {
+                    *player_multiplier.write() = event.value().parse::<f32>().unwrap();
+                },
+            }
             label { r#for: "2_player", "3" }
-            input { r#type: "radio", id: "3_player", name: "player_selector", value: 1.25f32, onchange: move |event| { *player_multiplier.write() = event.value().parse::<f32>().unwrap(); }, }
+            input {
+                r#type: "radio",
+                id: "3_player",
+                name: "player_selector",
+                value: 1.25f32,
+                onchange: move |event| {
+                    *player_multiplier.write() = event.value().parse::<f32>().unwrap();
+                },
+            }
             label { r#for: "2_player", "4" }
-            input { r#type: "radio", id: "4_player", name: "player_selector", value: 1f32, onchange: move |event| { *player_multiplier.write() = event.value().parse::<f32>().unwrap(); }, }
+            input {
+                r#type: "radio",
+                id: "4_player",
+                name: "player_selector",
+                value: 1f32,
+                onchange: move |event| {
+                    *player_multiplier.write() = event.value().parse::<f32>().unwrap();
+                },
+            }
         }
     }
 }
@@ -143,9 +171,15 @@ pub fn CoinsCollected(coins: Signal<u16>, level: Signal<String>, coins_per_level
             min: 0,
             max: coins_per_level()[&level()],
             value: coins,
-            oninput: move |event| { CheckValidInput(event, coins, coins_per_level()[&level()]); },
-            onpaste: move |event| { event.prevent_default(); },
-            onkeypress: move |event| { PreventNonNumericalInput(event); },
+            oninput: move |event| {
+                CheckValidInput(event, coins, coins_per_level()[&level()]);
+            },
+            onpaste: move |event| {
+                event.prevent_default();
+            },
+            onkeypress: move |event| {
+                PreventNonNumericalInput(event);
+            },
             onkeyup: move |_| { CheckOverflow(coins, coins_per_level()[&level()]) },
         }
     }
@@ -158,53 +192,77 @@ pub fn CompletionTime(hours: Signal<u16>, minutes: Signal<u16>, seconds: Signal<
     rsx!
     {
         "Time to complete: "
-            input {
-                id: "clear_time_hours",
-                r#type: "number",
-                min: 0,
-                max: 99,
-                value: hours,
-                oninput: move |event| { CheckValidInput(event, hours, 99); },
-                onpaste: move |event| { event.prevent_default(); },
-                onkeypress: move |event| { PreventNonNumericalInput(event); },
-                onkeyup: move |event| { CheckOverflow(hours, 99) },
-            }
-            ":"
-            input {
-                id: "clear_time_minutes",
-                r#type: "number",
-                min: 0,
-                max: 59,
-                value: minutes,
-                oninput: move |event| { CheckValidInput(event, minutes, 59); },
-                onpaste: move |event| { event.prevent_default(); },
-                onkeypress: move |event| { PreventNonNumericalInput(event); },
-                onkeyup: move |event| { CheckOverflow(minutes, 59) },
-            }
-            ":"
-            input {
-                id: "clear_time_seconds",
-                r#type: "number",
-                min: 0,
-                max: 59,
-                value: seconds,
-                oninput: move |event| { CheckValidInput(event, seconds, 59); },
-                onpaste: move |event| { event.prevent_default(); },
-                onkeypress: move |event| { PreventNonNumericalInput(event); },
-                onkeyup: move |event| { CheckOverflow(seconds, 59) },
-            }
-            "."
-            input {
-                id: "clear_time_milliseconds",
-                r#type: "number",
-                min: 0,
-                max: 999,
-                value: milliseconds,
-                oninput: move |event| { CheckValidInput(event, milliseconds, 999); },
-                onpaste: move |event| { event.prevent_default(); },
-                onkeypress: move |event| { PreventNonNumericalInput(event); },
-                onkeyup: move |event| { CheckOverflow(milliseconds, 999) },
-            }
+        input {
+            id: "clear_time_hours",
+            r#type: "number",
+            min: 0,
+            max: 99,
+            value: hours,
+            oninput: move |event| {
+                CheckValidInput(event, hours, 99);
+            },
+            onpaste: move |event| {
+                event.prevent_default();
+            },
+            onkeypress: move |event| {
+                PreventNonNumericalInput(event);
+            },
+            onkeyup: move |event| { CheckOverflow(hours, 99) },
+        }
+        ":"
+        input {
+            id: "clear_time_minutes",
+            r#type: "number",
+            min: 0,
+            max: 59,
+            value: minutes,
+            oninput: move |event| {
+                CheckValidInput(event, minutes, 59);
+            },
+            onpaste: move |event| {
+                event.prevent_default();
+            },
+            onkeypress: move |event| {
+                PreventNonNumericalInput(event);
+            },
+            onkeyup: move |event| { CheckOverflow(minutes, 59) },
+        }
+        ":"
+        input {
+            id: "clear_time_seconds",
+            r#type: "number",
+            min: 0,
+            max: 59,
+            value: seconds,
+            oninput: move |event| {
+                CheckValidInput(event, seconds, 59);
+            },
+            onpaste: move |event| {
+                event.prevent_default();
+            },
+            onkeypress: move |event| {
+                PreventNonNumericalInput(event);
+            },
+            onkeyup: move |event| { CheckOverflow(seconds, 59) },
+        }
+        "."
+        input {
+            id: "clear_time_milliseconds",
+            r#type: "number",
+            min: 0,
+            max: 999,
+            value: milliseconds,
+            oninput: move |event| {
+                CheckValidInput(event, milliseconds, 999);
+            },
+            onpaste: move |event| {
+                event.prevent_default();
+            },
+            onkeypress: move |event| {
+                PreventNonNumericalInput(event);
+            },
+            onkeyup: move |event| { CheckOverflow(milliseconds, 999) },
+        }
     }
 
 }
@@ -272,9 +330,7 @@ pub fn GreedyTimes(level: Signal<String>, player_multiplier: Signal<f32>, coins_
 {
     if level() == "bonhomme"
     {
-        return rsx!{
-            "???"
-        }
+        return rsx!{ "???" }
     }
 
     let missed_0: String;

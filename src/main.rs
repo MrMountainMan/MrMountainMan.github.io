@@ -34,8 +34,8 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
-        document::Link {rel: "icon", href: DEFAULT_ICON}
-        document::Title{ "MrMountainMan Github" }
+        document::Link { rel: "icon", href: DEFAULT_ICON }
+        document::Title { "MrMountainMan Github" }
         Router::<Route> {}
     }
 }
@@ -44,13 +44,13 @@ fn App() -> Element {
 #[component]
 fn Home() -> Element {
     rsx! {
-        document::Link {rel: "icon", href: DEFAULT_ICON}
-        document::Title{ "MrMountainMan Github" }
-        
-        h2 {"Home Page!"}
+        document::Link { rel: "icon", href: DEFAULT_ICON }
+        document::Title { "MrMountainMan Github" }
 
-        Link { to: Route::Monaco2CalcMain {}, "Monaco 2 Score Calculator"}
+        h2 { "Home Page!" }
+
+        Link { to: Route::Monaco2CalcMain {}, "Monaco 2 Score Calculator" }
         br {}
-        Link { to: Route::Payday3Stats {}, "Payday 3 Stats"}
+        Link { to: Route::Payday3Stats {}, "Payday 3 Stats" }
     }
 }
