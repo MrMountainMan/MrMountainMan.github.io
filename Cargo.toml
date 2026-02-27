@@ -7,7 +7,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-dioxus = { version = "0.7.3", features = ["router"] }
+dioxus = { version = "0.7.3", features = ["fullstack","router"] }
 dioxus-logger = "0.7.3"
 regex = "1.11.3"
 reqwest = { version = "0.12.24", features = ["json"] }

@@ -25,7 +25,8 @@ const DEFAULT_ICON: Asset = asset!("/assets/icon.ico");
 
 
 fn main() {
-    dioxus_logger::init(Level::INFO).expect("logger failed to init");
+    //dioxus_web::launch::launch(App, vec![], dioxus_web::Config::new().hydrate(true));
+    //dioxus_logger::init(Level::INFO).expect("logger failed to init");
     dioxus::launch(App);
 }
 
