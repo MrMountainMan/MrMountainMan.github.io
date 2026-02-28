@@ -37,6 +37,7 @@ struct CritProcessed
 #[derive(serde::Deserialize, Clone)]
 struct Weapon
 {
+    is_category: bool,
     name: String,
     damage_distance_array: Vec<DamageProcessed>,
     crit_distance_array: Vec<CritProcessed>,
@@ -50,19 +51,25 @@ pub fn Payday3Stats() -> Element
     let mut weapons_signal = use_signal(|| Vec::<Weapon>::new());
 
     use_future(move || async move {
-        //MASTER LIST OF ALL WEAPONS. MUST BE UPDATED IN ORDER TO DISPLAY NEW WEAPONS. WEAPON NAME MUST CORRESPOND TO THE JSON FILE NAME AND INCLUDE FILE PATH       
+        //MASTER LIST OF ALL WEAPONS. MUST BE UPDATED IN ORDER TO DISPLAY NEW WEAPONS.
+        //WEAPON NAME MUST CORRESPOND TO THE JSON FILE NAME AND INCLUDE FILE PATH       
+        //CATEGORIES ARE DEFINED AS "_<Category Name>"
         let weapon_paths: Vec<&str> = vec![
+            "_Assault Rifles",
             "assault_rifles/adelig_rg5",
             "assault_rifles/car_4",
             "assault_rifles/chanit_s3",
             "assault_rifles/ku_59",
             "assault_rifles/northwest_b9",
             "assault_rifles/vf_7s",
+            "_LMGs",
             "lmgs/blyspruta_mx63",
+            "_Marksman Rifles",
             "marksman_rifles/fik_22_tlr",
             "marksman_rifles/reinfeld_900s",
             "marksman_rifles/sa_a144",
             "marksman_rifles/spearfish_1895",
+            "_Pistols",
             "pistols/garstini_viper_50ae",
             "pistols/jackknife_se5",
             "pistols/picchio_duro_5",
@@ -71,15 +78,18 @@ pub fn Payday3Stats() -> Element
             "pistols/sp_model_11",
             "pistols/stryk_7",
             "pistols/tribune_32",
+            "_Revolvers",
             "revolvers/bullkick_500",
             "revolvers/j&m_castigo_44",
             "revolvers/sforza_bison",
+            "_Shotguns",
             "shotguns/fsa_12g",
             "shotguns/justicar",
             "shotguns/m7_pursuviant",
             "shotguns/mosconi_12_classic",
             "shotguns/reinfeld_880",
             "shotguns/tas_12",
+            "_SMGs",
             "smgs/atk_7",
             "smgs/fik_pc9",
             "smgs/sg_compact_7",
@@ -89,6 +99,20 @@ pub fn Payday3Stats() -> Element
 
         for weapon_path in weapon_paths
         {   
+            //check to see if the path is a category
+            if weapon_path.starts_with("_")
+            {
+                weapons_signal.push(Weapon {
+                    is_category: true,
+                    name: weapon_path.to_owned()[1..].to_owned(),
+                    damage_distance_array: vec![],
+                    crit_distance_array: vec![],
+                    armor_pen: "0".to_string(),
+                    pen: "0".to_string(),
+                });
+                continue;
+            }
+
             //get the data from the weapon path
             let raw_data = reqwest::get(format!("https://raw.githubusercontent.com/MrMountainMan/MrMountainMan.github.io/refs/heads/main/assets/payday3stats/{}.json", weapon_path))//    "" + weapon_path + ".json")
                 .await
@@ -145,6 +169,7 @@ pub fn Payday3Stats() -> Element
             }            
 
             weapons_signal.push(Weapon {
+                is_category: false,
                 name: short_name.to_string(),
                 damage_distance_array: damage_nodes_processed,
                 crit_distance_array: crit_nodes_processed,
@@ -165,13 +190,6 @@ pub fn Payday3Stats() -> Element
             padding: "1px",
             background: "black",
             gap: "1px",
-            //blank
-            div { grid_column_end: "span 10", background: "white", "name here" }
-
-            //distance
-            for i in 0..=20 {
-                div { grid_column_end: "span 5", background: "white", {(i * 5).to_string()} }
-            }
 
             //weapons
             for weapon in weapons_signal.iter() {
@@ -179,31 +197,40 @@ pub fn Payday3Stats() -> Element
                     grid_column_start: 1,
                     grid_column_end: "span 10",
                     background: "white",
-                    "Name: "
+                    if !weapon.is_category
+                    {
+                        "Name: "
+                    }
                     {weapon.name.clone()}
                 }
-                for node in weapon.damage_distance_array.clone().iter() {
+                if weapon.is_category
+                {
+                    for i in 0..=20 {
+                        div { grid_column_end: "span 5", background: "white", {(i * 5).to_string()}}
+                    }    
+                } else {
+                    for node in weapon.damage_distance_array.clone().iter() {
                     div {
                         grid_column_end: node.damage_distance.clone(),
                         background: node.background_colour.clone(),
                         {node.damage.clone()}
                     }
-                }
-                div {
-                    grid_column_start: 1,
-                    grid_column_end: "span 10",
-                    background: "white",
-                    "Crit Multi: "
-                }
-                for node in weapon.crit_distance_array.clone().iter() {
-                    div {
-                        grid_column_end: node.crit_distance.clone(),
-                        background: node.background_colour.clone(),
-                        {node.crit.clone()}
                     }
-                }
+                    div {
+                        grid_column_start: 1,
+                        grid_column_end: "span 10",
+                        background: "white",
+                        "Crit Multi: "
+                    }
+                    for node in weapon.crit_distance_array.clone().iter() {
+                        div {
+                            grid_column_end: node.crit_distance.clone(),
+                            background: node.background_colour.clone(),
+                            {node.crit.clone()}
+                        }
+                    }
+                } 
             }
-        
         }
     }
 }
