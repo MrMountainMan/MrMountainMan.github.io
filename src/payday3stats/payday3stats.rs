@@ -1,6 +1,6 @@
 //#[cfg(feature = "blocking")]
 
-use std::vec;
+use std::{collections::HashMap, vec};
 use dioxus::{prelude::*};
 use serde_json::json;
 
@@ -52,8 +52,9 @@ pub fn Payday3Stats() -> Element
 
     use_future(move || async move {
         //MASTER LIST OF ALL WEAPONS. MUST BE UPDATED IN ORDER TO DISPLAY NEW WEAPONS.
-        //WEAPON NAME MUST CORRESPOND TO THE JSON FILE NAME AND INCLUDE FILE PATH       
+        //WEAPON NAME MUST CORRESPOND TO THE JSON FILE NAME AND INCLUDE FILE PATH
         //CATEGORIES ARE DEFINED AS "_<Category Name>"
+        //TO NAME WEAPON, LOOK BELOW AND CREATE A NEW MAPPED OBJECT
         let weapon_paths: Vec<&str> = vec![
             "_Assault Rifles",
             "assault_rifles/adelig_rg5",
@@ -98,7 +99,47 @@ pub fn Payday3Stats() -> Element
             "smgs/sg_compact_7",
             "smgs/war_45",
             "smgs/ziv_commando",
-            ];
+        ];
+
+        let weapon_name_map: HashMap<&str, &str> = HashMap::from([
+            ("DA_FireData_AssaultRifle_RG5", "Adelig RG5"),
+            ("DA_FireData_AssaultRifle_CAR4", "CAR-4"),
+            ("DA_FireData_AssaultRifle_CHS3", "Chanit S3"),
+            ("DA_FireData_AssaultRifle_KU59", "KU-59"),
+            ("DA_FireData_AssaultRifle_NWB9", "Northwest B-9"),
+            ("DA_FireData_AssaultRifle_Julius", "Skogskrigare AG-9"),
+            ("DA_FireData_AssaultRifle_VF7S", "VF-7S"),
+            ("DA_FireData_LMG_MX63", "Blyspruta MX63"),
+            ("DA_FireData_LMG_PFLK", "Zokas-17"),
+            ("DA_FireData_Marksman_FIK22", "FIK 22 TLR"),
+            ("DA_FireData_Marksman_R900S", "Reinfeld 900S"),
+            ("DA_FireData_Marksman_A114", "SA A144"),
+            ("DA_FireData_Marksman_Spearfish", "Spearfish 1895"),
+            ("DA_FireData_Pistol_GarstiniViper", "Garstini Viper .50AE"),
+            ("DA_FireData_Pistol_SE5", "Jackknife SE5"),
+            ("DA_FireData_Pistol_PD5", "Picchio Duro 5"),
+            ("DA_FireData_Pistol_Yates", "Russell JB-9"),
+            ("DA_FireData_Pistol_S40", "Signature 40"),
+            ("DA_FireData_Pistol_S403", "Signature 403"),
+            ("DA_FireData_Pistol_SPM11", "SP Model 11"),
+            ("DA_FireData_Pistol_Stryk7", "Stryk 7"),
+            ("DA_FireData_Pistol_T32", "Tribune 32"),
+            ("DA_FireData_Revolver_Bullkick500", "Bullkick 500"),
+            ("DA_FireData_Revolver_Castigo44", "J&M Castigo 44"),
+            ("DA_FireData_Revolver_Bison", "Sforza Bison"),
+            ("DA_FireData_Shotgun_FSA12", "FSA-12G"),
+            ("DA_FireData_Revolver_Justicar", "Justicar"),
+            ("DA_FireData_Shotgun_M7P", "M7 Pursuviant"),
+            ("DA_FireData_Shotgun_Mosconi12C", "Mosconi 12 Classic"),
+            ("DA_FireData_Shotgun_R880", "Reinfeld 880"),
+            ("DA_FireData_Shotgun_TAS12", "TAS-12"),
+            ("DA_FireData_SMG_ATK7", "ATK-7"),
+            ("DA_FireData_SMG_PC9", "FIK PC9"),
+            ("DA_FireData_SMG_Compact7", "SG Compact-7"),
+            ("DA_FireData_SMG_WAR45", "WAR-45"),
+            ("DA_FireData_SMG_Commando", "Ziv Commando"),
+
+        ]);
 
         for weapon_path in weapon_paths
         {   
@@ -137,7 +178,7 @@ pub fn Payday3Stats() -> Element
 
             //get and shorten the name
             let full_name: String = serde_json::from_value(name_json).unwrap();
-            let (_, short_name) = full_name.rsplit_once('_').unwrap();
+            let mapped_name: String = weapon_name_map.get(full_name.as_str()).unwrap_or(&"unknown").to_string();
 
             //process damage distance
             let mut damage_nodes_processed: Vec<DamageProcessed> = Vec::new();
@@ -178,7 +219,7 @@ pub fn Payday3Stats() -> Element
 
             weapons_signal.push(Weapon {
                 is_category: false,
-                name: short_name.to_string(),
+                name: mapped_name,
                 damage_distance_array: damage_nodes_processed,
                 crit_distance_array: crit_nodes_processed,
                 armor_pen: serde_json::to_string(&armour_pen_json).unwrap_or("0".to_string()),//serde_json::from_value(armour_pen_json).unwrap_or("n/a2".to_string()),
