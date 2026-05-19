@@ -3,9 +3,11 @@ car4: Gameplay/Weapons/AssaultRifle
 chanit: DLCs/00030-DLC0003/Weapons/AssaultRifle
 ku59: Gameplay/Weapons/AssaultRifle
 northwest: Gameplay/Weapons/AssaultRifle
+skogskrigare: DLCs/00130-Primary002/Gameplay/Weapons/AssaultRifle
 vf7s: Gameplay/Weapons/AssaultRifle
 
 blyspruta: DLCs/00010-DLCHEIST0002/Gameplay/Weapons/LMG
+zokas: DLCs/00120-Primary001/Gameplay/Weapons/LMG
 
 fik22: DLCs/00006-DLCWEAP0001/Gameplay/Weapons/Marksman
 reinfeld r900: Gameplay/Weapons/Marksman
@@ -15,6 +17,7 @@ spearfish: DLCs/00170-Weapon3/Gameplay/Waspons/Marksman
 deagle (viper): DLCs/0080-DLC0004/Gameplay/Weapons/Pistol
 jackknife: DLCs/0080-DLC0004/Gameplay/Weapons/Pistol
 picchip duro: DLCs/00030-DLC0003/Weapons/Pistol
+russell: DLCs/WPN_SECO_Yates/Gameplay/Weapons/Pistol
 sig40: Gameplay/Weapons/Pistol
 sig403: Gameplay/Weapons/Pistol
 sp model 11:Gameplay/Weapons/Pistol

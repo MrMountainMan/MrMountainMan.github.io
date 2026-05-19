@@ -1,0 +1,61 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_AssaultRifle_Julius",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 100.0,
+          "Distance": 1500.0
+        },
+        {
+          "Damage": 90.0,
+          "Distance": 3500.0
+        },
+        {
+          "Damage": 75.0,
+          "Distance": 10000.0
+        }
+      ],
+      "AmmoLoaded": 30,
+      "AmmoInventoryMax": 360,
+      "AmmoInventory": 240,
+      "AmmoPickup": {
+        "Max": 9.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 4.15,
+          "Distance": 1000.0
+        },
+        {
+          "Multiplier": 3.4,
+          "Distance": 3000.0
+        },
+        {
+          "Multiplier": 3.0,
+          "Distance": 4000.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 1.0,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 30,
+      "AmmoPerReload": 30,
+      "AmmoVisibleMax": 3,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 650.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_Julius'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00130-Primary002/Gameplay/Weapons/AssaultRifle/Julius/C_HurtReactionWeight_AssaultRifle_Julius.0"
+        }
+      }
+    }
+  }
+]

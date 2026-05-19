@@ -1,0 +1,62 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_LMG_PFLK",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 110.0,
+          "Distance": 1500.0
+        },
+        {
+          "Damage": 90.6,
+          "Distance": 2500.0
+        },
+        {
+          "Damage": 66.0,
+          "Distance": 3500.0
+        }
+      ],
+      "AmmoLoaded": 95,
+      "AmmoInventoryMax": 380,
+      "AmmoInventory": 285,
+      "AmmoPickup": {
+        "Min": 6.0,
+        "Max": 9.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 2.0,
+          "Distance": 1500.0
+        },
+        {
+          "Multiplier": 1.6,
+          "Distance": 3000.0
+        },
+        {
+          "Multiplier": 1.2,
+          "Distance": 10000.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 1.0,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoLoadedMax": 95,
+      "AmmoPerReload": 95,
+      "AmmoVisibleMax": 3,
+      "RoundsPerMinute": 650.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_LMG_PFLK'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00120-Primary001/Gameplay/Weapons/LMG/PFLK/C_HurtReactionWeight_LMG_PFLK.0"
+        },
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Interrupt",
+        "CriticalHurtReactionWeightBuildupModifier": 0.2
+      }
+    }
+  }
+]

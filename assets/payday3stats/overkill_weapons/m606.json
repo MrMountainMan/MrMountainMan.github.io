@@ -1,0 +1,75 @@
+[
+  {
+    "Type": "SBZPlayerM606ProjectileWeaponFireData",
+    "Name": "DA_FireData_OVK_Player_M606",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerM606ProjectileWeaponFireData'",
+    "Properties": {
+      "PitchAdjustment": 0.0,
+      "SpawnOffsetFromCamera": 20.0,
+      "DamageDistanceArray": [],
+      "AmmoLoaded": 1,
+      "AmmoLeftInChamber": 0,
+      "AmmoInventoryMax": 2,
+      "AmmoInventory": 2,
+      "AmmoPickup": {
+        "Min": 0.0,
+        "Max": 0.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [],
+      "BurstRoundCount": 1,
+      "bCanHitEnvironmentAfterPenetration": true,
+      "Range": 800,
+      "ArmorPenetration": 1.0,
+      "BackblastExplosiveData": {
+        "ObjectName": "SBZExplosiveData'DA_Explosive_M606Backblast'",
+        "ObjectPath": "PAYDAY3/Content/DLCs/00216-WPN_OVK_M606/Gameplay/Weapons/OVK/M606/DA_Explosive_M606Backblast.0"
+      },
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Always",
+      "GrenadeProjectileClass": {
+        "AssetPathName": "/Game/DLCs/00216-WPN_OVK_M606/Gameplay/Weapons/OVK/M606/BP_PlayerRocketProjectile.BP_PlayerRocketProjectile_C",
+        "SubPathString": ""
+      },
+      "ArmorPenetrationProjectile": 10.0,
+      "FriendlyPlayerDamageScale": 0.01,
+      "InstigatorPlayerDamageScale": 0.01,
+      "bUseInstigatorPlayerDamageScale": true,
+      "DamageDistanceProjectileArray": [
+        {
+          "Damage": 4500.0,
+          "Distance": 200.0
+        },
+        {
+          "Damage": 900.0,
+          "Distance": 500.0
+        },
+        {
+          "Damage": 360.0,
+          "Distance": 700.0
+        },
+        {
+          "Damage": 220.0,
+          "Distance": 1200.0
+        }
+      ],
+      "GasDurationSeconds": 14.0,
+      "AmmoLoadedMax": 1,
+      "AmmoPerReload": 1,
+      "AmmoVisibleMax": 1,
+      "bIsEquippedAmmoLoadedTracked": true,
+      "RoundsPerMinute": 180.0,
+      "DamageTypeClass": {
+        "ObjectName": "BlueprintGeneratedClass'DT_RocketProjectile_M606_C'",
+        "ObjectPath": "PAYDAY3/Content/DLCs/00216-WPN_OVK_M606/Gameplay/Weapons/OVK/M606/DT_RocketProjectile_M606.0"
+      },
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_OVK_M606'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/00216-WPN_OVK_M606/Gameplay/Weapons/OVK/M606/C_HurtReactionWeight_OVK_M606.0"
+        },
+        "HurtReactionWeightModifier": 4.0,
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Incapacitate"
+      }
+    }
+  }
+]

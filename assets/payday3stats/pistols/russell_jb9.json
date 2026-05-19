@@ -1,0 +1,57 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Pistol_Yates",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 48.2,
+          "Distance": 1000.0
+        },
+        {
+          "Damage": 25.0,
+          "Distance": 1500.0
+        },
+        {
+          "Damage": 18.0,
+          "Distance": 2500.0
+        }
+      ],
+      "AmmoLoaded": 32,
+      "AmmoLeftInChamber": 0,
+      "AmmoInventoryMax": 320,
+      "AmmoInventory": 192,
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 5.0,
+          "Distance": 1000.0
+        },
+        {
+          "Multiplier": 2.5,
+          "Distance": 1500.0
+        },
+        {
+          "Multiplier": 1.5,
+          "Distance": 2500.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Auto",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Always",
+      "AmmoLoadedMax": 32,
+      "AmmoPerReload": 32,
+      "AmmoVisibleMax": 3,
+      "bIsEmptyAmmoEjected": true,
+      "RoundsPerMinute": 1200.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Pistol_Yates'",
+          "ObjectPath": "PAYDAY3/Content/DLCs/WPN_SECO_Yates/Gameplay/Weapons/Pistol/Yates/C_HurtReactionWeight_Pistol_Yates.0"
+        },
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Interrupt"
+      }
+    }
+  }
+]

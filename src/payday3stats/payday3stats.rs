@@ -129,8 +129,8 @@ pub fn Payday3Stats() -> Element
             let name_json: serde_json::Value = json[0].get("Name").unwrap_or(&json!("unknown")).clone();//.expect("Failed to parse weapon name from JSON").clone();
             let damage_distance_json: serde_json::Value = json[0]["Properties"].get("DamageDistanceArray").unwrap_or(&json!([])).clone();//.expect("Failed to parse damage distance array from JSON").clone();
             let crit_distance_json: serde_json::Value = json[0]["Properties"].get("CriticalDamageMultiplierDistanceArray").unwrap_or(&json!([])).clone();//.expect("Failed to parse critical damage distance array from JSON").clone();
-            let armour_pen_json: serde_json::Value = json[0]["Properties"].get("ArmorPenetration").unwrap_or(&json!("0")).clone();//("Failed to parse armour pen value from JSON").clone();
-            let pen_json: serde_json::Value = json[0]["Properties"].get("MaximumPenetrationCount").unwrap_or(&json!("0")).clone();//.expect("Failed to parse pen value from JSON").clone();
+            let armour_pen_json: serde_json::Value = json[0]["Properties"].get("ArmorPenetration").unwrap_or(&json!(0)).clone();//("Failed to parse armour pen value from JSON").clone();
+            let pen_json: serde_json::Value = json[0]["Properties"].get("MaximumPenetrationCount").unwrap_or(&json!(0)).clone();//.expect("Failed to parse pen value from JSON").clone();
 
             //get and shorten the name
             let full_name: String = serde_json::from_value(name_json).unwrap();
@@ -151,6 +151,8 @@ pub fn Payday3Stats() -> Element
                 damage_green_amount -= 50;
                 damage_red_amount += 50;
             }
+            //add one more node that is blank to fill the rest of the cells
+            damage_nodes_processed.push(DamageProcessed { damage: "".to_string(), damage_distance: format!("span {}", 105 - total_damage_distance_covered), background_colour: "white".to_string()});
 
             //process crit distance
             let mut crit_nodes_processed: Vec<CritProcessed> = Vec::new();
@@ -166,15 +168,18 @@ pub fn Payday3Stats() -> Element
                 crit_nodes_processed.push(CritProcessed { crit: node.Multiplier.to_string(), crit_distance: dist_string, background_colour: format!("rgb({},{},0", crit_red_amount, crit_green_amount) });
                 crit_green_amount -= 50;
                 crit_red_amount += 50;
-            }            
+            }
+            //add one more node that is blank to fill the rest of the cells
+            crit_nodes_processed.push(CritProcessed { crit: "".to_string(), crit_distance: format!("span {}", 105 - total_crit_distance_covered), background_colour: "white".to_string()});
+
 
             weapons_signal.push(Weapon {
                 is_category: false,
                 name: short_name.to_string(),
                 damage_distance_array: damage_nodes_processed,
                 crit_distance_array: crit_nodes_processed,
-                armor_pen: serde_json::from_value(armour_pen_json).unwrap_or("0".to_string()),
-                pen: serde_json::from_value(pen_json).unwrap_or("0".to_string()),
+                armor_pen: serde_json::to_string(&armour_pen_json).unwrap_or("0".to_string()),//serde_json::from_value(armour_pen_json).unwrap_or("n/a2".to_string()),
+                pen: serde_json::to_string(&pen_json).unwrap_or("0".to_string()),
             });
         }
     });
@@ -210,11 +215,11 @@ pub fn Payday3Stats() -> Element
                     }    
                 } else {
                     for node in weapon.damage_distance_array.clone().iter() {
-                    div {
-                        grid_column_end: node.damage_distance.clone(),
-                        background: node.background_colour.clone(),
-                        {node.damage.clone()}
-                    }
+                        div {
+                            grid_column_end: node.damage_distance.clone(),
+                            background: node.background_colour.clone(),
+                            {node.damage.clone()}
+                        }
                     }
                     div {
                         grid_column_start: 1,
@@ -228,6 +233,17 @@ pub fn Payday3Stats() -> Element
                             background: node.background_colour.clone(),
                             {node.crit.clone()}
                         }
+                    }
+                    div {
+                        grid_column_start: 1,
+                        grid_column_end: "span 10",
+                        background: "white",
+                        "Armor Penetration: " {weapon.armor_pen.clone()}
+                    }
+                    div {
+                        grid_column_start: 11,
+                        grid_column_end: "span 105",
+                        background: "white"
                     }
                 } 
             }
