@@ -29,7 +29,7 @@ castigo: Gameplay/Weapons/Revolver
 bison: Gameplay/Weapons/Revolver
 
 fsa: DLCs/00006-DLCWEAP0001/Gameplay/Waspons/Shotgun
-justicar: DLCs/00110/DLCWEAP0002/Gameplay/Weapons/Revolver
+justicar: DLCs/00110-DLCWEAP0002/Gameplay/Weapons/Revolver
 pursuviant: DLCs/00030-DLC0003/Gameplay/Weapons/Shotgun
 mosconi: Gameplay/Weapons/Shotgun
 r880: Gameplay/Weapons/Shotgun
