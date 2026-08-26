@@ -240,10 +240,10 @@ pub fn Payday3Stats() -> Element
         div {
             display: "grid",
             grid_auto_columns: "15px",
-            grid_template_columns: "256px 30px repeat(115, 15px)",
+            grid_template_columns: "256px 30px repeat(155, 15px)",
             padding: "1px",
-            background: "black",
-            gap: "1px",
+            background: "white",
+            //gap: "1px",
 
             //weapons
             for weapon in weapons_signal.iter() {
@@ -254,10 +254,20 @@ pub fn Payday3Stats() -> Element
                         grid_column_start: 1,
                         grid_column_end: 2,
                         grid_row_start: "span 3",
+                        border: "1px solid black",
                         background: "white",
                         img{
                             src: weapon.image_link.clone(),
                         }
+                    }
+                }
+                else
+                {
+                    div {
+                        grid_column_start: 1,
+                        grid_column_end: 2,
+                        background: "white",
+                        border: "1px solid black",
                     }
                 }
                 
@@ -265,6 +275,7 @@ pub fn Payday3Stats() -> Element
                     grid_column_start: 2,
                     grid_column_end: "span 10",
                     background: "white",
+                    border: "1px solid black",
                     if !weapon.is_category
                     {
                         "Name: "
@@ -274,13 +285,19 @@ pub fn Payday3Stats() -> Element
                 if weapon.is_category
                 {
                     for i in 0..=20 {
-                        div { grid_column_end: "span 5", background: "white", {(i * 5).to_string()}}
+                        div {
+                            grid_column_end: "span 5",
+                            background: "white",
+                            border: "1px solid black",
+                            {(i * 5).to_string()}
+                        }
                     }    
                 } else {
                     for node in weapon.damage_distance_array.clone().iter() {
                         div {
                             grid_column_end: node.damage_distance.clone(),
                             background: node.background_colour.clone(),
+                            border: "1px solid black",
                             {node.damage.clone()}
                         }
                     }
@@ -288,12 +305,14 @@ pub fn Payday3Stats() -> Element
                         grid_column_start: 2,
                         grid_column_end: "span 10",
                         background: "white",
+                        border: "1px solid black",
                         "Crit Multi: "
                     }
                     for node in weapon.crit_distance_array.clone().iter() {
                         div {
                             grid_column_end: node.crit_distance.clone(),
                             background: node.background_colour.clone(),
+                            border: "1px solid black",
                             {node.crit.clone()}
                         }
                     }
@@ -301,13 +320,15 @@ pub fn Payday3Stats() -> Element
                         grid_column_start: 2,
                         grid_column_end: "span 10",
                         background: "white",
+                        border: "1px solid black",
                         "Armor Penetration: " {weapon.armor_pen.clone()}
                         "\nEnemy Penetration: " {weapon.pen.clone()}
                     }
                     div {
                         grid_column_start: 12,
                         grid_column_end: "span 105",
-                        background: "white"
+                        background: "white",
+                        border: "1px solid black",
                     }
                 } 
             }
