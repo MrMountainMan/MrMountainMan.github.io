@@ -43,6 +43,7 @@ struct Weapon
     crit_distance_array: Vec<CritProcessed>,
     armor_pen: String,
     pen: String,
+    image_link: String,
 }
 
 
@@ -153,6 +154,7 @@ pub fn Payday3Stats() -> Element
                     crit_distance_array: vec![],
                     armor_pen: "0".to_string(),
                     pen: "0".to_string(),
+                    image_link: "".to_string(),
                 });
                 continue;
             }
@@ -168,6 +170,8 @@ pub fn Payday3Stats() -> Element
             //let bytes = dioxus::asset_resolver::read_asset_bytes(&weapon_json).await.unwrap();
             //let json: serde_json::Value = serde_json::from_slice(&bytes).unwrap();
             
+            let image_source = format!("https://raw.githubusercontent.com/MrMountainMan/MrMountainMan.github.io/refs/heads/main/assets/payday3stats/{}.png", weapon_path);
+
             let json: serde_json::Value = serde_json::from_str(&raw_data).unwrap();
             
             let name_json: serde_json::Value = json[0].get("Name").unwrap_or(&json!("unknown")).clone();//.expect("Failed to parse weapon name from JSON").clone();
@@ -224,6 +228,7 @@ pub fn Payday3Stats() -> Element
                 crit_distance_array: crit_nodes_processed,
                 armor_pen: serde_json::to_string(&armour_pen_json).unwrap_or("0".to_string()),//serde_json::from_value(armour_pen_json).unwrap_or("n/a2".to_string()),
                 pen: serde_json::to_string(&pen_json).unwrap_or("0".to_string()),
+                image_link: image_source,
             });
         }
     });
@@ -235,15 +240,29 @@ pub fn Payday3Stats() -> Element
         div {
             display: "grid",
             grid_auto_columns: "15px",
-            grid_template_columns: "30px repeat(115, 15px)",
+            grid_template_columns: "256px 30px repeat(115, 15px)",
             padding: "1px",
             background: "black",
             gap: "1px",
 
             //weapons
             for weapon in weapons_signal.iter() {
+                //gun image
+                if !weapon.is_category
+                {
+                    div {
+                        grid_column_start: 1,
+                        grid_column_end: 2,
+                        grid_row_start: "span 3",
+                        background: "white",
+                        img{
+                            src: weapon.image_link.clone(),
+                        }
+                    }
+                }
+                
                 div {
-                    grid_column_start: 1,
+                    grid_column_start: 2,
                     grid_column_end: "span 10",
                     background: "white",
                     if !weapon.is_category
@@ -266,7 +285,7 @@ pub fn Payday3Stats() -> Element
                         }
                     }
                     div {
-                        grid_column_start: 1,
+                        grid_column_start: 2,
                         grid_column_end: "span 10",
                         background: "white",
                         "Crit Multi: "
@@ -279,13 +298,14 @@ pub fn Payday3Stats() -> Element
                         }
                     }
                     div {
-                        grid_column_start: 1,
+                        grid_column_start: 2,
                         grid_column_end: "span 10",
                         background: "white",
                         "Armor Penetration: " {weapon.armor_pen.clone()}
+                        "\nEnemy Penetration: " {weapon.pen.clone()}
                     }
                     div {
-                        grid_column_start: 11,
+                        grid_column_start: 12,
                         grid_column_end: "span 105",
                         background: "white"
                     }
