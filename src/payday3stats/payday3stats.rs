@@ -43,6 +43,7 @@ struct Weapon
     crit_distance_array: Vec<CritProcessed>,
     armor_pen: String,
     pen: String,
+    pellets: String,
     image_link: String,
 }
 
@@ -156,6 +157,7 @@ pub fn Payday3Stats() -> Element
                     crit_distance_array: vec![],
                     armor_pen: "0".to_string(),
                     pen: "0".to_string(),
+                    pellets: "0".to_string(),
                     image_link: "".to_string(),
                 });
                 continue;
@@ -181,6 +183,7 @@ pub fn Payday3Stats() -> Element
             let crit_distance_json: serde_json::Value = json[0]["Properties"].get("CriticalDamageMultiplierDistanceArray").unwrap_or(&json!([])).clone();//.expect("Failed to parse critical damage distance array from JSON").clone();
             let armour_pen_json: serde_json::Value = json[0]["Properties"].get("ArmorPenetration").unwrap_or(&json!(0)).clone();//("Failed to parse armour pen value from JSON").clone();
             let pen_json: serde_json::Value = json[0]["Properties"].get("MaximumPenetrationCount").unwrap_or(&json!(0)).clone();//.expect("Failed to parse pen value from JSON").clone();
+            let pellets_json: serde_json::Value = json[0]["Properties"].get("ProjectilesPerFiredRound").unwrap_or(&json!(0)).clone();
 
             //get and shorten the name
             let full_name: String = serde_json::from_value(name_json).unwrap();
@@ -230,6 +233,7 @@ pub fn Payday3Stats() -> Element
                 crit_distance_array: crit_nodes_processed,
                 armor_pen: serde_json::to_string(&armour_pen_json).unwrap_or("0".to_string()),//serde_json::from_value(armour_pen_json).unwrap_or("n/a2".to_string()),
                 pen: serde_json::to_string(&pen_json).unwrap_or("0".to_string()),
+                pellets: serde_json::to_string(&pellets_json).unwrap_or("0".to_string()),
                 image_link: image_source,
             });
         }
@@ -325,6 +329,10 @@ pub fn Payday3Stats() -> Element
                         border: "1px solid black",
                         "Armor Penetration: " {weapon.armor_pen.clone()}
                         "\nEnemy Penetration: " {weapon.pen.clone()}
+                        if weapon.pellets != "0"
+                        {
+                            "\nPellets per Shot: " {weapon.pellets.clone()}
+                        }
                     }
                     div {
                         grid_column_start: 12,
