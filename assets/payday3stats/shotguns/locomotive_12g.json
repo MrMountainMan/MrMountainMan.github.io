@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Shotgun_Pocket",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/WPN_SECO_Pocket/Gameplay/Weapons/Shotgun/Pocket/DA_FireData_Shotgun_Pocket",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 55.0,
+          "Distance": 1000.0
+        },
+        {
+          "Damage": 45.0,
+          "Distance": 1500.0
+        },
+        {
+          "Damage": 16.0,
+          "Distance": 10000.0
+        }
+      ],
+      "bIsReloadEndCycledEachRound": true,
+      "AmmoLoaded": 3,
+      "AmmoInventoryMax": 31,
+      "AmmoInventory": 24,
+      "AmmoPickup": {
+        "Min": 1.0,
+        "Max": 2.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 3.0,
+          "Distance": 1000.0
+        },
+        {
+          "Multiplier": 2.0,
+          "Distance": 1500.0
+        },
+        {
+          "Multiplier": 1.75,
+          "Distance": 2000.0
+        },
+        {
+          "Multiplier": 1.1,
+          "Distance": 10000.0
+        }
+      ],
+      "FireMode": "ESBZFireMode::Auto",
+      "FireType": "ESBZFireType::Pump",
+      "ProjectilesPerFiredRound": 10,
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+      "AmmoLoadedMax": 2,
+      "AmmoPerReload": 1,
+      "AmmoVisibleMax": 3,
+      "AmmoVisibleMaxPreviewOverride": 0,
+      "RoundsPerMinute": 100.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Shotgun_Pocket'",
+          "ObjectPath": "/Game/DLCs/WPN_SECO_Pocket/Gameplay/Weapons/Shotgun/Pocket/C_HurtReactionWeight_Shotgun_Pocket.0"
+        },
+        "HurtReactionWeightModifier": 1.0
+      }
+    }
+  }
+]
