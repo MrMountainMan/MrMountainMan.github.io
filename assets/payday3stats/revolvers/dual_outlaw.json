@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Dual_Outlaw",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/00252-Western/Gameplay/Weapons/Dual/Outlaw/DA_FireData_Dual_Outlaw",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 125.0,
+          "Distance": 1500.0
+        },
+        {
+          "Damage": 100.0,
+          "Distance": 2500.0
+        },
+        {
+          "Damage": 80.0,
+          "Distance": 10000.0
+        },
+        {
+          "Damage": 60.0,
+          "Distance": 2500.0
+        }
+      ],
+      "AmmoLoaded": 12,
+      "AmmoLeftInChamber": 0,
+      "AmmoInventoryMax": 72,
+      "AmmoInventory": 72,
+      "AmmoPickup": {
+        "min": 3.0,
+        "max": 5.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 2.0,
+          "Distance": 1500.0
+        },
+        {
+          "Multiplier": 1.5,
+          "Distance": 5000.0
+        },
+        {
+          "Multiplier": 1.25,
+          "Distance": 10000.0
+        }
+      ],
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ArmorPenetration": 2.0,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Always",
+      "AmmoLoadedMax": 12,
+      "AmmoPerReload": 12,
+      "AmmoVisibleMax": 12,
+      "bIsChamberRotatedEachFiredRound": true,
+      "RoundsPerMinute": 500.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Dual_Outlaw'",
+          "ObjectPath": "/Game/DLCs/00252-Western/Gameplay/Weapons/Dual/Outlaw/C_HurtReactionWeight_Dual_Outlaw.0"
+        },
+        "HurtReactionWeightModifier": 1.0
+      }
+    }
+  }
+]

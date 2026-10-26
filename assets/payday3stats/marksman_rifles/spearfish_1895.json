@@ -2,25 +2,22 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_Marksman_Spearfish",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/00170-Weapon3/Gameplay/Weapons/Marksman/Spearfish/DA_FireData_Marksman_Spearfish",
     "Properties": {
       "DamageDistanceArray": [
         {
           "Damage": 100.0,
-          "Distance": 900.0
-        },
-        {
-          "Damage": 95.0,
           "Distance": 2000.0
         },
         {
           "Damage": 95.0,
-          "Distance": 2500.0
+          "Distance": 3000.0
         },
         {
           "Damage": 90.0,
-          "Distance": 3000.0
+          "Distance": 3500.0
         }
       ],
       "bIsReloadEndCycledEachRound": true,
@@ -28,8 +25,8 @@
       "AmmoInventoryMax": 56,
       "AmmoInventory": 40,
       "AmmoPickup": {
-        "Min": 2.0,
-        "Max": 3.0
+        "min": 2.0,
+        "max": 3.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -57,9 +54,9 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_Marksman_Spearfish'",
-          "ObjectPath": "PAYDAY3/Content/DLCs/00170-Weapon3/Gameplay/Weapons/Marksman/Spearfish/C_HurtReactionWeight_Marksman_Spearfish.0"
+          "ObjectPath": "/Game/DLCs/00170-Weapon3/Gameplay/Weapons/Marksman/Spearfish/C_HurtReactionWeight_Marksman_Spearfish.0"
         },
-        "HurtReactionWeightModifier": 1.5
+        "HurtReactionWeightModifier": 2.0
       }
     }
   }

@@ -85,9 +85,11 @@ pub fn Payday3Stats() -> Element
             "pistols/tribune_32",
             "_Revolvers",
             "revolvers/bullkick_500",
+            "revolvers/dual_outlaw",
             "revolvers/j&m_castigo_44",
             "revolvers/sforza_bison",
             "_Shotguns",
+            "dual_grimshot",
             "shotguns/fsa_12g",
             "shotguns/justicar",
             "shotguns/locomotive_12g",
@@ -105,20 +107,20 @@ pub fn Payday3Stats() -> Element
         ];
 
         let weapon_name_map: HashMap<&str, &str> = HashMap::from([
-            ("DA_FireData_AssaultRifle_RG5", "Adelig RG5"),
+            ("DA_FireData_AssaultRifle_RG5", "Adelig RG5"),             //assault rifles
             ("DA_FireData_AssaultRifle_CAR4", "CAR-4"),
             ("DA_FireData_AssaultRifle_CHS3", "Chanit S3"),
             ("DA_FireData_AssaultRifle_KU59", "KU-59"),
             ("DA_FireData_AssaultRifle_NWB9", "Northwest B-9"),
             ("DA_FireData_AssaultRifle_Julius", "Skogskrigare AG-9"),
             ("DA_FireData_AssaultRifle_VF7S", "VF-7S"),
-            ("DA_FireData_LMG_MX63", "Blyspruta MX63"),
+            ("DA_FireData_LMG_MX63", "Blyspruta MX63"),                 //lmgs
             ("DA_FireData_LMG_PFLK", "Zokas-17"),
-            ("DA_FireData_Marksman_FIK22", "FIK 22 TLR"),
+            ("DA_FireData_Marksman_FIK22", "FIK 22 TLR"),               //marksman rifles
             ("DA_FireData_Marksman_R900S", "Reinfeld 900S"),
             ("DA_FireData_Marksman_A114", "SA A144"),
             ("DA_FireData_Marksman_Spearfish", "Spearfish 1895"),
-            ("DA_FireData_Pistol_GarstiniViper", "Garstini Viper .50AE"),
+            ("DA_FireData_Pistol_GarstiniViper", "Garstini Viper .50AE"),//pistols
             ("DA_FireData_Pistol_SE5", "Jackknife SE5"),
             ("DA_FireData_Pistol_PD5", "Picchio Duro 5"),
             ("DA_FireData_Pistol_S40", "Signature 40"),
@@ -126,9 +128,11 @@ pub fn Payday3Stats() -> Element
             ("DA_FireData_Pistol_SPM11", "SP Model 11"),
             ("DA_FireData_Pistol_Stryk7", "Stryk 7"),
             ("DA_FireData_Pistol_T32", "Tribune 32"),
-            ("DA_FireData_Revolver_Bullkick500", "Bullkick 500"),
+            ("DA_FireData_Revolver_Bullkick500", "Bullkick 500"),       //revolvers
+            ("DA_FireData_Dual_Outlaw", "Dual Outlaws"),
             ("DA_FireData_Revolver_Castigo44", "J&M Castigo 44"),
             ("DA_FireData_Revolver_Bison", "Sforza Bison"),
+            ("DA_FireData_Dual_Grimshot", "Dual Grimshots"),            //shotguns
             ("DA_FireData_Shotgun_FSA12", "FSA-12G"),
             ("DA_FireData_Revolver_Justicar", "Justicar"),
             ("DA_FireData_Shotgun_M7P", "M7 Pursuviant"),
@@ -136,7 +140,7 @@ pub fn Payday3Stats() -> Element
             ("DA_FireData_Shotgun_R880", "Reinfeld 880"),
             ("DA_FireData_Shotgun_TAS12", "TAS-12"),
             ("DA_FireData_Shotgun_Pocket", "Locomotive 12G"),
-            ("DA_FireData_SMG_ATK7", "ATK-7"),
+            ("DA_FireData_SMG_ATK7", "ATK-7"),                          //smgs
             ("DA_FireData_SMG_PC9", "FIK PC9"),
             ("DA_FireData_Pistol_Yates", "Russell JB-9"),
             ("DA_FireData_SMG_Compact7", "SG Compact-7"),

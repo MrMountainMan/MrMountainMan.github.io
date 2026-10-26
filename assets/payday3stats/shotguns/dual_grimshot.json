@@ -1,0 +1,59 @@
+[
+  {
+    "Type": "SBZPlayerWeaponFireData",
+    "Name": "DA_FireData_Dual_Grimshot",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/00252-Western/Gameplay/Weapons/Dual/Grimshot/DA_FireData_Dual_Grimshot",
+    "Properties": {
+      "DamageDistanceArray": [
+        {
+          "Damage": 63.0,
+          "Distance": 1500.0
+        },
+        {
+          "Damage": 33.4,
+          "Distance": 35.0
+        },
+        {
+          "Damage": 25.0,
+          "Distance": 5000.0
+        }
+      ],
+      "bIsReloadEndCycledEachRound": true,
+      "AmmoLeftInChamber": 2,
+      "AmmoInventoryMax": 96,
+      "AmmoInventory": 72,
+      "AmmoPickup": {
+        "min": 2.0,
+        "max": 3.0
+      },
+      "CriticalDamageMultiplierDistanceArray": [
+        {
+          "Multiplier": 2.0,
+          "Distance": 2000.0
+        },
+        {
+          "Multiplier": 1.2,
+          "Distance": 3000.0
+        }
+      ],
+      "FireType": "ESBZFireType::Pump",
+      "ProjectilesPerFiredRound": 6,
+      "bCanHitEnvironmentAfterPenetration": true,
+      "ImpactType": "ESBZProjectileImpactType::Medium",
+      "AmmoPerReload": 2,
+      "AmmoVisibleMax": 4,
+      "AmmoVisibleMaxPreviewOverride": 0,
+      "RoundsPerMinute": 200.0,
+      "HurtReactionData": {
+        "HurtReactionWeightCurve": {
+          "ObjectName": "CurveVector'C_HurtReactionWeight_Dual_Grimshot'",
+          "ObjectPath": "/Game/DLCs/00252-Western/Gameplay/Weapons/Dual/Grimshot/C_HurtReactionWeight_Dual_Grimshot.0"
+        },
+        "HurtReactionWeightModifier": 1.0,
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Interrupt"
+      }
+    }
+  }
+]

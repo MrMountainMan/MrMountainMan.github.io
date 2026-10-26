@@ -27,6 +27,7 @@ tribune: DLCs/00030-DLC0003/Weapons/Pistol
 bullkick: DLCs/00010-DLCHEIST0002/Gameplay/Weapons/Revolver
 castigo: Gameplay/Weapons/Revolver
 bison: Gameplay/Weapons/Revolver
+outlaws: DLCs/00252-Western/Gameplay/Weapons/Dual
 
 fsa: DLCs/00006-DLCWEAP0001/Gameplay/Waspons/Shotgun
 justicar: DLCs/00110-DLCWEAP0002/Gameplay/Weapons/Revolver
@@ -34,6 +35,7 @@ pursuviant: DLCs/00030-DLC0003/Gameplay/Weapons/Shotgun
 mosconi: Gameplay/Weapons/Shotgun
 r880: Gameplay/Weapons/Shotgun
 tas12: DLCs/0080-DLC0004/Gameplay/Weapons/Shotgun
+grimshot: DLCs/00252-Western/Gameplay/Weapons/Dual
 
 atk7: DLCs/00010-DLCHEIST0002/Gameplay/Weapons/SMG
 fikpc9: Gameplay/Weapons/SMG

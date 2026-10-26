@@ -2,17 +2,14 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_Shotgun_R880",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/Gameplay/Weapons/Shotgun/R880/DA_FireData_Shotgun_R880",
     "Properties": {
       "DamageDistanceArray": [
         {
-          "Damage": 47.6,
-          "Distance": 200.0
-        },
-        {
-          "Damage": 47.6,
-          "Distance": 10000.0
+          "Damage": 48.0,
+          "Distance": 1000.0
         },
         {
           "Damage": 24.0,
@@ -28,8 +25,8 @@
       "AmmoInventoryMax": 70,
       "AmmoInventory": 56,
       "AmmoPickup": {
-        "Min": 2.0,
-        "Max": 4.0
+        "min": 2.0,
+        "max": 4.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -53,12 +50,12 @@
       "ImpactType": "ESBZProjectileImpactType::Medium",
       "AmmoLoadedMax": 7,
       "AmmoPerReload": 1,
-      "AmmoVisibleMax": 1,
+      "AmmoVisibleMax": 2,
       "RoundsPerMinute": 75.0,
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_Shotgun_R880'",
-          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Shotgun/R880/C_HurtReactionWeight_Shotgun_R880.0"
+          "ObjectPath": "/Game/Gameplay/Weapons/Shotgun/R880/C_HurtReactionWeight_Shotgun_R880.0"
         },
         "HurtReactionWeightModifier": 1.0,
         "DesiredHurtReactionWeight": "ESBZDamageWeight::Incapacitate"
