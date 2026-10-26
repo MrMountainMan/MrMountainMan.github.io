@@ -89,7 +89,7 @@ pub fn Payday3Stats() -> Element
             "revolvers/j&m_castigo_44",
             "revolvers/sforza_bison",
             "_Shotguns",
-            "dual_grimshot",
+            "shotguns/dual_grimshot",
             "shotguns/fsa_12g",
             "shotguns/justicar",
             "shotguns/locomotive_12g",
