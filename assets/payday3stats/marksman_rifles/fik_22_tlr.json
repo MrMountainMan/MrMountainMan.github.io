@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_Marksman_FIK22",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/00006-DLCWEAP0001/Gameplay/Weapons/Marksman/FIK22/DA_FireData_Marksman_FIK22",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,7 +28,7 @@
       "AmmoInventoryMax": 250,
       "AmmoInventory": 200,
       "AmmoPickup": {
-        "Max": 7.0
+        "max": 7.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -53,7 +54,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_Marksman_FIK22'",
-          "ObjectPath": "PAYDAY3/Content/DLCs/00006-DLCWEAP0001/Gameplay/Weapons/Marksman/FIK22/C_HurtReactionWeight_Marksman_FIK22.0"
+          "ObjectPath": "/Game/DLCs/00006-DLCWEAP0001/Gameplay/Weapons/Marksman/FIK22/C_HurtReactionWeight_Marksman_FIK22.0"
         },
         "HurtReactionWeightModifier": 1.0,
         "CriticalHurtReactionWeightBuildupModifier": 0.2

@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_AssaultRifle_CAR4",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/Gameplay/Weapons/AssaultRifle/CAR4/DA_FireData_AssaultRifle_CAR4",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,8 +28,8 @@
       "AmmoInventoryMax": 300,
       "AmmoInventory": 240,
       "AmmoPickup": {
-        "Min": 6.0,
-        "Max": 8.0
+        "min": 6.0,
+        "max": 8.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -56,12 +57,12 @@
       "RoundsPerMinute": 720.0,
       "DamageTypeClass": {
         "ObjectName": "BlueprintGeneratedClass'BP_DamageType_AssaultRifle_CAR4_C'",
-        "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/CAR4/BP_DamageType_AssaultRifle_CAR4.0"
+        "ObjectPath": "/Game/Gameplay/Weapons/AssaultRifle/CAR4/BP_DamageType_AssaultRifle_CAR4.0"
       },
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_CAR4'",
-          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/CAR4/C_HurtReactionWeight_AssaultRifle_CAR4.0"
+          "ObjectPath": "/Game/Gameplay/Weapons/AssaultRifle/CAR4/C_HurtReactionWeight_AssaultRifle_CAR4.0"
         }
       }
     }

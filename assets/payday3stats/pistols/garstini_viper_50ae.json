@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_Pistol_GarstiniViper",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/00080-DLC0004/Gameplay/Weapons/Pistol/GarstiniViper/DA_FireData_Pistol_GarstiniViper",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,8 +28,8 @@
       "AmmoInventoryMax": 70,
       "AmmoInventory": 56,
       "AmmoPickup": {
-        "Min": 1.0,
-        "Max": 2.0
+        "min": 1.0,
+        "max": 2.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -56,12 +57,10 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_Pistol_GarstiniViper'",
-          "ObjectPath": "PAYDAY3/Content/DLCs/00080-DLC0004/Gameplay/Weapons/Pistol/GarstiniViper/C_HurtReactionWeight_Pistol_GarstiniViper.0"
+          "ObjectPath": "/Game/DLCs/00080-DLC0004/Gameplay/Weapons/Pistol/GarstiniViper/C_HurtReactionWeight_Pistol_GarstiniViper.0"
         },
         "HurtReactionWeightModifier": 2.0,
-        "DesiredHurtReactionWeight": "ESBZDamageWeight::Incapacitate",
-        "HurtReactionWeightBuildupModifier": 1.0,
-        "CriticalHurtReactionWeightBuildupModifier": 1.0
+        "DesiredHurtReactionWeight": "ESBZDamageWeight::Incapacitate"
       }
     }
   }

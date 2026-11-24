@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_Marksman_A114",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/Gameplay/Weapons/Marksman/A114/DA_FireData_Marksman_A114",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,8 +28,8 @@
       "AmmoInventoryMax": 120,
       "AmmoInventory": 96,
       "AmmoPickup": {
-        "Min": 3.0,
-        "Max": 4.0
+        "min": 3.0,
+        "max": 4.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -54,7 +55,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_Marksman_A114'",
-          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Marksman/A114/C_HurtReactionWeight_Marksman_A114.0"
+          "ObjectPath": "/Game/Gameplay/Weapons/Marksman/A114/C_HurtReactionWeight_Marksman_A114.0"
         },
         "HurtReactionWeightModifier": 1.0,
         "CriticalHurtReactionWeightBuildupModifier": 0.2

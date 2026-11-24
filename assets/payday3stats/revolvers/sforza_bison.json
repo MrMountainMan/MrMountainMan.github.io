@@ -4,6 +4,7 @@
     "Name": "DA_FireData_Revolver_Bison",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/Gameplay/Weapons/Revolver/Bison/DA_FireData_Revolver_Bison",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -28,8 +29,8 @@
       "AmmoInventoryMax": 60,
       "AmmoInventory": 48,
       "AmmoPickup": {
-        "Min": 2.0,
-        "Max": 4.0
+        "min": 2.0,
+        "max": 4.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -57,9 +58,9 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_Revolver_Bison'",
-          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Revolver/Bison/C_HurtReactionWeight_Revolver_Bison.0"
+          "ObjectPath": "/Game/Gameplay/Weapons/Revolver/Bison/C_HurtReactionWeight_Revolver_Bison.0"
         },
-        "HurtReactionWeightModifier": 0.5
+        "HurtReactionWeightModifier": 1.0
       }
     }
   }

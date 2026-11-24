@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_SMG_Compact7",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/Gameplay/Weapons/SMG/Compact7/DA_FireData_SMG_Compact7",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,7 +28,7 @@
       "AmmoInventoryMax": 300,
       "AmmoInventory": 240,
       "AmmoPickup": {
-        "Min": 8.0
+        "min": 8.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -55,7 +56,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_SMG_Compact7'",
-          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/SMG/Compact7/C_HurtReactionWeight_SMG_Compact7.0"
+          "ObjectPath": "/Game/Gameplay/Weapons/SMG/Compact7/C_HurtReactionWeight_SMG_Compact7.0"
         }
       }
     }

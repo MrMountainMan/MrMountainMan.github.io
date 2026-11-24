@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_Pistol_S40",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/Gameplay/Weapons/Pistol/S40/DA_FireData_Pistol_S40",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,8 +28,8 @@
       "AmmoInventoryMax": 120,
       "AmmoInventory": 96,
       "AmmoPickup": {
-        "Min": 4.0,
-        "Max": 6.0
+        "min": 4.0,
+        "max": 6.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -54,7 +55,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_Pistol_S40'",
-          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Pistol/S40/C_HurtReactionWeight_Pistol_S40.0"
+          "ObjectPath": "/Game/Gameplay/Weapons/Pistol/S40/C_HurtReactionWeight_Pistol_S40.0"
         }
       }
     }

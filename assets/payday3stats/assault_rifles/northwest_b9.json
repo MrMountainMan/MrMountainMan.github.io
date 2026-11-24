@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_AssaultRifle_NWB9",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/Gameplay/Weapons/AssaultRifle/NWB9/DA_FireData_AssaultRifle_NWB9",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,8 +28,8 @@
       "AmmoInventoryMax": 300,
       "AmmoInventory": 240,
       "AmmoPickup": {
-        "Min": 7.0,
-        "Max": 9.0
+        "min": 7.0,
+        "max": 9.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -56,12 +57,12 @@
       "RoundsPerMinute": 750.0,
       "DamageTypeClass": {
         "ObjectName": "BlueprintGeneratedClass'BP_DamageType_AssaultRifle_NWB9_C'",
-        "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/NWB9/BP_DamageType_AssaultRifle_NWB9.0"
+        "ObjectPath": "/Game/Gameplay/Weapons/AssaultRifle/NWB9/BP_DamageType_AssaultRifle_NWB9.0"
       },
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_NWB9'",
-          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/NWB9/C_HurtReactionWeight_AssaultRifle_NWB9.0"
+          "ObjectPath": "/Game/Gameplay/Weapons/AssaultRifle/NWB9/C_HurtReactionWeight_AssaultRifle_NWB9.0"
         }
       }
     }

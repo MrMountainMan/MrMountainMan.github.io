@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_SMG_Commando",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/Gameplay/Weapons/SMG/Commando/DA_FireData_SMG_Commando",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,7 +28,7 @@
       "AmmoInventoryMax": 250,
       "AmmoInventory": 200,
       "AmmoPickup": {
-        "Min": 8.0
+        "min": 8.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -54,7 +55,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_SMG_Commando'",
-          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/SMG/Commando/C_HurtReactionWeight_SMG_Commando.0"
+          "ObjectPath": "/Game/Gameplay/Weapons/SMG/Commando/C_HurtReactionWeight_SMG_Commando.0"
         }
       }
     }

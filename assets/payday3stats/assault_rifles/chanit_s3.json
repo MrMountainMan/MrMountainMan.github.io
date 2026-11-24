@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_AssaultRifle_CHS3",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/00030-DLC0003/Gameplay/Weapons/AssaultRifle/CHS3/DA_FireData_AssaultRifle_CHS3",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -28,7 +29,7 @@
       "AmmoInventoryMax": 300,
       "AmmoInventory": 240,
       "AmmoPickup": {
-        "Max": 7.0
+        "max": 7.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -57,7 +58,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_CHS3'",
-          "ObjectPath": "PAYDAY3/Content/DLCs/00030-DLC0003/Gameplay/Weapons/AssaultRifle/CHS3/C_HurtReactionWeight_AssaultRifle_CHS3.0"
+          "ObjectPath": "/Game/DLCs/00030-DLC0003/Gameplay/Weapons/AssaultRifle/CHS3/C_HurtReactionWeight_AssaultRifle_CHS3.0"
         },
         "DesiredHurtReactionWeight": "ESBZDamageWeight::Interrupt"
       }

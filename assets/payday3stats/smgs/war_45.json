@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_SMG_WAR45",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/00006-DLCWEAP0001/Gameplay/Weapons/SMG/WAR45/DA_FireData_SMG_WAR45",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,7 +28,7 @@
       "AmmoInventoryMax": 250,
       "AmmoInventory": 200,
       "AmmoPickup": {
-        "Max": 7.0
+        "max": 7.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -55,7 +56,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_SMG_WAR45'",
-          "ObjectPath": "PAYDAY3/Content/DLCs/00006-DLCWEAP0001/Gameplay/Weapons/SMG/WAR45/C_HurtReactionWeight_SMG_WAR45.0"
+          "ObjectPath": "/Game/DLCs/00006-DLCWEAP0001/Gameplay/Weapons/SMG/WAR45/C_HurtReactionWeight_SMG_WAR45.0"
         }
       }
     }

@@ -1,0 +1,62 @@
+[
+    {
+        "Type": "SBZPlayerWeaponFireData",
+        "Name": "DA_FireData_AssaultRifle_Pilum",
+        "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+        "Package": "/Game/DLCs/00253-Ghost/Gameplay/Weapons/AssaultRifle/Pilum/DA_FireData_AssaultRifle_Pilum",
+        "Properties": {
+            "DamageDistanceArray": [
+                {
+                    "Damage": 94.0,
+                    "Distance": 2000.0
+                },
+                {
+                    "Damage": 88.0,
+                    "Distance": 5000.0
+                },
+                {
+                    "Damage": 80.0,
+                    "Distance": 10000.0
+                }
+            ],
+            "AmmoLoaded": 20,
+            "AmmoInventoryMax": 240,
+            "AmmoInventory": 180,
+            "AmmoPickup": {
+                "max": 9.0
+            },
+            "CriticalDamageMultiplierDistanceArray": [
+                {
+                    "Multiplier": 3.5,
+                    "Distance": 1500.0
+                },
+                {
+                    "Multiplier": 3.25,
+                    "Distance": 3500.0
+                },
+                {
+                    "Multiplier": 2.25,
+                    "Distance": 10000.0
+                }
+            ],
+            "FireMode": "ESBZFireMode::Auto",
+            "FireType": "ESBZFireType::Auto",
+            "bCanHitEnvironmentAfterPenetration": true,
+            "ArmorPenetration": 2.5,
+            "ImpactType": "ESBZProjectileImpactType::Medium",
+            "AmmoVisibilityType": "ESBZWeaponAmmoVisibilityType::Reload",
+            "AmmoLoadedMax": 20,
+            "AmmoPerReload": 20,
+            "AmmoVisibleMax": 3,
+            "bIsEmptyAmmoEjected": true,
+            "RoundsPerMinute": 700.0,
+            "HurtReactionData": {
+                "HurtReactionWeightCurve": {
+                    "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_Pilum'",
+                    "ObjectPath": "/Game/DLCs/00253-Ghost/Gameplay/Weapons/AssaultRifle/Pilum/C_HurtReactionWeight_AssaultRifle_Pilum.0"
+                }
+            }
+        }
+    }
+]

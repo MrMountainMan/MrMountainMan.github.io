@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_AssaultRifle_VF7S",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/Gameplay/Weapons/AssaultRifle/VF7S/DA_FireData_AssaultRifle_VF7S",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,8 +28,8 @@
       "AmmoInventoryMax": 200,
       "AmmoInventory": 160,
       "AmmoPickup": {
-        "Min": 4.0,
-        "Max": 5.0
+        "min": 4.0,
+        "max": 5.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -56,12 +57,12 @@
       "RoundsPerMinute": 550.0,
       "DamageTypeClass": {
         "ObjectName": "BlueprintGeneratedClass'BP_DamageType_AssaultRifle_VF7S_C'",
-        "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/VF7S/BP_DamageType_AssaultRifle_VF7S.0"
+        "ObjectPath": "/Game/Gameplay/Weapons/AssaultRifle/VF7S/BP_DamageType_AssaultRifle_VF7S.0"
       },
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_VF7S'",
-          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/VF7S/C_HurtReactionWeight_AssaultRifle_VF7S.0"
+          "ObjectPath": "/Game/Gameplay/Weapons/AssaultRifle/VF7S/C_HurtReactionWeight_AssaultRifle_VF7S.0"
         }
       }
     }

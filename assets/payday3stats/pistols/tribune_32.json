@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_Pistol_T32",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/00030-DLC0003/Gameplay/Weapons/Pistol/T32/DA_FireData_Pistol_T32",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,8 +28,8 @@
       "AmmoInventoryMax": 330,
       "AmmoInventory": 264,
       "AmmoPickup": {
-        "Min": 9.0,
-        "Max": 11.0
+        "min": 9.0,
+        "max": 11.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -55,7 +56,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_Pistol_T32'",
-          "ObjectPath": "PAYDAY3/Content/DLCs/00030-DLC0003/Gameplay/Weapons/Pistol/T32/C_HurtReactionWeight_Pistol_T32.0"
+          "ObjectPath": "/Game/DLCs/00030-DLC0003/Gameplay/Weapons/Pistol/T32/C_HurtReactionWeight_Pistol_T32.0"
         },
         "DesiredHurtReactionWeight": "ESBZDamageWeight::Flinch",
         "HurtReactionWeightBuildupModifier": 0.15

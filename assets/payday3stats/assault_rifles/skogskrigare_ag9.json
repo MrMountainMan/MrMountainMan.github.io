@@ -4,6 +4,7 @@
     "Name": "DA_FireData_AssaultRifle_Julius",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/00130-Primary002/Gameplay/Weapons/AssaultRifle/Julius/DA_FireData_AssaultRifle_Julius",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -23,7 +24,7 @@
       "AmmoInventoryMax": 360,
       "AmmoInventory": 240,
       "AmmoPickup": {
-        "Max": 9.0
+        "max": 9.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -53,7 +54,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_Julius'",
-          "ObjectPath": "PAYDAY3/Content/DLCs/00130-Primary002/Gameplay/Weapons/AssaultRifle/Julius/C_HurtReactionWeight_AssaultRifle_Julius.0"
+          "ObjectPath": "/Game/DLCs/00130-Primary002/Gameplay/Weapons/AssaultRifle/Julius/C_HurtReactionWeight_AssaultRifle_Julius.0"
         }
       }
     }

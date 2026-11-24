@@ -4,6 +4,7 @@
     "Name": "DA_FireData_Pistol_Yates",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/WPN_SECO_Yates/Gameplay/Weapons/Pistol/Yates/DA_FireData_Pistol_Yates",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -48,7 +49,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_Pistol_Yates'",
-          "ObjectPath": "PAYDAY3/Content/DLCs/WPN_SECO_Yates/Gameplay/Weapons/Pistol/Yates/C_HurtReactionWeight_Pistol_Yates.0"
+          "ObjectPath": "/Game/DLCs/WPN_SECO_Yates/Gameplay/Weapons/Pistol/Yates/C_HurtReactionWeight_Pistol_Yates.0"
         },
         "DesiredHurtReactionWeight": "ESBZDamageWeight::Interrupt"
       }

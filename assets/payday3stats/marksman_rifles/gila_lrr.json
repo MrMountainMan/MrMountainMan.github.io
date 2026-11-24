@@ -1,0 +1,58 @@
+[
+    {
+        "Type": "SBZPlayerWeaponFireData",
+        "Name": "DA_FireData_Marksman_Osiris",
+        "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+        "Package": "/Game/DLCs/00253-Ghost/Gameplay/Weapons/Marksman/Osiris/DA_FireData_Marksman_Osiris",
+        "Properties": {
+            "DamageDistanceArray": [
+                {
+                    "Damage": 450.0,
+                    "Distance": 3000.0
+                },
+                {
+                    "Damage": 430.0,
+                    "Distance": 1E+09
+                }
+            ],
+            "bIsReloadEndCycledEachRound": true,
+            "AmmoLoaded": 5,
+            "AmmoInventoryMax": 50,
+            "AmmoInventory": 40,
+            "AmmoPickup": {
+                "min": 1.0,
+                "max": 2.0
+            },
+            "CriticalDamageMultiplierDistanceArray": [
+                {
+                    "Multiplier": 2.0,
+                    "Distance": 1000000.0
+                }
+            ],
+            "FireType": "ESBZFireType::Bolt",
+            "MaximumPenetrationCount": 2,
+            "bCanHitEnvironmentAfterPenetration": true,
+            "Range": 15000,
+            "ArmorPenetration": 7.0,
+            "ImpactType": "ESBZProjectileImpactType::Heavy",
+            "AmmoLoadedMax": 5,
+            "AmmoPerReload": 5,
+            "AmmoVisibleMax": 2,
+            "AmmoVisibleMaxPreviewOverride": 0,
+            "bIsEmptyAmmoEjected": true,
+            "RoundsPerMinute": 45.0,
+            "DamageTypeClass": {
+                "ObjectName": "Class'SBZSniperBulletDamageType'",
+                "ObjectPath": "/Script/Starbreeze"
+            },
+            "HurtReactionData": {
+                "HurtReactionWeightCurve": {
+                    "ObjectName": "CurveVector'C_HurtReactionWeight_Marksman_Osiris'",
+                    "ObjectPath": "/Game/DLCs/00253-Ghost/Gameplay/Weapons/Marksman/Osiris/C_HurtReactionWeight_Marksman_Osiris.0"
+                },
+                "HurtReactionWeightModifier": 2.0
+            }
+        }
+    }
+]

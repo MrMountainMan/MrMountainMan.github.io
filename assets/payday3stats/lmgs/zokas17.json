@@ -4,6 +4,7 @@
     "Name": "DA_FireData_LMG_PFLK",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/DLCs/00120-Primary001/Gameplay/Weapons/LMG/PFLK/DA_FireData_LMG_PFLK",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -23,8 +24,8 @@
       "AmmoInventoryMax": 380,
       "AmmoInventory": 285,
       "AmmoPickup": {
-        "Min": 6.0,
-        "Max": 9.0
+        "min": 6.0,
+        "max": 9.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -52,7 +53,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_LMG_PFLK'",
-          "ObjectPath": "PAYDAY3/Content/DLCs/00120-Primary001/Gameplay/Weapons/LMG/PFLK/C_HurtReactionWeight_LMG_PFLK.0"
+          "ObjectPath": "/Game/DLCs/00120-Primary001/Gameplay/Weapons/LMG/PFLK/C_HurtReactionWeight_LMG_PFLK.0"
         },
         "DesiredHurtReactionWeight": "ESBZDamageWeight::Interrupt",
         "CriticalHurtReactionWeightBuildupModifier": 0.2

@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_Pistol_S403",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/Gameplay/Weapons/Pistol/S403/DA_FireData_Pistol_S403",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,8 +28,8 @@
       "AmmoInventoryMax": 170,
       "AmmoInventory": 136,
       "AmmoPickup": {
-        "Min": 4.0,
-        "Max": 7.0
+        "min": 4.0,
+        "max": 7.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -54,7 +55,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_Pistol_S403'",
-          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/Pistol/S403/C_HurtReactionWeight_Pistol_S403.0"
+          "ObjectPath": "/Game/Gameplay/Weapons/Pistol/S403/C_HurtReactionWeight_Pistol_S403.0"
         }
       }
     }

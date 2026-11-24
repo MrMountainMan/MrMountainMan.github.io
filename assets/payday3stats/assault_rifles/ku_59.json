@@ -2,8 +2,9 @@
   {
     "Type": "SBZPlayerWeaponFireData",
     "Name": "DA_FireData_AssaultRifle_KU59",
-    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SBZPlayerWeaponFireData'",
+    "Package": "/Game/Gameplay/Weapons/AssaultRifle/KU59/DA_FireData_AssaultRifle_KU59",
     "Properties": {
       "DamageDistanceArray": [
         {
@@ -27,8 +28,8 @@
       "AmmoInventoryMax": 300,
       "AmmoInventory": 240,
       "AmmoPickup": {
-        "Min": 4.0,
-        "Max": 6.0
+        "min": 4.0,
+        "max": 6.0
       },
       "CriticalDamageMultiplierDistanceArray": [
         {
@@ -57,7 +58,7 @@
       "HurtReactionData": {
         "HurtReactionWeightCurve": {
           "ObjectName": "CurveVector'C_HurtReactionWeight_AssaultRifle_KU59'",
-          "ObjectPath": "PAYDAY3/Content/Gameplay/Weapons/AssaultRifle/KU59/C_HurtReactionWeight_AssaultRifle_KU59.0"
+          "ObjectPath": "/Game/Gameplay/Weapons/AssaultRifle/KU59/C_HurtReactionWeight_AssaultRifle_KU59.0"
         }
       }
     }
