@@ -1,7 +1,7 @@
 //#[cfg(feature = "blocking")]
 
 use std::{collections::HashMap, vec};
-use dioxus::{prelude::*};
+use dioxus::{html::g::end, prelude::*};
 use serde_json::json;
 
 #[derive(serde::Deserialize, Clone, Copy, serde::Serialize)]
@@ -203,14 +203,26 @@ pub fn Payday3Stats() -> Element
             let mut total_damage_distance_covered = 0;
             let mut damage_green_amount = 200;
             let mut damage_red_amount = 0;
+            let mut end_early = false;
             for node in damage_distance_array
             {
                 let mut dist_string = String::from("span ");
-                dist_string.push_str(&((node.Distance/ 100.0) as i32  - total_damage_distance_covered).to_string());
+                let mut dam_dist_num = (node.Distance / 100.0) as i32 - total_damage_distance_covered;
+                if (node.Distance / 100.0) as i32 - total_damage_distance_covered > 100
+                {
+                    dam_dist_num = 100 - total_damage_distance_covered;
+                    end_early = true;
+                }
+                dist_string.push_str(&(dam_dist_num).to_string());
                 total_damage_distance_covered = (node.Distance / 100.0) as i32;
                 damage_nodes_processed.push(DamageProcessed { damage: node.Damage.to_string(), damage_distance: dist_string, background_colour: format!("rgb({},{},0", damage_red_amount, damage_green_amount) });
                 damage_green_amount -= 50;
                 damage_red_amount += 50;
+                if end_early
+                {
+                    total_damage_distance_covered = 100;
+                    break;
+                }
             }
             //add one more node that is blank to fill the rest of the cells
             damage_nodes_processed.push(DamageProcessed { damage: "".to_string(), damage_distance: format!("span {}", 105 - total_damage_distance_covered), background_colour: "white".to_string()});
@@ -221,14 +233,26 @@ pub fn Payday3Stats() -> Element
             let mut total_crit_distance_covered = 0;
             let mut crit_green_amount = 200;
             let mut crit_red_amount = 0;
+            end_early = false;
             for node in crit_distance_array
             {
                 let mut dist_string = String::from("span ");
-                dist_string.push_str(&((node.Distance / 100.0) as i32 - total_crit_distance_covered).to_string());
+                let mut crit_dist_num = (node.Distance / 100.0) as i32 - total_crit_distance_covered;
+                if (node.Distance / 100.0) as i32 - total_crit_distance_covered > 100
+                {
+                    crit_dist_num = 100 - total_crit_distance_covered;
+                    end_early = true;
+                }
+                dist_string.push_str(&(crit_dist_num).to_string());
                 total_crit_distance_covered = (node.Distance / 100.0) as i32;
                 crit_nodes_processed.push(CritProcessed { crit: node.Multiplier.to_string(), crit_distance: dist_string, background_colour: format!("rgb({},{},0", crit_red_amount, crit_green_amount) });
                 crit_green_amount -= 50;
                 crit_red_amount += 50;
+                if end_early
+                {
+                    total_crit_distance_covered = 100;
+                    break;
+                }
             }
             //add one more node that is blank to fill the rest of the cells
             crit_nodes_processed.push(CritProcessed { crit: "".to_string(), crit_distance: format!("span {}", 105 - total_crit_distance_covered), background_colour: "white".to_string()});
